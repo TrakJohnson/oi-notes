@@ -1,0 +1,720 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2018-09-13 Thu 15:25 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Martin Espada</title>
+<meta name="generator" content="Org mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="/home/theo/oi-notes-website/general.css" type="text/css"/>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Martin Espada</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org9ccb887">1. Context</a></li>
+<li><a href="#orgfbe5e94">2. The Meaning of the Shovel</a>
+<ul>
+<li><a href="#orgd6ade5f">2.1. Context</a></li>
+<li><a href="#org6064643">2.2. Stanza 1</a></li>
+<li><a href="#org36faaf6">2.3. Stanza 2</a></li>
+<li><a href="#org3472b0d">2.4. Stanza 3</a></li>
+<li><a href="#org446b35f">2.5. Stanza 4</a></li>
+<li><a href="#orgafaa16a">2.6. Stanza 5</a></li>
+</ul>
+</li>
+<li><a href="#org95d7c22">3. The Poet in the Box</a>
+<ul>
+<li><a href="#org0f2ada6">3.1. Activity 4 - Writer's effect's</a></li>
+<li><a href="#org8626187">3.2. Other presentations</a></li>
+</ul>
+</li>
+<li><a href="#orgc6b0d5c">4. Poems on his father (Morivivi + There but not there)</a></li>
+<li><a href="#org4494f09">5. Prisonners of Saint Lawrence</a></li>
+<li><a href="#org69dd3b1">6. The Moon shatters on Alabama Avenue</a></li>
+<li><a href="#orgc059eb9">7. How we could have lived and died this way</a>
+<ul>
+<li><a href="#org7932357">7.1. Criticism of society</a></li>
+<li><a href="#org4af4c95">7.2. Literary analysis</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<p>
+Poetry: 1-3 poems = 1 work (Like small stories)
+</p>
+
+<div id="outline-container-org9ccb887" class="outline-2">
+<h2 id="org9ccb887"><span class="section-number-2">1</span> Context</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>His poetry deals with social issues &#x2013; inequality</li>
+<li>historical elements
+<ul class="org-ul">
+<li>narration</li>
+<li>based on facts</li>
+</ul></li>
+<li>strong political message
+<ul class="org-ul">
+<li>militant</li>
+</ul></li>
+<li>Meaning of the shovel
+<ul class="org-ul">
+<li>Use of coto bring life</li>
+</ul></li>
+<li>form of poetry - free verse</li>
+<li>is it really poetry ?</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgfbe5e94" class="outline-2">
+<h2 id="orgfbe5e94"><span class="section-number-2">2</span> The Meaning of the Shovel</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orgd6ade5f" class="outline-3">
+<h3 id="orgd6ade5f"><span class="section-number-3">2.1</span> Context</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>Went to Nicaragua after the dictatorship</li>
+<li>NOT autobiographical - speaker, not the poet.</li>
+<li>Need to help - opression of minorities</li>
+<li>Desire to help</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org6064643" class="outline-3">
+<h3 id="org6064643"><span class="section-number-3">2.2</span> Stanza 1</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>Strength of the masses &#x2013;&gt; communist / they have nothing
+<ul class="org-ul">
+<li>"Congregation" vs "landless"</li>
+</ul></li>
+
+<li>Presence of the dictator
+<ul class="org-ul">
+<li>Impact - lack of respect for him</li>
+<li>Called "the dictator" &#x2013;&gt; they can criticize</li>
+<li>Still the presence of the army: they are at the border</li>
+<li>There is still a threat that they need to fight against =&gt;
+justifies the work</li>
+</ul></li>
+</ul>
+<ul class="org-ul">
+<li>Sibilance -&gt; soft</li>
+<li>"earth", "thousand", "every" &#x2013;&gt; massive movement =&gt; <b>revolution</b></li>
+<li>Planting a fistful of nails &#x2013;&gt; planting a bright future
+
+<ul class="org-ul">
+<li>Fistuful = communism, power of the people</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org36faaf6" class="outline-3">
+<h3 id="org36faaf6"><span class="section-number-3">2.3</span> Stanza 2</h3>
+<div class="outline-text-3" id="text-2-3">
+<ul class="org-ul">
+<li>"I dig" repetition
+<ul class="org-ul">
+<li>Need to rebuild &#x2013;&gt; repetition insists on</li>
+<li>They are not going to let the events prevent them from rebuilding</li>
+<li>Directly to the facts: monotonous stanza
+<ul class="org-ul">
+<li>The facts are enough, no need to dramatize</li>
+<li>Also sense of being drained of all emotions by the dictator's
+reign
+<ul class="org-ul">
+<li>They still have strength though</li>
+</ul></li>
+</ul></li>
+</ul></li>
+
+<li>Violence: killed in the back
+<ul class="org-ul">
+<li>The dictator's army is not even killing in front</li>
+</ul></li>
+
+<li>"Swaddled" vs "swaddled" = opposition</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org3472b0d" class="outline-3">
+<h3 id="org3472b0d"><span class="section-number-3">2.4</span> Stanza 3</h3>
+<div class="outline-text-3" id="text-2-4">
+<ul class="org-ul">
+<li>Army of the volunteers - transmitting knowledge
+<ul class="org-ul">
+<li>Spread the knowledge - prevent from being controlled</li>
+</ul></li>
+
+<li>Army of the dictator - destruction and desolation
+<ul class="org-ul">
+<li>Swarming - pest, bees, insects</li>
+<li>Disease and death</li>
+</ul></li>
+<li>"sandwiched" = food + strength</li>
+<li>Like bringing food supplies in</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org446b35f" class="outline-3">
+<h3 id="org446b35f"><span class="section-number-3">2.5</span> Stanza 4</h3>
+<div class="outline-text-3" id="text-2-5">
+<ul class="org-ul">
+<li>"yellow dress" &#x2013;&gt; hope</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgafaa16a" class="outline-3">
+<h3 id="orgafaa16a"><span class="section-number-3">2.6</span> Stanza 5</h3>
+<div class="outline-text-3" id="text-2-6">
+<blockquote>
+<p>
+"I dig""
+</p>
+</blockquote>
+
+<ul class="org-ul">
+<li>anaphorous repetition like in all "I dig because today I stopped</li>
+<li>digging" contrast &#x2013; keep on working</li>
+<li>Can't stop working - determination</li>
+<li>Dig for treasure</li>
+<li>Orange : colors</li>
+<li>primitive, prehistoric atmosphere → Manual work / primitive setup</li>
+<li>Enjambement "into a plastic bag // full of ice" → finds pleasure in the simple stuff</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org95d7c22" class="outline-2">
+<h2 id="org95d7c22"><span class="section-number-2">3</span> The Poet in the Box</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+What image do we have of a poet ? Isolation: box, prison Possesed by
+poetry.
+</p>
+</div>
+
+<div id="outline-container-org0f2ada6" class="outline-3">
+<h3 id="org0f2ada6"><span class="section-number-3">3.1</span> Activity 4 - Writer's effect's</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+<b>Metaphor</b>: There poetry was a grasshopper in the bowl of his hands
+</p>
+
+<p>
+Poetry is compared to a grasshopper for multiple reasons. To start with, 
+a grasshopper is usually rare and well hidden in its environnement. It
+is a very volatile insect, which is very hard to catch: this shows that
+poetry that Brandon is seeking is a very rare sight, which is the
+achievement of his efforts to be alone in the box. The "bowl of his
+hands" reinforces the importance of this moment, as the grasshopper
+could jump out at any moment and be gone for ever.
+</p>
+
+<p>
+<b>Similie</b>: The scratching of his pencil like fingernails on dungeon
+stone.
+</p>
+
+<p>
+"Fingernails on dungeon stone" evoke a feeling of disgust and
+reluctance, which contrasts with the scratching of a pencil. This
+difference links the poet to a lone prisonner in a dungeon, further
+enhancing his loneliness.
+</p>
+
+<p>
+<b>Similie</b>: Like the script of a pharaoh's deeds on pyramid walls
+</p>
+
+<p>
+This similie comparing the poetry to writings on a pyramid's walls,
+which gives the idea of a lost and unknown great work. This comparaison
+increases the importance of the poet and makes it an artifact, hidden
+from society, to discover.
+</p>
+
+<p>
+<b>Metaphor</b>: Metaphor spilled from the light he trapped
+</p>
+
+<p>
+This metaphor gives the reader the impression that the poet's eyes are
+filled with light, giving an unsual perpesctive on the simple act of
+looking. This suggests that the poet sees things differently: it is not
+him who sees the light, but the light that fills him. This isolates
+Brandon, but makes him a more "poetic" and mysterious figure, along with
+the poetry he creates, as if it was made of pure light.
+</p>
+
+<p>
+<b>Metaphor</b>: Metaphor, that cackling spirit
+</p>
+
+<p>
+This stylistic device tranforms the tools of poetry into an evil and
+possesive creature. The verb "cackling" is usually associated with a
+witch's laugh, and the description as a spirit
+</p>
+
+<p>
+<b>Metaphor</b>: The cold was a blanket to him
+</p>
+
+<p>
+Here the main intriguing feature to this metaphor is the opposition
+between the blanket and the cold, as these two words are usually
+considered as antonyms. This further highights the need for isolation of
+the poet, as Brandon seems to have different conceptions of things: what
+appears bad to us is for him a protection.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8626187" class="outline-3">
+<h3 id="org8626187"><span class="section-number-3">3.2</span> Other presentations</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+<b>Freedom</b>: freedom in isolation 
+<b>Forgetting</b> - freedom of thought
+<b>Denounciation</b> of poets in society
+</p>
+
+<blockquote>
+<p>
+"There are more poets in prison than anywhere else"
+</p>
+</blockquote>
+<ul class="org-ul">
+<li>Challenging perception of the poet</li>
+<li>Labelling people</li>
+<li>The box is physical but also imaginary</li>
+</ul>
+
+<blockquote>
+<p>
+"We have a problem with Brandon // he's a poet"
+</p>
+</blockquote>
+
+<ul class="org-ul">
+<li>People being judged / tagged injust</li>
+<li>Need - passion
+<ul class="org-ul">
+<li>Gives up his freedom to be able to write without needing to sustain
+for himself</li>
+</ul></li>
+<li>Societal problems present
+<ul class="org-ul">
+<li>Other poets have nothing to say inTempérature du CPU the before last
+stanza</li>
+<li>Martin Espada has things to say - ejust like Brandon</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc6b0d5c" class="outline-2">
+<h2 id="orgc6b0d5c"><span class="section-number-2">4</span> Poems on his father (Morivivi + There but not there)</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+His father is portrayed as&#x2026; 
+</p>
+<ul class="org-ul">
+<li>An adventurer</li>
+<li>A hero / courageous</li>
+<li>immortal</li>
+<li>a leader / peacemaker</li>
+<li>a survivor</li>
+<li>a fighter / troublemaker</li>
+<li>He /s/pat ob/s/cenities like /s/unflower /s/eeds"</li>
+<li>Growth - renewal (seeds) * Juvenile aspect - children spitting sunflower seeds</li>
+</ul>
+
+<p>
+Quotes: 
+</p>
+
+<blockquote>
+<p>
+"every riot, every rally, every arrest, every night in jail"
+</p>
+</blockquote>
+
+<blockquote>
+<p>
+"He rose / and dug his arm up to the elbow in the monster's belly, / so badly did he want to teat out the heart and eat it" 
+</p>
+</blockquote>
+<ul class="org-ul">
+<li>Message of peace</li>
+</ul>
+
+<p>
+<b>Immortal</b>: lots of luck
+</p>
+
+<blockquote>
+<p>
+"A mountain born of moutains"
+</p>
+</blockquote>
+<ul class="org-ul">
+<li>Heroic (mythological hero)</li>
+</ul>
+
+<blockquote>
+<p>
+"after every riot, every rally, every arrest, every night in jail"
+</p>
+</blockquote>
+</div>
+</div>
+
+<div id="outline-container-org4494f09" class="outline-2">
+<h2 id="org4494f09"><span class="section-number-2">5</span> Prisonners of Saint Lawrence</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Dehumanises prisonners
+</p>
+
+<p>
+Law: almighty; godly 
+</p>
+<ul class="org-ul">
+<li>Criticises the harshness of gglaw</li>
+<li>!= humanity</li>
+</ul>
+
+<p>
+Immigration - Drugs 
+</p>
+<ul class="org-ul">
+<li>Escaping poverty - reality through drugs</li>
+</ul>
+
+<p>
+Contrast between Spanish islands and prisonners of Saint Lawrence 
+"Hammered faces"
+</p>
+
+<p>
+"island men" -&gt; trapped in their island
+</p>
+
+<ul class="org-ul">
+<li>Only through their memories can they escape the prison</li>
+<li>Portrayed as criminals - defined by their crime
+<ul class="org-ul">
+<li>But they are also victims</li>
+</ul></li>
+
+<li>physical isolation from people they can communicate with</li>
+<li>sense of movement vs imprisonment of the people</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org69dd3b1" class="outline-2">
+<h2 id="org69dd3b1"><span class="section-number-2">6</span> The Moon shatters on Alabama Avenue</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>Grandfather figure</li>
+<li>Unfairness
+<ul class="org-ul">
+<li>no money, still dies</li>
+</ul></li>
+
+<li>Violent poem
+<ul class="org-ul">
+<li>Physical violence</li>
+<li>Moral/Psychological violence: unecessary crime</li>
+</ul></li>
+
+<li>Victim of violence because he is poor ?
+<ul class="org-ul">
+<li>The moon is the only source of light during the night</li>
+<li>Only the father left</li>
+</ul></li>
+
+<li>There was only the moon left (Father in poor family )</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgc059eb9" class="outline-2">
+<h2 id="orgc059eb9"><span class="section-number-2">7</span> How we could have lived and died this way</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li>Persecution for nothing / racism</li>
+<li>Makes us remember the slave stuff</li>
+</ul>
+</div>
+
+<div id="outline-container-org7932357" class="outline-3">
+<h3 id="org7932357"><span class="section-number-3">7.1</span> Criticism of society</h3>
+<div class="outline-text-3" id="text-7-1">
+<ul class="org-ul">
+<li>Racism, stereotypes =&gt; unfair justice</li>
+<li>Epigraph =&gt; suffering for the rebels</li>
+<li>Violence in the US society</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org4af4c95" class="outline-3">
+<h3 id="org4af4c95"><span class="section-number-3">7.2</span> Literary analysis</h3>
+<div class="outline-text-3" id="text-7-2">
+<ul class="org-ul">
+<li>Anaphora in "I see" &#x2013;&gt; people aren't blind, suggests "Everyone sees"</li>
+<li>References to slavery shows that no progress has been made</li>
+<li>Hypocritical socety, pretending that slavery is over</li>
+<li>Pronouns giving identity, individuality</li>
+<li><b>The</b> "blablab banal" -&gt; individual</li>
+<li>"We could have lived or died this way" -&gt; concerns everyone</li>
+<li>"Last blood pooling, last breath spitting"</li>
+<li>Symmetry: "too much"</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2018-09-13 Thu 15:25</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

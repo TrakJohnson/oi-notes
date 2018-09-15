@@ -1,0 +1,826 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2018-09-13 Thu 15:25 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The Tempest</title>
+<meta name="generator" content="Org mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="/home/theo/oi-notes-website/general.css" type="text/css"/>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">The Tempest</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org407b0af">1. Background</a>
+<ul>
+<li><a href="#orge20c2ec">1.1. Hierarchy</a></li>
+</ul>
+</li>
+<li><a href="#org2aa6027">2. Group Work - Liberal Humanism</a>
+<ul>
+<li><a href="#org1f0d87f">2.1. Theory: Post-colonialism</a>
+<ul>
+<li><a href="#orgb55d5d4">2.1.1. Disinheritance</a></li>
+<li><a href="#org0f868f9">2.1.2. Overriding culture</a></li>
+<li><a href="#org2148483">2.1.3. Exploiting the resources</a></li>
+</ul>
+</li>
+<li><a href="#org0a0a914">2.2. Theory: Feminism</a></li>
+<li><a href="#org108f926">2.3. Theory: Historicism</a>
+<ul>
+<li><a href="#org36bc30c">2.3.1. Politics, wealth and power</a></li>
+</ul>
+</li>
+<li><a href="#org989d631">2.4. Theory: Psychoanalysis</a></li>
+</ul>
+</li>
+<li><a href="#orgf379cb3">3. Act 1 Scene 1 - Representation</a>
+<ul>
+<li><a href="#org0e1ab98">3.1. Sound</a></li>
+<li><a href="#org6ded765">3.2. Shift in the hierarchy</a></li>
+</ul>
+</li>
+<li><a href="#org790e772">4. Act 1 Scene 2 - Power &amp; Control</a>
+<ul>
+<li><a href="#org26e9d48">4.1. Propspero and his authority</a>
+<ul>
+<li><a href="#orgd4bfb3d">4.1.1. Miranda</a></li>
+<li><a href="#org5c290d6">4.1.2. Caliban</a></li>
+<li><a href="#orgfced6b6">4.1.3. Ariel</a></li>
+<li><a href="#org2944e63">4.1.4. Ferdinand</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org407b0af" class="outline-2">
+<h2 id="org407b0af"><span class="section-number-2">1</span> Background</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orge20c2ec" class="outline-3">
+<h3 id="orge20c2ec"><span class="section-number-3">1.1</span> Hierarchy</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li>God is the creator: created the world from chaos</li>
+<li>Everything hsa a specific place in the hierarchy
+<ul class="org-ul">
+<li>God, Angels, Humans, etc</li>
+<li>The "Great chain of being"</li>
+</ul></li>
+<li>Fire, Air, Water, Earth</li>
+<li><b><b>Macocosm</b></b>: Universe, Nature Sky</li>
+<li><b><b>Microcosm</b></b>: sub-hierarchy (King, Church, Princes, etc or within animals, birds)
+<ul class="org-ul">
+<li>Is a reflection of the <b><b>Macrocosm</b></b></li>
+<li>There is even one for the emotions (Choler, Tears, Blood, Phlegm)
+<ul class="org-ul">
+<li>If there is imbalance, <b>sin will come</b></li>
+</ul></li>
+</ul></li>
+<li>If order is not maintained, devils and demons can come in: <b><b>sin</b></b>
+<ul class="org-ul">
+<li>There is always someone above you you must <b><b>obey</b></b></li>
+</ul></li>
+<li>Link to the story:
+<ul class="org-ul">
+<li>Beginning, the boatswain commands</li>
+<li>Prospero lost his place as king</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2aa6027" class="outline-2">
+<h2 id="org2aa6027"><span class="section-number-2">2</span> Group Work - Liberal Humanism</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>Explain the theory.</li>
+<li>How does that apply to the Tempest ?
+<ul class="org-ul">
+<li>Find textual evidence to back up your points</li>
+</ul></li>
+</ul>
+
+<blockquote>
+<p>
+Freedom and human progress are the goals in life. Reconciliation and harmony are possible.
+</p>
+</blockquote>
+
+<ul class="org-ul">
+<li><b><b>Prospero's opinion</b></b>
+<ul class="org-ul">
+<li>Reconciliation
+<ul class="org-ul">
+<li>Believes that the people that took his place can be forgiven</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<blockquote>
+<p>
+Let us not burden our remembrances with / A heaviness that's gone
+(Act 5 Scene 1 l. 198)
+</p>
+</blockquote>
+
+<ul class="org-ul">
+<li>He doesn't seek revenge: does not kill Antonio, seeks <b><b>reconciliation</b></b>;</li>
+</ul>
+<ul class="org-ul">
+<li>Freedom and human progress
+<ul class="org-ul">
+<li>He fullfils his promises</li>
+</ul></li>
+</ul>
+</div>
+
+<div id="outline-container-org1f0d87f" class="outline-3">
+<h3 id="org1f0d87f"><span class="section-number-3">2.1</span> Theory: Post-colonialism</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>Critical analysis on colonisers / colonised
+<ul class="org-ul">
+<li>Struggle / conflict</li>
+<li>Glorifies diversity</li>
+</ul></li>
+<li><b><b>Caliban</b></b>: he is a native / the "lesser being"
+<ul class="org-ul">
+<li>Colonisation will force him ultimately to be colonised</li>
+<li>Prospero is the master / Caliban the "slave"</li>
+<li>Caliban claims the island but he cannot fight</li>
+<li>Caliban can change master, but not become the master himself
+<ul class="org-ul">
+<li>Alcohol is linked to illusion: Caliban thinks the grass is greener</li>
+</ul></li>
+<li>"A boared slave, that deserves nothing but a prison"</li>
+</ul></li>
+</ul>
+
+<p>
+<span class="underline">Prospero conquers the land</span>
+</p>
+<ul class="org-ul">
+<li>Thanks to his powers</li>
+<li>Promises a better future (Ariel's liberty)</li>
+</ul>
+</div>
+
+<div id="outline-container-orgb55d5d4" class="outline-4">
+<h4 id="orgb55d5d4"><span class="section-number-4">2.1.1</span> Disinheritance</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<ul class="org-ul">
+<li>Caliban loses what he possesed</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org0f868f9" class="outline-4">
+<h4 id="org0f868f9"><span class="section-number-4">2.1.2</span> Overriding culture</h4>
+<div class="outline-text-4" id="text-2-1-2">
+<ul class="org-ul">
+<li>Prospero taught Caliban to speak
+<ul class="org-ul">
+<li>Although in the end he only curses</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org2148483" class="outline-4">
+<h4 id="org2148483"><span class="section-number-4">2.1.3</span> Exploiting the resources</h4>
+<div class="outline-text-4" id="text-2-1-3">
+<ul class="org-ul">
+<li>The first thing that Trinculo thinks when he sees Caliban is that he could make money if he brought him to Europe
+<ul class="org-ul">
+<li>First instinct</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0a0a914" class="outline-3">
+<h3 id="org0a0a914"><span class="section-number-3">2.2</span> Theory: Feminism</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>Miranda is an object - and a tool for Prospero</li>
+<li>Even though she has the impression of being free, she is manipulated by her father
+<ul class="org-ul">
+<li>Ex: he puts her to sleep</li>
+</ul></li>
+<li>Associated sometimes with strong physical and pscychological strength
+<ul class="org-ul">
+<li>Still associated with purity</li>
+</ul></li>
+<li><b><b>Claribel</b></b>: Forced by her father to mary a prince in Tunis
+<ul class="org-ul">
+<li>No independance</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org108f926" class="outline-3">
+<h3 id="org108f926"><span class="section-number-3">2.3</span> Theory: Historicism</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+Studying history is required to understand literature
+</p>
+
+<ul class="org-ul">
+<li>Chain of being
+<ul class="org-ul">
+<li>Order has to be respected:</li>
+</ul></li>
+<li>Montaigne (Of the Cannibals)
+<ul class="org-ul">
+<li>Compassion with the cannibals</li>
+<li>Shakespeare: does he agree (?)
+<ul class="org-ul">
+<li>The "cannibal" turns against the master</li>
+</ul></li>
+</ul></li>
+<li>Plot similar to the tempest</li>
+</ul>
+</div>
+
+<div id="outline-container-org36bc30c" class="outline-4">
+<h4 id="org36bc30c"><span class="section-number-4">2.3.1</span> Politics, wealth and power</h4>
+<div class="outline-text-4" id="text-2-3-1">
+<ul class="org-ul">
+<li>The whole plot is for power</li>
+<li>Cycle of power: slaves usually go from master to another master
+<ul class="org-ul">
+<li>Prospero uses the excuse of freeing Ariel from Sycorax to keep his power on him</li>
+</ul></li>
+<li>Conspiracies against established govt.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org989d631" class="outline-3">
+<h3 id="org989d631"><span class="section-number-3">2.4</span> Theory: Psychoanalysis</h3>
+<div class="outline-text-3" id="text-2-4">
+<ul class="org-ul">
+<li>Instincts vs Reason
+<ul class="org-ul">
+<li>Freud</li>
+</ul></li>
+<li>Caliban's attempted rape
+<ul class="org-ul">
+<li>Even though Prospero was friendly, Caliban's instincts take over</li>
+</ul></li>
+<li>Drinking reveals their unconscious
+<ul class="org-ul">
+<li>Reveal the conspiracy</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf379cb3" class="outline-2">
+<h2 id="orgf379cb3"><span class="section-number-2">3</span> Act 1 Scene 1 - Representation</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li>Atmosphere of <b>chaos</b>
+<ul class="org-ul">
+<li><i>In media res</i> + lots of characters going in and out = confusion</li>
+<li>Lighting</li>
+<li>Sound: exclamation marks, wave wind whistle, demand for silence, screams for instruction
+<ul class="org-ul">
+<li>"They are louder than the weather"</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+
+
+<div id="outline-container-org0e1ab98" class="outline-3">
+<h3 id="org0e1ab98"><span class="section-number-3">3.1</span> Sound</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+Exclamation marks, wave, winds, whistes, demands for silence, screams for instructions
+</p>
+
+<blockquote>
+<p>
+They are louder than the weather
+<i>- Boatswain</i>
+</p>
+</blockquote>
+
+<blockquote>
+<p>
+What cares these roares for the name of the king ? To cabin. Silence! Trouble us not. 
+<i>- Boatswain</i>
+</p>
+</blockquote>
+
+<blockquote>
+<p>
+you whoreson, insolent noisemaker
+<i>- Antonio</i>
+</p>
+</blockquote>
+</div>
+</div>
+
+<div id="outline-container-org6ded765" class="outline-3">
+<h3 id="org6ded765"><span class="section-number-3">3.2</span> Shift in the hierarchy</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>Not only is there chaos in the weather, but they is also internal chaos as the order is disrupted</li>
+<li>Boatswain is higher on stage than the nobles</li>
+<li>He does not watch his language:</li>
+</ul>
+
+<blockquote>
+<p>
+<i>Boatswain</i>
+Out of our way, I say [&#x2026;] Have you a mind to sink ?
+</p>
+</blockquote>
+
+<ul class="org-ul">
+<li>Arrogant, rhetorical questions</li>
+</ul>
+<ul class="org-ul">
+<li>The boatswain suggests that the noble's power is useless against the storm:
+<ul class="org-ul">
+<li>They powerless facing <b>Nature</b></li>
+</ul></li>
+</ul>
+
+<blockquote>
+<p>
+if you can command these elements to silence [&#x2026;] use your authority. If you cannot, give thanks you have lived so long
+<i>- Boatswain</i>
+</p>
+</blockquote>
+
+
+<ul class="org-ul">
+<li>Gonzalo even praises the Boatswain - master praising the slave ?</li>
+</ul>
+
+<blockquote>
+<p>
+I have great confort from this fellow
+<i>- Gonzalo</i>
+</p>
+</blockquote>
+
+<ul class="org-ul">
+<li>Gonzalo is also optimistic / trusting / has faith in other people
+<ul class="org-ul">
+<li><b>optimistic</b></li>
+<li>doesn't blame the mariners for their lack of skill &rarr; excuse of <span class="underline">destiny</span></li>
+</ul></li>
+</ul>
+
+<blockquote>
+<p>
+For our case is as theirs
+<i>- Gonzalo</i>
+</p>
+</blockquote>
+
+<ul class="org-ul">
+<li>The storm will kill them all (at least they think) regardless of rank</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org790e772" class="outline-2">
+<h2 id="org790e772"><span class="section-number-2">4</span> Act 1 Scene 2 - Power &amp; Control</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org26e9d48" class="outline-3">
+<h3 id="org26e9d48"><span class="section-number-3">4.1</span> Propspero and his authority</h3>
+<div class="outline-text-3" id="text-4-1">
+</div>
+<div id="outline-container-orgd4bfb3d" class="outline-4">
+<h4 id="orgd4bfb3d"><span class="section-number-4">4.1.1</span> Miranda</h4>
+<div class="outline-text-4" id="text-4-1-1">
+<p>
+<b>Character's role and relation to Prospero</b>
+</p>
+<ul class="org-ul">
+<li>Daughter</li>
+<li>Used as a tool to regain political importance / appease his ennemies
+<ul class="org-ul">
+<li>to become the duke of Milan</li>
+</ul></li>
+</ul>
+
+<p>
+<b>Prospero's attitude and behaviour towards the character</b>
+</p>
+<ul class="org-ul">
+<li>Gentle / Kind / very peaceful relationship
+<ul class="org-ul">
+<li>Uses adjectives such as "wench"</li>
+</ul></li>
+<li>Gives her his version of the facts
+<ul class="org-ul">
+<li>Doesn't insist on how he wasn't devoted to governing the city; puts <span class="underline">all the blame on his brother</span></li>
+</ul></li>
+</ul>
+
+<blockquote>
+<p>
+that a brother should be / so perfidious
+<i>- Prospero</i>
+</p>
+</blockquote>
+
+<ul class="org-ul">
+<li>Extremely hypocritical: criticises their manipulativity but that's what's he's doing
+<ul class="org-ul">
+<li>She only sees one side</li>
+</ul></li>
+<li><b>Manipulative</b>: Molds her into what he wants: potrays himself fully as a victim of a conspiracy</li>
+<li>Only tells her the story 12 years after</li>
+<li>Choses to put her to sleep when he wants</li>
+</ul>
+
+<blockquote>
+<p>
+Tho art inclined to sleep. 'Tis a good dullness, / And give it way; I know thou <b>canst not choose</b>
+<i>- Prospero</i>
+</p>
+</blockquote>
+</div>
+</div>
+
+
+<div id="outline-container-org5c290d6" class="outline-4">
+<h4 id="org5c290d6"><span class="section-number-4">4.1.2</span> Caliban</h4>
+<div class="outline-text-4" id="text-4-1-2">
+<p>
+<b>Character's role and relation to Prospero</b>
+</p>
+<ul class="org-ul">
+<li>Prospero's slave</li>
+<li>They hate each other (athough this was different)</li>
+</ul>
+
+<p>
+<b>Prospero's attitude and behaviour towards the character</b>
+</p>
+<ul class="org-ul">
+<li>Extremely conflictual relationship</li>
+</ul>
+
+<blockquote>
+<p>
+Thou poisonous slave, got by the devil himself / Upon thy wicked dam, come forth
+<i>- Prospero</i>
+</p>
+</blockquote>
+
+<ul class="org-ul">
+<li>Two way hatred: the slave answers</li>
+</ul>
+
+<blockquote>
+<p>
+You taught me language, and my profit on't / Is, I know how to curse. The red plague rid you / for learning me your language
+</p>
+</blockquote>
+
+<ul class="org-ul">
+<li>Prospero's excuse for his master position is the attempted rape on his daughter</li>
+<li>While Caliban argues he is the one who kicked him out from his island</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgfced6b6" class="outline-4">
+<h4 id="orgfced6b6"><span class="section-number-4">4.1.3</span> Ariel</h4>
+<div class="outline-text-4" id="text-4-1-3">
+<p>
+<b>Character's role and relation to Prospero</b>
+</p>
+<ul class="org-ul">
+<li>Air spirit</li>
+<li>Fulfills Prospero's request that involve magic &rarr; grants him his power</li>
+</ul>
+
+<p>
+<b>Prospero's attitude and behaviour towards the character</b>
+</p>
+<ul class="org-ul">
+<li>Is his propperty + gives him orders
+<ul class="org-ul">
+<li>"Approach, <span class="underline">my</span> Ariel. Come !" - insists on "my"</li>
+</ul></li>
+<li>Flatters him to show "sympathy"</li>
+</ul>
+
+<blockquote>
+<p>
+My brave spirit ! [&#x2026;] Why that's my spirit !
+</p>
+</blockquote>
+
+<ul class="org-ul">
+<li>Although he gives the appearance of being sympathetic, he has no mercy for his servant</li>
+</ul>
+
+<blockquote>
+<p>
+thy charge / Exactly is performed; but there's more work 
+<i>- Prospero</i>
+</p>
+</blockquote>
+
+<ul class="org-ul">
+<li>Refuses to grant him his liberty
+<ul class="org-ul">
+<li>Even if he promises, uses the argument that he freed him from Sycorax to keep him longer</li>
+<li>Reminds him of his past and his "torment"</li>
+</ul></li>
+</ul>
+
+<blockquote>
+<p>
+Before the time be out ? No more.
+<i>- Prospero</i>
+</p>
+</blockquote>
+
+<ul class="org-ul">
+<li>Poses threats to prevent him from thinking about freedom</li>
+</ul>
+
+<blockquote>
+<p>
+If tho more murmur'st, I will rend an oak and peg thee in his knotty entrails till though has howled away twelve winters.
+</p>
+</blockquote>
+</div>
+</div>
+
+<div id="outline-container-org2944e63" class="outline-4">
+<h4 id="org2944e63"><span class="section-number-4">4.1.4</span> Ferdinand</h4>
+<div class="outline-text-4" id="text-4-1-4">
+<p>
+<b>Character's role and relation to Prospero</b>
+</p>
+<ul class="org-ul">
+<li>Alonso's son (collaborated with Antonion)</li>
+<li>Used as a tool for marriage and strategical union</li>
+</ul>
+
+<p>
+<b>Prospero's attitude and behaviour towards the character</b>
+</p>
+<ul class="org-ul">
+<li><b>Manipulation</b>
+<ul class="org-ul">
+<li>Gives him the illusion of a magical, beautiful island</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2018-09-13 Thu 15:25</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

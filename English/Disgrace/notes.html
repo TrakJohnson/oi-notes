@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2018-09-13 Thu 15:25 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Disgrace</title>
+<meta name="generator" content="Org mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="/home/theo/oi-notes-website/general.css" type="text/css"/>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Disgrace</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgae79b63">1. Key questions and Themes</a>
+<ul>
+<li><a href="#orga60fb4b">1.1. Meaning of the title</a></li>
+</ul>
+</li>
+<li><a href="#org29a07e6">2. Extracts about women</a></li>
+<li><a href="#org288df7e">3. Discuss the role and importance of female characters</a></li>
+<li><a href="#org698c26c">4. To what extent do you think Davide evolves / changes</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgae79b63" class="outline-2">
+<h2 id="orgae79b63"><span class="section-number-2">1</span> Key questions and Themes</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orga60fb4b" class="outline-3">
+<h3 id="orga60fb4b"><span class="section-number-3">1.1</span> Meaning of the title</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li>Disgrace of a teacher</li>
+<li>Disgrace of Melanie</li>
+</ul>
+
+<p>
+Interest at the beginning
+</p>
+<ul class="org-ul">
+<li>No one is really into it
+<ul class="org-ul">
+<li>Students look through him as if he was transparent</li>
+<li>He says its not a course</li>
+</ul></li>
+</ul>
+
+<p>
+<span class="underline">Disgrace</span>: how its handled, no one really admits wrongs
+</p>
+
+<p>
+Shady way of dealing with this: no sense of justice
+</p>
+
+<ul class="org-ul">
+<li>Conflict between the Father - outsider, wants to get the rapers punished</li>
+<li>She wants to not become a disgrace</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org29a07e6" class="outline-2">
+<h2 id="org29a07e6"><span class="section-number-2">2</span> Extracts about women</h2>
+<div class="outline-text-2" id="text-2">
+<blockquote>
+<p>
+he tries to pick Teresa up in middle age. The new Teresa is a dumpy little widow installed in the Vila Gamba with her aged father, running the household, holding the purse-strings tight, keeping an eye out that the servants do not steal the sugar &#x2026; The passage of time has not treated Teresa kindly. With her heavy bust, her stocky trunk, her abbreviated legs, she looks more like a peasant, a contadina, than an aristocrat. The complexion that Byron one so admired as turned hectic; in summer she is overtaken with attacks of asthma that leave her heaving for breath.
+</p>
+</blockquote>
+<ul class="org-ul">
+<li>p181</li>
+<li>Old age makes weak
+<ul class="org-ul">
+<li>She only runs the households / boring</li>
+<li>Role of the woman is that but its not interesting to the man
+<ul class="org-ul">
+<li>Opposition to younger women</li>
+</ul></li>
+</ul></li>
+<li>Qualifications of what a women is there to do for the men</li>
+<li>Belittling of women</li>
+<li>Role: not sharing / keeping everything for herself
+<ul class="org-ul">
+<li>Stopping the pleasure - associated with <b>sugar</b></li>
+<li>Lack of fun / woman doesn't share the pleasure she has</li>
+</ul></li>
+</ul>
+
+<blockquote>
+<p>
+dumpy
+</p>
+</blockquote>
+<ul class="org-ul">
+<li>A word repeated often</li>
+<li>Shows misoginy / effect of time on women</li>
+</ul>
+
+
+<blockquote>
+<p>
+But nothing will stop him. He carries her to the bedroom, brushes off the absurd slippers, kisses her feet, astonished by the feeling she evokes. Something to do with the apparition on the stage: the wig, the wiggling bottom, the crude talk. Strange love! Yet from the quiver of Aphrodite, goddess of the foaming waves, no doubt about that.
+She does not resist. All she does is avert herself avert her lips, avert her eyes. She lets him lay her out on the bed and undress her: she even helps him, raising her arms and then her hips. Little shivers of cold run through her; as soon as she is bare, she slips under the quilted counterpane like a mole burrowing, and turns her back on him.
+Not rape, not quite that, but undesired nevertheless, undesired to the core. As though she had decided to go slack, die within herself for the duration, like a rabbit when the jaws of the fox close on its neck. So
+that everything done to her might be done, as it were, far away.
+</p>
+</blockquote>
+<ul class="org-ul">
+<li>She is powerless - he is dominant
+<ul class="org-ul">
+<li>From his perspective</li>
+<li>He is the predator "when the jaws of the fox close on its neck"</li>
+</ul></li>
+<li>Romantic moment from his POV
+<ul class="org-ul">
+<li>"He kisses her feet"</li>
+<li>References to Aphrodite</li>
+</ul></li>
+<li>He doesn't realize what is really happenning
+<ul class="org-ul">
+<li>He associate sexual harassement only with violence</li>
+<li>Doesn't see the psychological</li>
+</ul></li>
+</ul>
+
+
+<blockquote>
+<p>
+Good bones, like her mother. A woman in the flower of her years, attractive despite the heaviness, despite the unflattering clothes.
+'From my point of view, David, it is working out perfectly well. I'm glad to have you here. It takes a while to adjust to the pace of country life, that's all. Once you find things to do you won't be so bored.' 
+He nods absentmindedly. Attractive, he is thinking, yet lost to men. Need he reproach himself, or would it have worked out like that anyway?
+</p>
+</blockquote>
+<ul class="org-ul">
+<li>Description of his own daughter</li>
+<li>Judging his daughter through the view of a lover
+<ul class="org-ul">
+<li>Imposing his own ideals of beauty</li>
+</ul></li>
+<li>Reducing people to parts of the body: people are not whole, depiction as an object</li>
+</ul>
+
+<blockquote>
+<p>
+Melanie, on the pillion, sits with knees wide apart, pelvis arched. A quick shudder of lust tugs him. I have been there! he thinks. Then the motorcycle surges forward, bearing her away.
+</p>
+</blockquote>
+<ul class="org-ul">
+<li>Description as a conqueror: he has alread done that !
+<ul class="org-ul">
+<li>He is proud of it</li>
+</ul></li>
+</ul>
+
+<blockquote>
+<p>
+line 599. Wordsworth is writing about the limits of sense-perception. It is a theme we have touched
+on before. As the sense-organs reach the limit of their powers, their light begins to go out. Yet at the moment of expiry that light leaps up one last time like a candle-flame, giving us a glimpse of the invisible.
+The passage is difficult; perhaps it even contradicts the Mont Blanc moment. Nevertheless, Wordsworth
+seems to be feeling his way toward a balance: not the pure idea, wreathed in clouds, nor the visual image burned on the retina, overwhelming and disappointing us with its matter-of-fact clarity, but the sense-image, kept as fleeting as possible, as a means toward stirring or activating the idea that lies buried more deeply in the soil of memory.'
+He pauses. Blank incomprehension. He has gone too far too fast. How to bring them to him? How to bring her?
+`Like being in love,' he says. 'If you were blind you would hardly have fallen in love in the first place. But now, do you truly wish to see the beloved in the cold clarity of the visual apparatus? It may be in your better interest to throw a veil over the gaze, so as to keep her alive in her archetypal, goddesslike form.'
+</p>
+</blockquote>
+<ul class="org-ul">
+<li>Embarassement - him trying to connect with the students through love
+<ul class="org-ul">
+<li>Their opposed opinions only increase his alienation from them</li>
+</ul></li>
+<li>He gains life and viality from love</li>
+</ul>
+
+<p>
+David Lurie doesn't realise he is an aging man taking advantage of people
+</p>
+<ul class="org-ul">
+<li>Romanticizes everything - including himself</li>
+<li>He is keeping "a veil over the gaze"
+<ul class="org-ul">
+<li>Just like the situation in South Africa, where people put veils everywhere</li>
+</ul></li>
+</ul>
+
+<p>
+Why ? He has lost his attraction / male power through the aging
+</p>
+<ul class="org-ul">
+<li>He has to go and see students or prostitute; <b>powerless</b>
+<ul class="org-ul">
+<li>Just like the white men trying to cling on / maintain power</li>
+<li><b>Personal story mirrors society</b></li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org288df7e" class="outline-2">
+<h2 id="org288df7e"><span class="section-number-2">3</span> Discuss the role and importance of female characters</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li>Melanie
+<ul class="org-ul">
+<li>Used the highlight the powerlessness of the women at the time</li>
+<li>Not really a <span class="underline">physical</span> rape but more of a <span class="underline">psychological</span> rape
+<ul class="org-ul">
+<li>Melanie is powerless against his advances</li>
+</ul></li>
+</ul></li>
+<li>Lucy
+<ul class="org-ul">
+<li>Used to show the precarious place of women in society</li>
+<li>she prefers to not reveal anything than to denounce the agressors
+<ul class="org-ul">
+<li>social pressure at the time</li>
+</ul></li>
+<li>He wants to control what Lucy does - the split</li>
+<li>She highlights shift in his role and his power:
+<ul class="org-ul">
+<li>David goes off-center</li>
+</ul></li>
+</ul></li>
+<li>Bev
+<ul class="org-ul">
+<li>Motherly, wise old figure
+<ul class="org-ul">
+<li>Care for animals</li>
+</ul></li>
+<li>Sees women above their appearance / sexuality
+<ul class="org-ul">
+<li>He's lost everything - irony as he criticized these types of women and ends up with them</li>
+<li>Relates to the dogs - they are lost / abandonned</li>
+</ul></li>
+</ul></li>
+<li>Soraya
+<ul class="org-ul">
+<li>"Thursday has become an oasis of luxe et volupté"</li>
+<li>David's ideal of beauty
+<ul class="org-ul">
+<li>"Soraya is tall and slim, with long black hair and dark, liquid eyes. Technically he is old enough to be her father"</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p>
+Power is an illusion:
+</p>
+<ul class="org-ul">
+<li>David needs women more than women need David</li>
+<li>He has romanticized
+<ul class="org-ul">
+<li>Women were able to move on - not him !</li>
+</ul></li>
+</ul>
+
+<p>
+Women show his weaknesses:
+</p>
+
+<p>
+Links with other works:
+</p>
+
+<ul class="org-ul">
+<li>SND and the position of women
+<ul class="org-ul">
+<li>Stanley's superiority &#x2013;&gt; <b>rape</b></li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-org698c26c" class="outline-2">
+<h2 id="org698c26c"><span class="section-number-2">4</span> To what extent do you think Davide evolves / changes</h2>
+<div class="outline-text-2" id="text-4">
+<blockquote>
+<p>
+His mind has become a refuge for old thoughts, idle, indigent, with nowhere else to go. He ought to chase them out, sweep the premises clean. But he does not care to do so, or does not care enough.
+</p>
+</blockquote>
+
+<blockquote>
+<p>
+Now he is sharing her house, her life. He has to be careful not to allow old habits to creep back, the habits of a parent: putting the toilet roll on the spool, switching off lights, chasing the cat off the sofa. Practise for old age, he admonishes himself. Practise fitting in. Practise for the old folks' home.
+</p>
+</blockquote>
+
+<ul class="org-ul">
+<li>A man out of his time</li>
+</ul>
+
+<p>
+Change of perspective on society
+</p>
+
+<p>
+Change of people he is with
+</p>
+<ul class="org-ul">
+<li>From Soraya to Bev
+<ul class="org-ul">
+<li>Change in his ideal of beauty</li>
+</ul></li>
+</ul>
+
+<p>
+Evolution in his idea of the play:
+</p>
+<ul class="org-ul">
+<li>From a romantic Lord Byron to a Teresa in middle age</li>
+</ul>
+
+<p>
+Coming to apologize at the end of the book
+</p>
+<ul class="org-ul">
+<li>Slight change ? Compared to him saying he was "enriched" by this experience to the media</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2018-09-13 Thu 15:25</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2018-09-13 Thu 11:32 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Moving On - Notes</title>
+<meta name="generator" content="Org mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="http://gongzhitaao.org/orgcss/org.css"/>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Moving On - Notes</h1>
+<blockquote>
+<p>
+Please take notes on your reading regarding <b><b>migrations</b></b>, <b><b>society</b></b>, <b><b>minorities</b></b> and <b><b>religion</b></b> during Post War America.
+</p>
+</blockquote>
+
+<div id="outline-container-orgf985d91" class="outline-2">
+<h2 id="orgf985d91"><span class="section-number-2">1</span> Postwar America</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orga61c5bd" class="outline-3">
+<h3 id="orga61c5bd"><span class="section-number-3">1.1</span> Victory !</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li>US's victory results in a surge in <b><b>patriotism</b></b>
+<ul class="org-ul">
+<li>People singing national anthem, "God bless America", etc</li>
+<li>National frenzy</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgad91c1f" class="outline-3">
+<h3 id="orgad91c1f"><span class="section-number-3">1.2</span> People on the move</h3>
+<div class="outline-text-3" id="text-1-2">
+<ul class="org-ul">
+<li>Important population migration in wartime
+<ul class="org-ul">
+<li>People went <b><b>north</b></b> to work in factories and participate in the war effort</li>
+<li>Old south &rarr; New York, Chicago, Philadelphia, Detroit + West Coast
+<ul class="org-ul">
+<li>Especially <span class="underline">african americans</span> (higher paying jobs)</li>
+<li>They became permanent residents of the metropolis</li>
+</ul></li>
+</ul></li>
+<li>War industry meant lots of middle class
+<ul class="org-ul">
+<li><span class="underline">Mass culture:</span> More leisure + importance of media</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org8ed1ac0" class="outline-3">
+<h3 id="org8ed1ac0"><span class="section-number-3">1.3</span> Economic transformation</h3>
+<div class="outline-text-3" id="text-1-3">
+<ul class="org-ul">
+<li>New Deal didn't work &rarr; solution is wartime industry</li>
+<li>However lots of national debt + inflation (no consumer goods available during the war)
+<ul class="org-ul">
+<li>OPA (Office of Price Administration)</li>
+</ul></li>
+<li>Redistribution of wage
+<ul class="org-ul">
+<li>Workers have more pay !</li>
+</ul></li>
+<li>Lots of govt. intervention leads to sucess in eliminating the depression</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org05a2e6e" class="outline-3">
+<h3 id="org05a2e6e"><span class="section-number-3">1.4</span> A diverse society</h3>
+<div class="outline-text-3" id="text-1-4">
+<ul class="org-ul">
+<li>When the war finished - US was still a very rural country</li>
+<li>Soldiers rapidly came back
+<ul class="org-ul">
+<li>Although many were happy to ..</li>
+<li>.. some never recovered from physical or psychological wounds
+<ul class="org-ul">
+<li>others questionned whether it was worth it to fight for the greedy, materialistic society they came back to</li>
+</ul></li>
+</ul></li>
+<li>25% of population is foreign in US
+<ul class="org-ul">
+<li>10% are african americans (+ hispanics, chinese, etc)</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgd3e5dac" class="outline-3">
+<h3 id="orgd3e5dac"><span class="section-number-3">1.5</span> The growth of big labour</h3>
+<div class="outline-text-3" id="text-1-5">
+<ul class="org-ul">
+<li>Importance of trade unions</li>
+<li>However <b><b>liberal</b></b> stance during the war opposed <b><b>conservatives*</b></b> of the post-war (have to fight the communists)
+<ul class="org-ul">
+<li>Purchasing power + wages fell with postwar inflation</li>
+<li><span class="underline">Consequence</span>: a <i>lot</i> of strikes in 1945 &rarr; resulted in prove</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org742b401" class="outline-3">
+<h3 id="org742b401"><span class="section-number-3">1.6</span> A religious people</h3>
+<div class="outline-text-3" id="text-1-6">
+<p>
+Even though the US was becoming more secular: still very religious
+</p>
+<ul class="org-ul">
+<li>45 million protestants</li>
+<li>25 million catholics</li>
+<li>5 million jewish</li>
+</ul>
+
+<blockquote>
+<p>
+<b>ECUMENICALISM</b>: The doctrine of the ecumenical movement that promotes cooperation and better understanding among different religious denominations.
+</p>
+</blockquote>
+
+<ul class="org-ul">
+<li>That was not very present</li>
+<li>Conservative groups were still very powerful
+<ul class="org-ul">
+<li><span class="underline">anti-catholic</span> feeling</li>
+<li>discrimination against jews</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org8a1717b" class="outline-3">
+<h3 id="org8a1717b"><span class="section-number-3">1.7</span> Women</h3>
+<div class="outline-text-3" id="text-1-7">
+<ul class="org-ul">
+<li>Many entered the labour force during the war (6 million 1941 &rarr; 1945)
+<ul class="org-ul">
+<li>Became skilled, earned high wages, etc</li>
+<li>Quit domestic jobs</li>
+<li>However still discrimination: women earned <b>60%</b> of men's wages for equivalent work</li>
+</ul></li>
+<li>They also became head of the family
+<ul class="org-ul">
+<li>Even more responsability given that there were few places to take care of children</li>
+</ul></li>
+<li>However, after the end of the war, they were forced out to be replaced by men
+<ul class="org-ul">
+<li><span class="underline">Automobile industry:</span> 25% women in 1945; 7% in 1946</li>
+<li>They were put back in "woman jobs" (mostly low-paying)</li>
+</ul></li>
+<li>And no one cared - until the 1960s</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org00195be" class="outline-3">
+<h3 id="org00195be"><span class="section-number-3">1.8</span> African Americans</h3>
+<div class="outline-text-3" id="text-1-8">
+<ul class="org-ul">
+<li><b>WW2</b>: As much segregation in the army as at home
+<ul class="org-ul">
+<li>However there was the promise of getting education and a better job after the war</li>
+<li>Conditions were still better than WW1</li>
+</ul></li>
+<li>NAACP grew from 50 000 (1940) &rarr; 500 000 (1945) people</li>
+<li>More employment opportunities
+<ul class="org-ul">
+<li>Philip Randolph - african american labor leader - threatened a public march</li>
+<li>FDR in exchange made the <b>FEPC</b> (Fair Employment Practices Commitee) which attempted to prevent discrimination at the workplace
+<ul class="org-ul">
+<li>More symbolic than useful</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p>
+Exile from the South to the North
+</p>
+<ul class="org-ul">
+<li>voting rights are in the north
+<ul class="org-ul">
+<li>they form an important voting mass</li>
+</ul></li>
+<li>however society didn't change (the mindset is mostly the same)</li>
+<li><span class="underline">June 1943</span>: 3 days of riot, 25 african american and 9 whites dead</li>
+<li>Black protests in the North were more common, and more effective</li>
+</ul>
+
+<p>
+War gave opportunities
+</p>
+<ul class="org-ul">
+<li><b>GI Bill</b>: allowed GIs to get education, fund their buisness, etc.</li>
+<li>Gave self-esteem + respect to the war veterans, regardless of their skin color</li>
+</ul>
+
+<p>
+However most african americans were in the South (2/3)
+</p>
+<ul class="org-ul">
+<li>Most lived in poverty + segregation</li>
+<li>Regrouped to prepare the civil rights movement of the 50s</li>
+</ul>
+
+<p>
+<b>Federal Housing Administration</b>
+</p>
+<ul class="org-ul">
+<li>Discrimination for housing</li>
+<li>Resulted in black ghettos (ex: South Chicago)
+<ul class="org-ul">
+<li>Riots from the whites that couldn't afford to move as the black population became massive</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgeb00484" class="outline-3">
+<h3 id="orgeb00484"><span class="section-number-3">1.9</span> Hispanic Americans</h3>
+<div class="outline-text-3" id="text-1-9">
+<ul class="org-ul">
+<li>They had good positions in the army, 11 won the Congressional Medal of Honour</li>
+<li>Followed the african americans to the North to get work
+<ul class="org-ul">
+<li>This led to a shortage in farm workforce</li>
+<li>Led to the importation of workers from Mexico (<i>braceros</i>)
+<ul class="org-ul">
+<li>They were exploited quite ruthlessly</li>
+</ul></li>
+</ul></li>
+<li>They suffered from similar discrimination as the african americans
+<ul class="org-ul">
+<li>They were attacked by marines on leave in Southern California</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org3c1c606" class="outline-3">
+<h3 id="org3c1c606"><span class="section-number-3">1.10</span> Asian Americans</h3>
+<div class="outline-text-3" id="text-1-10">
+<p>
+Major violation of civil liberties: internment of Japanese Americans
+</p>
+<ul class="org-ul">
+<li>120 000 of them sent to internment camps in 1942</li>
+<li>Relocation was "necessary" to allow "security" on the West Coast, as they could aid the enemy in case of attack
+<ul class="org-ul">
+<li>Later admitted that all of that was done to support anti-japanese prejudice, wartime hysteria and greed</li>
+</ul></li>
+<li>Contrary to other minorities, no one helped them (not even Earl Warren)</li>
+<li>"Individual rights could be sacrificed to military necessity"</li>
+<li>As a consequence, many lost their homes and buisnesses (total estimated to $400 million)</li>
+<li>Despite that, they were determined to show their worth and enrolled in the army
+<ul class="org-ul">
+<li>442nd Regimental Combat Engineers was the most decorated unit in American military history</li>
+</ul></li>
+<li>Restitution of goods took a long time
+<ul class="org-ul">
+<li>They were still receiving in 1988 - Reagan</li>
+</ul></li>
+</ul>
+
+<blockquote>
+<p>
+<i>We admit a wrong. Here we affirm our commitment as a nation to equal justice under the law.</i>
+</p>
+<ul class="org-ul">
+<li>Reagan</li>
+</ul>
+</blockquote>
+
+<ul class="org-ul">
+<li>Japanese citizens did not linger much on these events: they wanted to move forward
+<ul class="org-ul">
+<li>They managed to get very good education and work</li>
+</ul></li>
+</ul>
+
+<p>
+The Chinese on the other hand, were sympathised with as they were Allies
+</p>
+<ul class="org-ul">
+<li>They were suffering from the Japanese cruelty</li>
+<li>Many found job opportunities and managed to get out of their ghettos</li>
+</ul>
+
+<p>
+We tend to think that wartime unity was very present
+</p>
+<ul class="org-ul">
+<li>However long-established conflicts and tensions simmerd just beneath the surface</li>
+<li>Although progress had been made, much was left</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgb018325" class="outline-3">
+<h3 id="orgb018325"><span class="section-number-3">1.11</span> Native Americans</h3>
+<div class="outline-text-3" id="text-1-11">
+<ul class="org-ul">
+<li>Worked in the army, talking the tribal dialect so that japanese couldn't understand</li>
+<li>They became part of the society after the war (didn't return to their reserves)</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2018-09-13 Thu 11:32</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

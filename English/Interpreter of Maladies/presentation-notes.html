@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2018-09-13 Thu 19:34 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Interpreter of Maladies</title>
+<meta name="generator" content="Org mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="/home/theo/oi-notes-website/general.css" type="text/css"/>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Interpreter of Maladies</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org8247c6a">1. Mrs Sen's</a>
+<ul>
+<li><a href="#org8b40ca7">1.1. Coming of age</a></li>
+<li><a href="#org678bd7f">1.2. Social progress</a></li>
+</ul>
+</li>
+<li><a href="#org6c388bf">2. Interpreter of Maladies</a>
+<ul>
+<li><a href="#org2ed70fd">2.1. Characters</a>
+<ul>
+<li><a href="#org3790718">2.1.1. Mr Kapasi</a></li>
+<li><a href="#orgd13750e">2.1.2. Mrs Das</a></li>
+<li><a href="#org45d8ef9">2.1.3. Mr Das</a></li>
+<li><a href="#org9a997bb">2.1.4. Children</a></li>
+</ul>
+</li>
+<li><a href="#org198d16c">2.2. Mrs Das + Mr Kapasi's relationship</a></li>
+<li><a href="#orgbf0f120">2.3. Themes</a>
+<ul>
+<li><a href="#org6a9617d">2.3.1. Identity</a></li>
+<li><a href="#org0733e4f">2.3.2. Communication</a></li>
+<li><a href="#org72188c7">2.3.3. Contrast between India and America</a></li>
+<li><a href="#org7285527">2.3.4. Parenting</a></li>
+<li><a href="#org848e517">2.3.5. Concealment</a></li>
+<li><a href="#orgedffc7d">2.3.6. Marriage Love</a></li>
+</ul>
+</li>
+<li><a href="#orgaf2745b">2.4. Symbols</a></li>
+</ul>
+</li>
+<li><a href="#org4f8beb7">3. Third &amp; Final continent</a>
+<ul>
+<li><a href="#orgccdec69">3.1. Title</a></li>
+<li><a href="#org1ddf33f">3.2. Narrator</a></li>
+<li><a href="#orgc26556f">3.3. Mrs Croft</a></li>
+<li><a href="#orgc05f002">3.4. Daughter</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org8247c6a" class="outline-2">
+<h2 id="org8247c6a"><span class="section-number-2">1</span> Mrs Sen's</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Identity and immigrant's experience
+</p>
+
+<ul class="org-ul">
+<li>Mr Sen tryies ro make Mrs Sen more independant</li>
+<li>"I have been gibing her driving lessons"</li>
+<li>"Mrs Sens is afraid to adapt
+
+<ul class="org-ul">
+<li>Highlights the differences between India (good) and the US</li>
+<li>She calls India "home"</li>
+<li>Keeps indian traditions: powder instead of ring</li>
+<li>Still says she is the image of her husband; presents her husband
+instead of her</li>
+</ul></li>
+</ul>
+
+<p>
+Contrast with Eliot's parents, who are american stereotypes
+</p>
+</div>
+
+<div id="outline-container-org8b40ca7" class="outline-3">
+<h3 id="org8b40ca7"><span class="section-number-3">1.1</span> Coming of age</h3>
+<div class="outline-text-3" id="text-1-1">
+<blockquote>
+<p>
+"You're a big boy now", she told him Eliot learns throughout the novel
+about stuff
+</p>
+</blockquote>
+</div>
+</div>
+
+<div id="outline-container-org678bd7f" class="outline-3">
+<h3 id="org678bd7f"><span class="section-number-3">1.2</span> Social progress</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+Mrs Sen learns about the american culture thanks to eliot
+</p>
+
+<p>
+Symbol of the car: very scared about dribing She used to be rich in
+India: had a chauffeur She always goes slowly, incapable to merge into
+the culture
+</p>
+
+<p>
+"Why won't anybody slow down ?" - Mrs Sen is puzzled with the complexity
+of this new situation
+</p>
+
+<p>
+Mrs Sen is homesick - she misses fish - Only reason for her to drive is
+get fish; reminds her of india - all of her clothing is from India
+(Sari, flip flops, powder) - People see her as a foreigner - she always
+uses the blade - Everyone has a blade in India; she is very skilled with
+it - one of the only things she is skilled with is indian. - Symbol of
+social unity - Doesn't wnat him to go near the blade: maternal figure
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6c388bf" class="outline-2">
+<h2 id="org6c388bf"><span class="section-number-2">2</span> Interpreter of Maladies</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Title: Mr Kapasi works as an interpreter for a doctor
+</p>
+</div>
+
+<div id="outline-container-org2ed70fd" class="outline-3">
+<h3 id="org2ed70fd"><span class="section-number-3">2.1</span> Characters</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-org3790718" class="outline-4">
+<h4 id="org3790718"><span class="section-number-4">2.1.1</span> Mr Kapasi</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<ul class="org-ul">
+<li>Has 2 jobs</li>
+<li>lost hope
+<ul class="org-ul">
+<li>used to know many languages; never accomplished his dream</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgd13750e" class="outline-4">
+<h4 id="orgd13750e"><span class="section-number-4">2.1.2</span> Mrs Das</h4>
+<div class="outline-text-4" id="text-2-1-2">
+<ul class="org-ul">
+<li>American tourists</li>
+<li>Only interested person in Kapasi's life</li>
+<li>Selfish an uncaring parent</li>
+<li>Very young parents - quite irresponsible</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org45d8ef9" class="outline-4">
+<h4 id="org45d8ef9"><span class="section-number-4">2.1.3</span> Mr Das</h4>
+<div class="outline-text-4" id="text-2-1-3">
+<ul class="org-ul">
+<li>Interested in India</li>
+<li>Very focused on India + the guide: tourist stereotype</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org9a997bb" class="outline-4">
+<h4 id="org9a997bb"><span class="section-number-4">2.1.4</span> Children</h4>
+<div class="outline-text-4" id="text-2-1-4">
+<ul class="org-ul">
+<li>Quite young children</li>
+<li>Illegitimate child (Ronny)</li>
+<li>Children have more responsibility than the parents
+<ul class="org-ul">
+<li>"Bobby make sure that your brother doesn't do anything stupid"</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org198d16c" class="outline-3">
+<h3 id="org198d16c"><span class="section-number-3">2.2</span> Mrs Das + Mr Kapasi's relationship</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>they develop a relationship</li>
+<li>Mr Kapasi has hope that Mrs Das will send him mail
+<ul class="org-ul">
+<li>Hope vanishes as the slip of paper flies away</li>
+</ul></li>
+<li>Mr Kapasi thinks his job is worthless
+<ul class="org-ul">
+<li>Mrs Das has an interest in his job</li>
+</ul></li>
+<li>Mrs Das says only to Kapasi that she had an illegitimate shild</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgbf0f120" class="outline-3">
+<h3 id="orgbf0f120"><span class="section-number-3">2.3</span> Themes</h3>
+<div class="outline-text-3" id="text-2-3">
+</div>
+<div id="outline-container-org6a9617d" class="outline-4">
+<h4 id="org6a9617d"><span class="section-number-4">2.3.1</span> Identity</h4>
+<div class="outline-text-4" id="text-2-3-1">
+<ul class="org-ul">
+<li>Mr Kapasi feels worthless / useless, especially in contrast with his
+initial dream of being an important translator</li>
+<li>Mrs Das changes this POV on his identity &#x2013;&gt; Mr Kapasi is an important
+person / more important than the doctor ?</li>
+<li>Did that job to save his son - shows his selflessness</li>
+<li>Very educated man; sacrificed all to save his son</li>
+</ul>
+
+<p>
+All of his hope of a "Renaissance" flew away with this piece of paper - fragility of the relationship
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0733e4f" class="outline-4">
+<h4 id="org0733e4f"><span class="section-number-4">2.3.2</span> Communication</h4>
+<div class="outline-text-4" id="text-2-3-2">
+<ul class="org-ul">
+<li>Lost all of his skills in languages: deterioration of communication
+with time</li>
+<li>No communication between mom and Dad</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org72188c7" class="outline-4">
+<h4 id="org72188c7"><span class="section-number-4">2.3.3</span> Contrast between India and America</h4>
+<div class="outline-text-4" id="text-2-3-3">
+<ul class="org-ul">
+<li>Look like Indians, but&#x2026;
+<ul class="org-ul">
+<li>Signs of US / And tourism</li>
+<li>Gums; clothing</li>
+<li>Takes pictures of everything</li>
+<li>Relies on his tour guide more on the local people</li>
+</ul></li>
+<li>Mr Das: knows all about India through the <i>tour book</i></li>
+<li>Mr Kapasi: knows all about US through <i>Dallas show</i></li>
+<li>Kapasi is shocked by her infidelity</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org7285527" class="outline-4">
+<h4 id="org7285527"><span class="section-number-4">2.3.4</span> Parenting</h4>
+<div class="outline-text-4" id="text-2-3-4">
+<ul class="org-ul">
+<li>Parents fight for nothing - like children
+<ul class="org-ul">
+<li>Irresponsible/immature parents</li>
+</ul></li>
+<li>Weird relation with childre: calls mother by first name</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org848e517" class="outline-4">
+<h4 id="org848e517"><span class="section-number-4">2.3.5</span> Concealment</h4>
+<div class="outline-text-4" id="text-2-3-5">
+<ul class="org-ul">
+<li>Mr Das and Mrs Das do not talk / interact</li>
+<li>Mrs Das has sunglasses - can't see through</li>
+<li>"kept it a secret for 8 whole years"</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgedffc7d" class="outline-4">
+<h4 id="orgedffc7d"><span class="section-number-4">2.3.6</span> Marriage Love</h4>
+<div class="outline-text-4" id="text-2-3-6">
+<ul class="org-ul">
+<li>Mrs Das and Mr Das - Mrs Kapasi and Mr Kapasi
+<ul class="org-ul">
+<li>They all have problems</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgaf2745b" class="outline-3">
+<h3 id="orgaf2745b"><span class="section-number-3">2.4</span> Symbols</h3>
+<div class="outline-text-3" id="text-2-4">
+<ul class="org-ul">
+<li><b>Puffed rice</b>
+<ul class="org-ul">
+<li>Mrs Das is careless, doesn't take care of what she does</li>
+<li>"not offering puffed rice to anyone"
+<ul class="org-ul">
+<li>shows her selfishness</li>
+</ul></li>
+<li>However drops it</li>
+</ul></li>
+<li><b>Monkeys</b>
+<ul class="org-ul">
+<li>embody a less; mrs das is punished for having an illegitimate child</li>
+<li>Symbolize India's culture</li>
+</ul></li>
+<li><b>Sunglasses</b>
+<ul class="org-ul">
+<li>Protection from everyone else</li>
+<li>Only takes them off when talking to Kapasi &#x2013;&gt; Shows intimacy</li>
+</ul></li>
+<li><b>Camera</b>
+<ul class="org-ul">
+<li>like sunglasses, covers him from the rest of the world</li>
+<li>doesn't take care of what he's taking a picture of
+<ul class="org-ul">
+<li>starving peasant</li>
+</ul></li>
+<li>doesn't really enjoy the trip - just takes pictures</li>
+</ul></li>
+<li><b>Clothes/Colors</b>
+<ul class="org-ul">
+<li>Tina's dress - reminds of a princess</li>
+<li>Contrasts with the Indian people
+<ul class="org-ul">
+<li>"narrow brown shoulders"</li>
+</ul></li>
+<li>Mrs Das' strawberry → young / passion; appetite for food, but also
+passiong through her affair</li>
+<li>Clothes also represent how tidy Mr Kapasi is depsite his poverty</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org4f8beb7" class="outline-2">
+<h2 id="org4f8beb7"><span class="section-number-2">3</span> Third &amp; Final continent</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgccdec69" class="outline-3">
+<h3 id="orgccdec69"><span class="section-number-3">3.1</span> Title</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+Asia (India) &rarr; Europe (London) &rarr; America (US)
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1ddf33f" class="outline-3">
+<h3 id="org1ddf33f"><span class="section-number-3">3.2</span> Narrator</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>Doesn't have a name: "Bengali man"</li>
+<li>Arranged marriage: attendd amarriage</li>
+<li>Quite prestigous intellect - LSE &amp; MIT</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgc26556f" class="outline-3">
+<h3 id="orgc26556f"><span class="section-number-3">3.3</span> Mrs Croft</h3>
+<div class="outline-text-3" id="text-3-3">
+<p>
+103 years old <b>SPLENDID</b>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc05f002" class="outline-3">
+<h3 id="orgc05f002"><span class="section-number-3">3.4</span> Daughter</h3>
+<div class="outline-text-3" id="text-3-4">
+<ul class="org-ul">
+<li>Reveals the vulnerability of Mrs Croft</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2018-09-13 Thu 19:34</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

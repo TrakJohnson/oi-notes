@@ -1,0 +1,1276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2018-09-13 Thu 19:34 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The Great Gatsby</title>
+<meta name="generator" content="Org mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="/home/theo/oi-notes-website/general.css" type="text/css"/>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">The Great Gatsby</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org279ebcd">1. Nick as an unreliable character</a></li>
+<li><a href="#org018b20b">2. Looking at settings</a>
+<ul>
+<li><a href="#orge8533c4">2.1. Commentary structure</a></li>
+<li><a href="#org67b6f2b">2.2. Oral structure</a></li>
+<li><a href="#orgae33278">2.3. Oral passage #1</a></li>
+</ul>
+</li>
+<li><a href="#orgb3c83bd">3. Women in the Great Gatsby</a></li>
+<li><a href="#orga635999">4. Upper class society</a>
+<ul>
+<li><a href="#org9a8c35c">4.1. Colors</a></li>
+</ul>
+</li>
+<li><a href="#orgcb24dbf">5. The Valley of Ashes</a>
+<ul>
+<li><a href="#orgb941dd5">5.1. Description - The Valley of Ashes</a></li>
+<li><a href="#orga01e7a7">5.2. Myrtle</a></li>
+</ul>
+</li>
+<li><a href="#orgf24ee64">6. Setting: New York from afar vs up close</a>
+<ul>
+<li><a href="#org3a7facb">6.1. Wolfsheim's office</a></li>
+<li><a href="#org3fc9879">6.2. More setting</a>
+<ul>
+<li><a href="#org72715d7">6.2.1. Queensboro Bridge</a></li>
+<li><a href="#org82e891d">6.2.2. Tom + Myrtle's appartment</a></li>
+<li><a href="#orgd7ac166">6.2.3. Cellar on 42nd Street</a></li>
+<li><a href="#org1f789af">6.2.4. La Plaza Suite</a></li>
+</ul>
+</li>
+<li><a href="#orgf61c066">6.3. Conclusion on setting</a></li>
+</ul>
+</li>
+<li><a href="#org255bd1b">7. Jordan's Narrative</a></li>
+<li><a href="#orgf653fa0">8. Gatsby's party</a></li>
+<li><a href="#orgb024a50">9. Oral Practice</a>
+<ul>
+<li><a href="#orgeda3968">9.1. First impression of Gatsby's</a></li>
+<li><a href="#orgf9624a1">9.2. First meeting between Gatsby and Daisy</a></li>
+<li><a href="#org24ea17a">9.3. Continued</a></li>
+<li><a href="#orgd8c933d">9.4. Green Light</a></li>
+<li><a href="#orgda9b5b4">9.5. Alcohol</a></li>
+<li><a href="#org6289703">9.6. Blindness</a></li>
+<li><a href="#orgfaca038">9.7. How justified is the title ?</a></li>
+<li><a href="#org20a4417">9.8. Portrayal of women in Gatsby</a></li>
+<li><a href="#org575d0e0">9.9. Colors</a></li>
+<li><a href="#orgc7615d9">9.10. How does the author grasp attention in the intro ?</a></li>
+<li><a href="#org38329e3">9.11. Comment about Fitzgerald's use of imagery in one  scene?</a></li>
+<li><a href="#org69d9543">9.12. Comment on the importance of parties in the novels?</a></li>
+</ul>
+</li>
+<li><a href="#org7a3465c">10. Final Chapter</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org279ebcd" class="outline-2">
+<h2 id="org279ebcd"><span class="section-number-2">1</span> Nick as an unreliable character</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+"I was within and without, simultaneously enchnated and repelled by the inexhaustible variety of life" - Nick
+</p>
+
+<ul class="org-ul">
+<li>Shows his lack of seriousness when narrating; he doesn't focus; wanders from place to place</li>
+<li>Under the effect alcohol</li>
+<li>Conflict between his feelings</li>
+</ul>
+
+<p>
+""Not Gatsby" I said shortly" - Nick when talking about bootleggers
+</p>
+
+<ul class="org-ul">
+<li>Naïve narrator - biased for some characters</li>
+<li>Doesn't know the truth &#x2013;&gt; Doesn't tell us the truth</li>
+<li>Spontaneously answers - preconceived image of Gatsby</li>
+</ul>
+
+
+<p>
+Gatsby with a "broken heart" &#x2013;&gt; He is seen by Nick as a victim; <b>romanticized</b>
+"his purposeless splendor" &#x2013;&gt; exagerration, hyperbole
+</p>
+
+<p>
+Only realise things one by one
+</p>
+
+<p>
+p.70 - Montenegro Medal
+</p>
+<ul class="org-ul">
+<li>Jay Gatsby</li>
+</ul>
+
+
+<p>
+Conclusion on Nick as a narrator:
+</p>
+<ul class="org-ul">
+<li>Naïve
+<ul class="org-ul">
+<li>Doensn't understand that Gatsby is in the bootlegger trade</li>
+</ul></li>
+<li>Overly confident in thinking he can "reserve all judgements"</li>
+<li>Quickly manipulated</li>
+<li>Graduated</li>
+<li>Gatsby has a dream (Finding Daisy) &#x2013;&gt; follows it to <b>the end</b>
+<ul class="org-ul">
+<li>Nick has no goal, he just wanders and ain't doin shit
+<ul class="org-ul">
+<li>He is a lost solider, restless</li>
+</ul></li>
+</ul></li>
+<li>He deceives us himself
+<ul class="org-ul">
+<li>Bragging about his family - some lies</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org018b20b" class="outline-2">
+<h2 id="org018b20b"><span class="section-number-2">2</span> Looking at settings</h2>
+<div class="outline-text-2" id="text-2">
+<blockquote>
+<p>
+And so it happened that on a warm windy evening I drove over to East Egg to see two old friends whom I scarcely knew at all. Their house was even more elaborate than I expected, a cheerful red-and-white Georgian Colonial mansion, overlooking the bay. The lawn started at the beach and ran toward the front door for a quarter of a mile, jumping over sun-dials and brick walks and burning gardens — finally when it reached the house drifting up the side in bright vines as though from the momentum of its run. The front was broken by a line of French windows, glowing now with reflected gold and wide open to the warm windy afternoon, and Tom Buchanan in riding clothes was standing with his legs apart on the front porch.
+</p>
+
+<p>
+He had changed since his New Haven years. Now he was a sturdy straw-haired man of thirty with a rather hard mouth and a supercilious manner. Two shining arrogant eyes had established dominance over his face and gave him the appearance of always leaning aggressively forward. Not even the effeminate swank of his riding clothes could hide the enormous power of that body — he seemed to fill those glistening boots until he strained the top lacing, and you could see a great pack of muscle shifting when his shoulder moved under his thin coat. It was a body capable of enormous leverage — a cruel body.
+</p>
+
+<p>
+His speaking voice, a gruff husky tenor, added to the impression of fractiousness he conveyed. There was a touch of paternal contempt in it, even toward people he liked — and there were men at New Haven who had hated his guts.
+</p>
+
+<p>
+“Now, don’t think my opinion on these matters is final,” he seemed to say, “just because I’m stronger and more of a man than you are.” We were in the same senior society, and while we were never intimate I always had the impression that he approved of me and wanted me to like him with some harsh, defiant wistfulness of his own.
+We talked for a few minutes on the sunny porch.
+</p>
+
+<p>
+“I’ve got a nice place here,” he said, his eyes flashing about restlessly.
+Turning me around by one arm, he moved a broad flat hand along the front vista, including in its sweep a sunken Italian garden, a half acre of deep, pungent roses, and a snub-nosed motor-boat that bumped the tide offshore.
+</p>
+</blockquote>
+</div>
+
+<div id="outline-container-orge8533c4" class="outline-3">
+<h3 id="orge8533c4"><span class="section-number-3">2.1</span> Commentary structure</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+<b>Possible structures:</b>
+</p>
+
+<ul class="org-ul">
+<li>Theme1</li>
+<li>Theme2</li>
+<li>Theme3</li>
+</ul>
+
+<p>
+OR
+</p>
+
+<ul class="org-ul">
+<li>Movement1</li>
+<li>Movement2</li>
+<li>Movement3</li>
+</ul>
+
+<p>
+(A movement is a chunk of the text)
+</p>
+</div>
+</div>
+
+<div id="outline-container-org67b6f2b" class="outline-3">
+<h3 id="org67b6f2b"><span class="section-number-3">2.2</span> Oral structure</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>Chronologically à peu près</li>
+<li>Stylistic devices, etc</li>
+<li>Organising but not too much</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-orgae33278" class="outline-3">
+<h3 id="orgae33278"><span class="section-number-3">2.3</span> Oral passage #1</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+We are presented to the Buchanan's, and especially to Tom through:
+</p>
+
+<ul class="org-ul">
+<li>Setting
+<ul class="org-ul">
+<li>Colonial house &#x2013;&gt; old rich, slave owner</li>
+<li>French windows &#x2013;&gt; old rich</li>
+<li>Overlooking the bay &#x2013;&gt; superiority</li>
+</ul></li>
+<li>Appearance
+<ul class="org-ul">
+<li>Straw hair</li>
+</ul></li>
+<li>Voice</li>
+</ul>
+
+<p>
+What impression ? What idea do they link to ?
+Answer the quetsion !
+</p>
+
+<p>
+<b>WHAT</b> is shown and <b>HOW</b> ?
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgb3c83bd" class="outline-2">
+<h2 id="orgb3c83bd"><span class="section-number-2">3</span> Women in the Great Gatsby</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Freedom is obtained through masculine traits
+</p>
+<ul class="org-ul">
+<li>Equality is obtained at a sacrifice</li>
+</ul>
+
+<p>
+Women are judged for getting drunk
+</p>
+<ul class="org-ul">
+<li>Sensuality is vulgar and negative</li>
+<li>Women trying to adapt are criticised</li>
+</ul>
+
+<p>
+Myrtle relies on men to escape her inferior social class
+</p>
+<ul class="org-ul">
+<li>Highlights disparity</li>
+</ul>
+
+<p>
+Fame and celebreity as a threat
+</p>
+
+<p>
+Nick's snoberry: stupid poor people !
+</p>
+<ul class="org-ul">
+<li>People failing at being flatters</li>
+</ul>
+
+<p>
+Nick: attracted by masculine traits
+</p>
+<ul class="org-ul">
+<li>Gatsbyy</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orga635999" class="outline-2">
+<h2 id="orga635999"><span class="section-number-2">4</span> Upper class society</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li>Upper class</li>
+<li>Patriarchal</li>
+<li>Eggs
+<ul class="org-ul">
+<li>Fertility / Life</li>
+<li>East (Wealthy old) / West (Wealthy new)
+<ul class="org-ul">
+<li>They are far apart - Rush for the modern West</li>
+<li>Opposition: old money and the American Dream / new money and uh what (?)</li>
+<li>The old: se reposent sur des lauriers of their money they received
+<ul class="org-ul">
+<li>Ironic: they "earned" their money .. ?</li>
+<li>Hypocritical / Looks down on the West
+<ul class="org-ul">
+<li>Tom <b>drinks</b> always !</li>
+<li>Slave trade / plantation owners</li>
+</ul></li>
+</ul></li>
+<li>The new: dirty, illegal money; don't know how they got rich
+<ul class="org-ul">
+<li>But they actually worked for it</li>
+</ul></li>
+</ul></li>
+<li>The Eggs look the same (from the outside) but are in fact different</li>
+<li>The egg shell protects / but its also fragile</li>
+</ul></li>
+</ul>
+</div>
+
+<div id="outline-container-org9a8c35c" class="outline-3">
+<h3 id="org9a8c35c"><span class="section-number-3">4.1</span> Colors</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li>White; Daisy</li>
+<li>Gold / Yellow &#x2013;&gt; fake gold ?</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgcb24dbf" class="outline-2">
+<h2 id="orgcb24dbf"><span class="section-number-2">5</span> The Valley of Ashes</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+<span class="underline">Chapter 2</span>
+</p>
+
+<p>
+Split up of the chapter:
+</p>
+
+<ol class="org-ol">
+<li>Industrial <b>setting</b></li>
+<li>T. J. Eckelburg <b>motif</b></li>
+<li>Industrial <b>setting</b></li>
+<li>Tom - <b>characterisation</b> in society</li>
+<li><b>Setting</b> - Tom + Myrtle's home / garage</li>
+<li><b>Characterisation</b> - Wilson</li>
+<li><b>Dialog</b> Tom-Wilson</li>
+<li>Myrtle <b>Description</b></li>
+</ol>
+</div>
+
+<div id="outline-container-orgb941dd5" class="outline-3">
+<h3 id="orgb941dd5"><span class="section-number-3">5.1</span> Description - The Valley of Ashes</h3>
+<div class="outline-text-3" id="text-5-1">
+<p>
+"Ash-gray men swarm up with leaden spades and stir up an impenetrable cloud"
+</p>
+
+<ul class="org-ul">
+<li>Insect imagery ("swarming", "crawl")
+<ul class="org-ul">
+<li>Treated as subhuman; workers, blend in / machines to carry out work</li>
+</ul></li>
+<li>A lot of them</li>
+<li>Ashes =&gt; what is left of the fire
+<ul class="org-ul">
+<li>Fire cannot be restarted, fire has been transferred to the eggs</li>
+<li>The valley of ashes stores the waste of the rich eggs</li>
+</ul></li>
+<li>Farm of ashes: <b>oxymoron</b>
+<ul class="org-ul">
+<li>Farm is renewal, growth</li>
+<li>Ashes is death, no more hope</li>
+</ul></li>
+<li>No one wants to see what's happenning in the valley of ashes
+<ul class="org-ul">
+<li>clouds, inpenetrable, obscure</li>
+</ul></li>
+</ul>
+
+<p>
+"Doctor T.J. Eckleburg" &#x2013;&gt; what is he curing ?
+</p>
+<ul class="org-ul">
+<li>God ?</li>
+</ul>
+
+<p>
+"Yellow glasses"
+</p>
+<ul class="org-ul">
+<li>Yellow -&gt; gold / wealth ?</li>
+<li>More like yellow =&gt; <b>old</b></li>
+</ul>
+
+<p>
+"Evidently some wild wag of an oculist set them there to fatten his practice in the borough of Queen"
+</p>
+<ul class="org-ul">
+<li>Moved out &#x2013;&gt; no more hope</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-orga01e7a7" class="outline-3">
+<h3 id="orga01e7a7"><span class="section-number-3">5.2</span> Myrtle</h3>
+<div class="outline-text-3" id="text-5-2">
+<p>
+Mistress -&gt; normal
+Likes to "show her around"
+"The fact that he had one was insisted upon wherever he was known. His acquaintances resented the fact that he turned up in popular restaurants with her and, leaving her at a table, sauntered about, chatting with whomsoever he knew"
+</p>
+<ul class="org-ul">
+<li>Mistress is a possession</li>
+<li>Shows wealth, power, etc.</li>
+</ul>
+
+<p>
+Tom's violent character
+</p>
+<ul class="org-ul">
+<li>violence</li>
+<li>dominance, physically and socially</li>
+<li>Contrast with the ash-grey men: they are inactive, dead
+<ul class="org-ul">
+<li>Energy, life - linked to being rich</li>
+</ul></li>
+</ul>
+
+<p>
+"dust-covered wreck of a Ford"
+</p>
+<ul class="org-ul">
+<li>ashes, old</li>
+<li>Car is symbol of mobility / going forward: wreck shows they're going
+<ul class="org-ul">
+<li>Stuck in the valley of ashes</li>
+</ul></li>
+</ul>
+
+<p>
+"It had occurred to me that this shadow of a garage must be a blind, and that sumptuous and romantic apartments were concealed overhead"
+</p>
+<ul class="org-ul">
+<li>Foolish Nick imagining things - stupid Nick !</li>
+</ul>
+
+<p>
+"her body were continually smouldering"
+</p>
+<ul class="org-ul">
+<li>Reminds us of Tom's life</li>
+<li>Still has "fire" and energy -&gt; able to leave the valley of ashes, not dead</li>
+</ul>
+
+<p>
+Appearance: contradictory
+</p>
+<ul class="org-ul">
+<li>carries her flesh -&gt; not very attractive</li>
+<li>soft vs coarse (voice) =&gt;</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgf24ee64" class="outline-2">
+<h2 id="orgf24ee64"><span class="section-number-2">6</span> Setting: New York from afar vs up close</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-org3a7facb" class="outline-3">
+<h3 id="org3a7facb"><span class="section-number-3">6.1</span> Wolfsheim's office</h3>
+<div class="outline-text-3" id="text-6-1">
+<p>
+Protection
+</p>
+<ul class="org-ul">
+<li>Trying to hide Wolfsheim's presence</li>
+<li>Hypocrisy: heard Wolfsheim even though he's apparently not here</li>
+</ul>
+
+<p>
+Wolfsheim's storytelling
+</p>
+
+<p>
+Reality with Gatsby's friends
+</p>
+
+<ul class="org-ul">
+<li>"First time I saw him was when he come into Winebrenner’s poolroom at Forty-third Street and asked for a job. He hadn’t eat anything for a couple of days. ‘come on have some lunch with me,’ I sid. He ate more than four dollars’ worth of food in half an hour"
+<ul class="org-ul">
+<li>Wolfsheim appears as a saviour</li>
+</ul></li>
+</ul>
+
+<p>
+Quotes:
+</p>
+
+<blockquote>
+<p>
+Meyer Wolfsheim stood solemnly in the doorway, holding out both hands.
+</p>
+</blockquote>
+
+<blockquote>
+<p>
+Let us learn to show our friendship for a man when he is alive and not after he is dead,” he suggested. “After that my own rule is to let everything alone.
+</p>
+</blockquote>
+</div>
+</div>
+
+<div id="outline-container-org3fc9879" class="outline-3">
+<h3 id="org3fc9879"><span class="section-number-3">6.2</span> More setting</h3>
+<div class="outline-text-3" id="text-6-2">
+</div>
+<div id="outline-container-org72715d7" class="outline-4">
+<h4 id="org72715d7"><span class="section-number-4">6.2.1</span> Queensboro Bridge</h4>
+<div class="outline-text-4" id="text-6-2-1">
+<blockquote>
+<p>
+Over the great bridge, with the sunlight through the girders making a constant flicker upon the moving cars, with the city rising up across the river in white heaps and sugar lumps all built with a wish out of non-olfactory money.
+</p>
+</blockquote>
+
+<p>
+"non-olfactory money": clean, legal money
+</p>
+
+<blockquote>
+<p>
+A dead man passed us in a hearse heaped with blooms, followed by two carriages with drawn blinds, and by more cheerful carriages for friends. The friends looked out at us with the tragic eyes and short upper lips of southeastern Europe, and I was glad that the sight of Gatsby’s splendid car was included in their sombre holiday. As we crossed Blackwell’s Island a limousine passed us, driven by a white chauffeur, in which sat three modish negroes, two bucks and a girl. I laughed aloud as the yolks of their eyeballs rolled toward us in haughty rivalry.
+</p>
+</blockquote>
+
+<blockquote>
+<p>
+A dead man passed us in a hearse heaped with blooms
+</p>
+</blockquote>
+<ul class="org-ul">
+<li>Foreshadows death</li>
+</ul>
+
+
+<blockquote>
+<p>
+Anything can happen now that we've slid over the bridge
+</p>
+</blockquote>
+
+<ul class="org-ul">
+<li>Anything can become reality</li>
+<li>But also danger</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org82e891d" class="outline-4">
+<h4 id="org82e891d"><span class="section-number-4">6.2.2</span> Tom + Myrtle's appartment</h4>
+<div class="outline-text-4" id="text-6-2-2">
+<blockquote>
+<p>
+long white cake of apartment-house
+</p>
+</blockquote>
+<ul class="org-ul">
+<li>Luxurious</li>
+<li>However, its on ly the appearance / contrast with reality
+<ul class="org-ul">
+<li>"small" x3 in one sentence</li>
+</ul></li>
+<li>However also comparaison to the garden of Versailles
+<ul class="org-ul">
+<li>Nick is hesitating</li>
+</ul></li>
+</ul>
+
+<p>
+"dog-biscuits decomposing"
+</p>
+<ul class="org-ul">
+<li>pathetic</li>
+</ul>
+
+<p>
+"elaborate afternoon dress of cream coloured chiffon"
+</p>
+<ul class="org-ul">
+<li>Change appearance when they arrive in the house: its all acted out (?)
+<ul class="org-ul">
+<li>Staged show - similar to Gatsby</li>
+</ul></li>
+<li>Cream coloured != white</li>
+<li>"just a crazy old thing"
+<ul class="org-ul">
+<li>=&gt; "oh I'm really rich" etc etc: very pretentious</li>
+</ul></li>
+</ul>
+
+<p>
+Topics of conversation:
+</p>
+<ul class="org-ul">
+<li>Marriage + money</li>
+</ul>
+
+<blockquote>
+<p>
+The only picture was an over-enlarged photograph, apparently a hen sitting on a blurred rock. Looked at from a distance, however, the hen resolved itself into a bonnet, and the countenance of a stout old lady beamed down into the room
+</p>
+</blockquote>
+<ul class="org-ul">
+<li>Illusion: shady, don't know what it is</li>
+<li>When you get close you see something different</li>
+</ul>
+
+<blockquote>
+<p>
+Rang full of her artificial laughter
+</p>
+</blockquote>
+<ul class="org-ul">
+<li>happiness is artificial</li>
+</ul>
+
+
+<blockquote>
+<p>
+Mr. McKee was asleep on a chair with his fists clenched in his lap, like a photograph of a man of action. Taking out my handkerchief I wiped from his cheek the remains of the spot of dried lather that had worried me all the afternoon
+</p>
+</blockquote>
+
+<blockquote>
+<p>
+I was standing beside his bed and he was sitting up between the sheets, clad in his underwear, with a great portfolio in his hands.
+</p>
+</blockquote>
+</div>
+</div>
+
+<div id="outline-container-orgd7ac166" class="outline-4">
+<h4 id="orgd7ac166"><span class="section-number-4">6.2.3</span> Cellar on 42nd Street</h4>
+<div class="outline-text-4" id="text-6-2-3">
+<p>
+Appearance: cosmopolitain city, open to the world
+Real: the cellar is cold, dark - eyes not adapted, not welcoming
+</p>
+
+<p>
+Darker side of New York where illegal things happen - Wolfsheim
+</p>
+
+<p>
+Contrast with "The Old Metropole"
+</p>
+
+<p>
+Ferociously eating after talking about death
+</p>
+<ul class="org-ul">
+<li>Lack of <b>moral values</b>
+<ul class="org-ul">
+<li>Hint to how Gatsby made his money</li>
+</ul></li>
+</ul>
+
+<p>
+Death of <span class="underline">Rosy Rosenthal</span>
+</p>
+
+<p>
+Human molars: gives the idea of a cannibal
+</p>
+</div>
+</div>
+<div id="outline-container-org1f789af" class="outline-4">
+<h4 id="org1f789af"><span class="section-number-4">6.2.4</span> La Plaza Suite</h4>
+<div class="outline-text-4" id="text-6-2-4">
+<p>
+Plaza hotel: luxuous
+</p>
+<ul class="org-ul">
+<li>The weather is very hot</li>
+<li>There aren't enough windows
+<ul class="org-ul">
+<li>Foreshadows the growth of tension</li>
+</ul></li>
+</ul>
+
+<blockquote>
+<p>
+Mr. Nobody from Nowhere
+</p>
+</blockquote>
+<ul class="org-ul">
+<li>What Tom calls Gatsby</li>
+</ul>
+
+<p>
+They are rich, in a rich hotel, but they can't escape: suffocation
+</p>
+
+<p>
+Lack of windows =&gt; there is no escape 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf61c066" class="outline-3">
+<h3 id="orgf61c066"><span class="section-number-3">6.3</span> Conclusion on setting</h3>
+<div class="outline-text-3" id="text-6-3">
+<p>
+<b>Illusion</b>
+</p>
+
+<p>
+Appearance:
+</p>
+<ul class="org-ul">
+<li>Full of promise and very rich</li>
+</ul>
+
+<p>
+Truth:
+</p>
+<ul class="org-ul">
+<li>Illegal buisness, isolation, etc</li>
+<li>Daisy puts "cream", has a giant wardrobe
+<ul class="org-ul">
+<li>Always changes, not the real part</li>
+</ul></li>
+<li>Secretive: Wolfsheim's office and how hard it is to reach it</li>
+<li>Tom's view: extremely conservative; Tom says that New Money is like interracial marriage even though Gatsby was there before</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org255bd1b" class="outline-2">
+<h2 id="org255bd1b"><span class="section-number-2">7</span> Jordan's Narrative</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li>Image of Daisy</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf653fa0" class="outline-2">
+<h2 id="orgf653fa0"><span class="section-number-2">8</span> Gatsby's party</h2>
+<div class="outline-text-2" id="text-8">
+<p>
+Chapter 3
+Gatsby's parties are iconic in the novel
+Part of Gatsby's quest to impress and attract Daisy into West Egg, that is into the world of the New Money
+</p>
+
+<p>
+"We will see how this extract shows the greatness of Gatsby's party, through the descriptions of Gatsby's opulence as seen from the outside, then through the description of the luxurious inside and the exhibit of Gatsby's power through his servants, and finally  "
+Three parts: 
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-orgb024a50" class="outline-2">
+<h2 id="orgb024a50"><span class="section-number-2">9</span> Oral Practice</h2>
+<div class="outline-text-2" id="text-9">
+</div>
+<div id="outline-container-orgeda3968" class="outline-3">
+<h3 id="orgeda3968"><span class="section-number-3">9.1</span> First impression of Gatsby's</h3>
+<div class="outline-text-3" id="text-9-1">
+<p>
+First meeting between Nick and Gatsby =&gt; first impressions
+</p>
+<ul class="org-ul">
+<li>Introduced thanks to the war</li>
+<li>Mondaine and polite disccussion
+<ul class="org-ul">
+<li>They don't really talk about thei actual experience in the war</li>
+</ul></li>
+</ul>
+
+<p>
+Superficiality + theme of money
+</p>
+<ul class="org-ul">
+<li>Hydroplane</li>
+</ul>
+
+<p>
+Confusion: "this man, Gatsby": not very nice
+</p>
+
+<p>
+"invisible hedge": his house isn't important
+</p>
+
+<p>
+First impressoin last:
+</p>
+<ul class="org-ul">
+<li>Show opulence to nick</li>
+<li>However they don't really know each other</li>
+<li>Hyporcrisy / Superficiality</li>
+</ul>
+
+<p>
+No coincidence: Nick is naive thinking that Gats
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf9624a1" class="outline-3">
+<h3 id="orgf9624a1"><span class="section-number-3">9.2</span> First meeting between Gatsby and Daisy</h3>
+<div class="outline-text-3" id="text-9-2">
+<p>
+Cf. notes on pdf
+</p>
+
+<p>
+Gatsby's meeting is a huge disappointment; all of the buildup breaks down
+</p>
+</div>
+</div>
+
+<div id="outline-container-org24ea17a" class="outline-3">
+<h3 id="org24ea17a"><span class="section-number-3">9.3</span> Continued</h3>
+<div class="outline-text-3" id="text-9-3">
+<ul class="org-ul">
+<li>Hyperboles / time passing very fast</li>
+<li>All of his dreams resting on one person, on one impression
+<ul class="org-ul">
+<li>Very fragile</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-orgd8c933d" class="outline-3">
+<h3 id="orgd8c933d"><span class="section-number-3">9.4</span> Green Light</h3>
+<div class="outline-text-3" id="text-9-4">
+<ul class="org-ul">
+<li>Symbol of hope</li>
+<li>It is what Gatsby sees on the other side: East Egg</li>
+<li>Michaelis describes the car as green: it looked as hope, but its in fact yellow
+<ul class="org-ul">
+<li>Confusion between <span class="underline">money</span> and <span class="underline">hope</span> - money doesn't make happinnes</li>
+</ul></li>
+<li>At the end, Nick looks and doesn't see the Green Light anymore</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgda9b5b4" class="outline-3">
+<h3 id="orgda9b5b4"><span class="section-number-3">9.5</span> Alcohol</h3>
+<div class="outline-text-3" id="text-9-5">
+<ul class="org-ul">
+<li>Symbol of the illegal, of the "dark" money
+<ul class="org-ul">
+<li>Contrasts with Gatsb's parties, where there is the effusion of alcohol</li>
+</ul></li>
+<li>Daisy doesn't drink: alcohol can reveal personalities
+<ul class="org-ul">
+<li>Alters personality</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org6289703" class="outline-3">
+<h3 id="org6289703"><span class="section-number-3">9.6</span> Blindness</h3>
+<div class="outline-text-3" id="text-9-6">
+<ul class="org-ul">
+<li>Nick in his narrative is blind</li>
+<li>Owl-eyed man
+<ul class="org-ul">
+<li>"The books are real!" - he was expecting everything to be fake</li>
+<li>However they are not read: the detail in creating an imaginary person
+<ul class="org-ul">
+<li>Change of</li>
+</ul></li>
+</ul></li>
+<li>TJ Eckleburg's glasses</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgfaca038" class="outline-3">
+<h3 id="orgfaca038"><span class="section-number-3">9.7</span> How justified is the title ?</h3>
+<div class="outline-text-3" id="text-9-7">
+<ul class="org-ul">
+<li>Reflection of Nick's POV
+<ul class="org-ul">
+<li>"Great" ?</li>
+<li>Shows his adoration</li>
+<li>First impression</li>
+</ul></li>
+<li>"The Great Gatsby" sounds like a stage name</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org20a4417" class="outline-3">
+<h3 id="org20a4417"><span class="section-number-3">9.8</span> Portrayal of women in Gatsby</h3>
+<div class="outline-text-3" id="text-9-8">
+<ul class="org-ul">
+<li>Each character contributes to one part of the book
+<ul class="org-ul">
+<li><span class="underline">Daisy:</span> the rich woman / shows the partiarchal society</li>
+<li><span class="underline">Myrtle:</span> woman from the working class striving to join the upper class through her relationship with Tom Bunchanan
+<ul class="org-ul">
+<li>Difference in conception of</li>
+</ul></li>
+<li><span class="underline">Jordan</span>: Balancing girl, difficulty of being able to be a flapper / can't be both a man and a woman</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org575d0e0" class="outline-3">
+<h3 id="org575d0e0"><span class="section-number-3">9.9</span> Colors</h3>
+<div class="outline-text-3" id="text-9-9">
+<ul class="org-ul">
+<li>Yellow vs Gold - New vs Old Money</li>
+<li><span class="underline">White</span> vs <span class="underline">Cream</span>: Noble vs ThereWasAnAttempt</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgc7615d9" class="outline-3">
+<h3 id="orgc7615d9"><span class="section-number-3">9.10</span> How does the author grasp attention in the intro ?</h3>
+<div class="outline-text-3" id="text-9-10">
+<ul class="org-ul">
+<li>We don't know who Nick is</li>
+<li>We still don't know anything about Gatsby</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org38329e3" class="outline-3">
+<h3 id="org38329e3"><span class="section-number-3">9.11</span> Comment about Fitzgerald's use of imagery in one  scene?</h3>
+</div>
+
+<div id="outline-container-org69d9543" class="outline-3">
+<h3 id="org69d9543"><span class="section-number-3">9.12</span> Comment on the importance of parties in the novels?</h3>
+<div class="outline-text-3" id="text-9-12">
+<ul class="org-ul">
+<li>Parties are Gatsby's tools to his end: this is where he meets Nick</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7a3465c" class="outline-2">
+<h2 id="org7a3465c"><span class="section-number-2">10</span> Final Chapter</h2>
+<div class="outline-text-2" id="text-10">
+<ul class="org-ul">
+<li>What concluding messages are there about key themes ?</li>
+<li>What is revealed about characters ?</li>
+</ul>
+
+<blockquote>
+<p>
+At first I was surprised and confused; then, as he lay in his house
+and didn’t move or breathe or speak, hour upon hour, it grew upon me that I was
+responsible, because no one else was interested — interested, I mean, with that
+intense personal interest to which every one has some vague right at the end.
+</p>
+</blockquote>
+<ul class="org-ul">
+<li>Shows Gatsby's loneliness despite him appearing popular</li>
+<li>The only people that are around him, except for Nick, were either criminals or random people coming to his parties
+<ul class="org-ul">
+<li>Money != happiness</li>
+</ul></li>
+</ul>
+
+<blockquote>
+<p>
+But she and Tom had gone away early that afternoon, and taken baggage with them.
+</p>
+</blockquote>
+<ul class="org-ul">
+<li>Its every man for himself: when things go bad, no one is left</li>
+</ul>
+
+<blockquote>
+<p>
+scornful solidarity between Gatsby and me against them all.
+</p>
+</blockquote>
+
+<p>
+We learn about Wolfsheim's hypocrisy + his desire to not come: same as before, everyone for himself
+</p>
+
+
+<p>
+<b>Cycles and order</b>
+</p>
+<ul class="org-ul">
+<li>Gatsby's death is part of the order: it was inevitbale ?</li>
+</ul>
+
+<p>
+<b>Nick's perspective</b>
+</p>
+<ul class="org-ul">
+<li>Tainted narrative: Gatsby is only interested in what people can get him</li>
+<li>Gatsby is the master illusionist
+<ul class="org-ul">
+<li>Overuse of "old sport"</li>
+<li>Stage persona</li>
+</ul></li>
+</ul>
+
+<p>
+<b>American dream is hollow</b>
+</p>
+<ul class="org-ul">
+<li>People become consumer</li>
+</ul>
+
+<p>
+Owl-eyed man sees things as they realy are:
+</p>
+<ul class="org-ul">
+<li>"The poor son-of-a-bitch"</li>
+<li>"Amen to that" =&gt; he sees Gatsby as a real person, not just material
+<ul class="org-ul">
+<li>Praying goes back to the forgotten values</li>
+</ul></li>
+</ul>
+
+<p>
+Nick becomes what he says he is not:
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2018-09-13 Thu 19:34</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
