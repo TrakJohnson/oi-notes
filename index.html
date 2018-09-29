@@ -33,13 +33,24 @@
     }
     
     .category {
-      font-size: 1.3em;
+      font-size: 1.5em;
       width: 80%;
       margin: 20px;
       text-align: center;
       border: 5px solid gray;
-      padding: 100px 20px;
+      padding: 50px 10px;
+      height: 400px;
       width: 300px;
+    }
+
+    #history {
+      background-image: url("assets/history.jpg");
+      background-position: 450px -10px;
+      color: whitesmoke;
+    }
+
+    #english {
+      background: url("assets/english.jpg") no-repeat center;
     }
     
   </style>
@@ -47,8 +58,8 @@
     <h1>OI Notes</h1>
     <h3>2017 → 2019</h3>
     <div class="wrapper">
-      <a href="History/sitemap.html"><div class="category">History & Geography</div></a>
-      <a href="English/sitemap.html"><div class="category">English</div></a>
+      <a href="History/sitemap.html"><div class="category" id="history">History & Geography</div></a>
+      <a href="English/sitemap.html"><div class="category" id="english">English</div></a>
     </div>
   </body>
 </html>
