@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2018-11-12 Mon 22:55 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Bottom Billion - Chaps. 1 &amp; 6</title>
+<meta name="generator" content="Org mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="/home/theo/oi-notes-website/general.css" type="text/css"/><link rel="stylesheet" href="/oi-notes/general.css" type="text/css"/>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Bottom Billion - Chaps. 1 &amp; 6</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org5e71ad1">1. Chapter 1</a>
+<ul>
+<li><a href="#org94bad8e">1.1. Traps, and the countries caught in them</a></li>
+<li><a href="#org42aebbb">1.2. The role of growth in development</a></li>
+</ul>
+</li>
+<li><a href="#org33acf3e">2. Chapter 2</a>
+<ul>
+<li><a href="#orgfd1c236">2.1. Trade and the Bottom Billion</a></li>
+<li><a href="#orgb044d14">2.2. Capital Flows and the Bottom Billion</a>
+<ul>
+<li><a href="#orgeda7d43">2.2.1. Private Capital Inflows</a></li>
+<li><a href="#org64dcfe0">2.2.2. Private Capital outflows</a></li>
+</ul>
+</li>
+<li><a href="#orgcf9566c">2.3. Migration and the Bottom Billion</a></li>
+<li><a href="#orgf5d26d8">2.4. Life in Limbo: Out of the Frying Pan . . .</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<blockquote>
+<p>
+So far, our efforts have been paltry: through inertia, ignorance, and incompetence, we have stood by and watched them lose.
+</p>
+</blockquote>
+
+<blockquote>
+<p>
+What are Sub-Saharan’s challenges to development?
+</p>
+</blockquote>
+
+<div id="outline-container-org5e71ad1" class="outline-2">
+<h2 id="org5e71ad1"><span class="section-number-2">1</span> Chapter 1</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>Shrinking Third World</li>
+<li>However it is also getting harder to go out of the Third World
+<ul class="org-ul">
+<li>Group of countries "falling behind, falling apart"</li>
+</ul></li>
+</ul>
+
+<p>
+Development <b>biz</b>:
+</p>
+<ul class="org-ul">
+<li>Aid agencies (IMF, etc) and companies that come for contracts</li>
+<li>They prefer to define the world by omitting the last billion - because they aren't going there</li>
+</ul>
+
+<blockquote>
+<p>
+The World Bank has large ofﬁces in every major middle-income country but not a single person resident in the Central African Republic.
+</p>
+</blockquote>
+
+<p>
+Development <b>buzz</b>:
+</p>
+<ul class="org-ul">
+<li>Created by celebrities &amp; NGOs</li>
+<li>They do want to help these countries, but have to simplify their message for its wide audience</li>
+</ul>
+
+<p>
+Governments of failing countries: <span class="underline">extremes</span>
+</p>
+<ul class="org-ul">
+<li>Corrupted</li>
+<li>Military leaders / murderers</li>
+<li>Are represented in world organizations, but are completely useless
+<ul class="org-ul">
+<li>Can't do anything, nothing to negotiate</li>
+</ul></li>
+</ul>
+</div>
+
+<div id="outline-container-org94bad8e" class="outline-3">
+<h3 id="org94bad8e"><span class="section-number-3">1.1</span> Traps, and the countries caught in them</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li>Development can be achieved in a normal fashion - as long as you don't fall into <span class="underline">traps</span></li>
+</ul>
+<blockquote>
+<ul class="org-ul">
+<li>The conflict trap</li>
+<li>The natural trap</li>
+<li>The trap of being landlocked with bad neighbors</li>
+<li>The trap of bad governance</li>
+</ul>
+</blockquote>
+<ul class="org-ul">
+<li>Traps can be escaped but you have to catch up after
+<ul class="org-ul">
+<li>However now it has become very hard to catch up (ex Madagascar and Mauritius)</li>
+</ul></li>
+<li>Defining traps is tricky</li>
+</ul>
+
+<p>
+Problems:
+</p>
+<ul class="org-ul">
+<li>Average life expectancy is 20 years less</li>
+<li>Infant mortality is 14%</li>
+<li>Malnutrition, etc</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org42aebbb" class="outline-3">
+<h3 id="org42aebbb"><span class="section-number-3">1.2</span> The role of growth in development</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+<b>Data</b>:
+</p>
+<ul class="org-ul">
+<li>We don't see problems because of how <b>averages</b> are made
+<ul class="org-ul">
+<li>We have to consider <span class="underline">population</span></li>
+</ul></li>
+<li>Have not benefited from the 1990s boom</li>
+<li>Countries that are fractured politically have no data
+<ul class="org-ul">
+<li>And they're the ones who make the average plummet</li>
+</ul></li>
+<li>The only improvements we see is likely due to the short-lived effects of resources discoveries</li>
+</ul>
+
+<blockquote>
+<p>
+Picture this as a billion people stuck in a train that is slowly rolling backward downhill.
+</p>
+</blockquote>
+
+<p>
+An accelerating divergence between the two worlds
+</p>
+<ul class="org-ul">
+<li>Before globalization, countries had their chance</li>
+</ul>
+
+<p>
+People are more concerned with social measures
+</p>
+<ul class="org-ul">
+<li>However Brazil is a good example of countries</li>
+</ul>
+
+<p>
+Suspicion towards general growth:
+</p>
+<blockquote>
+<p>
+Yet overwhelmingly, the problem of the bottom billion has not been that they have had the <i>wrong</i> type of growth, it is that they have not had <i>any</i> growth
+</p>
+</blockquote>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org33acf3e" class="outline-2">
+<h2 id="org33acf3e"><span class="section-number-2">2</span> Chapter 2</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>All countries have been through one or more traps
+<ul class="org-ul">
+<li>Depend ant on natural resources</li>
+<li>Civil war</li>
+<li>Landlocked / Resources scarce / Bad neighborhood</li>
+<li>Bad governance</li>
+</ul></li>
+<li>However they are not <b>infinite</b>, nor <b>unavoidable</b></li>
+<li>Convergence: great example is the EU</li>
+<li>Also countries like China</li>
+</ul>
+
+<p>
+However convergence is becoming harder:
+#+BEGIN<sub>QUOTE</sub>
+I think the sad reality is that although globalization has powered the majority of developing countries toward prosperity, it is now making things harder for these latecomers
+#+END<sub>QUOTE</sub>.
+</p>
+</div>
+
+<div id="outline-container-orgfd1c236" class="outline-3">
+<h3 id="orgfd1c236"><span class="section-number-3">2.1</span> Trade and the Bottom Billion</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>Transition from land-based economy to labor-based</li>
+<li>Developing countries had problems because of trade barriers imposed by the rich in the 1970s
+<ul class="org-ul">
+<li>Developing countries are less surrounded with good industry: low labor costs doesn't compensate for that because specific labor is impossible to find</li>
+<li>They need a spark to start the fire</li>
+<li>Madagascar almost got this spark for example, but politics got in the way</li>
+</ul></li>
+</ul>
+
+<blockquote>
+<p>
+It suggests to me that there was a moment—roughly the decade of the 1980s—when the wage gap was sufﬁciently wide that any low-wage developing country could break into global markets as long as it was not stuck in one of the traps
+</p>
+</blockquote>
+
+<ul class="org-ul">
+<li>When the wage gap is just right, the bottom billion countries weren't ready (still stuck in traps) and didn't hop onto the train</li>
+<li>This vision is quite dark as it suggests <b>fate</b> and that countries cannot do much themselves</li>
+</ul>
+
+<blockquote>
+<p>
+The most depressing reaction is for people to see the society as intrinsically ﬂawed
+</p>
+</blockquote>
+
+<ul class="org-ul">
+<li>Asia trying to secure natural resources and thus preventing the bottom billion from rising</li>
+</ul>
+
+<blockquote>
+<p>
+The Chinese are all over the countries of the bottom billion, securing natural resource deals. Superﬁcially this is good news: it is certainly raising prices, most obviously of oil, which some countries of the bottom billion export.
+</p>
+</blockquote>
+
+<blockquote>
+<p>
+The growth of global trade has been wonderful for Asia. But don’t count on trade to help the bottom billion. Based on present trends, it seems more likely to lock yet more of the bottom billion countries into the natural resource trap than to save them through export diversiﬁcation.
+</p>
+</blockquote>
+</div>
+</div>
+
+<div id="outline-container-orgb044d14" class="outline-3">
+<h3 id="orgb044d14"><span class="section-number-3">2.2</span> Capital Flows and the Bottom Billion</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>Public and private capital are needed
+<ul class="org-ul">
+<li>Aids only give public</li>
+<li>Africa has twice as much public capital as private (opposite of Asia)
+<ul class="org-ul">
+<li>Private investment required</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+
+<div id="outline-container-orgeda7d43" class="outline-4">
+<h4 id="orgeda7d43"><span class="section-number-4">2.2.1</span> Private Capital Inflows</h4>
+<div class="outline-text-4" id="text-2-2-1">
+<ul class="org-ul">
+<li>Capitalism: low capital should attract investors
+<ul class="org-ul">
+<li>However it doesn't, go more to middle income countries</li>
+<li>Risk taking it <b>too high</b></li>
+</ul></li>
+</ul>
+<blockquote>
+<p>
+The answer is that the perceived risk of investment in the economies of the bottom billion remains high.
+</p>
+</blockquote>
+
+<ul class="org-ul">
+<li>Even when countries do significant reforms (Angola going from 18 to 23 in the scores for risk taking)
+<ul class="org-ul">
+<li>We must still get to ~30-40 to get good investments</li>
+</ul></li>
+<li>Stuck in a vicious circle</li>
+</ul>
+
+<blockquote>
+<p>
+There are ﬁfty-eight countries in the bottom billion, and investors do not track them individually but think of them collectively as “Africa” and dismiss them
+</p>
+</blockquote>
+</div>
+</div>
+
+<div id="outline-container-org64dcfe0" class="outline-4">
+<h4 id="org64dcfe0"><span class="section-number-4">2.2.2</span> Private Capital outflows</h4>
+<div class="outline-text-4" id="text-2-2-2">
+<ul class="org-ul">
+<li>Corruption &amp; Capital flight</li>
+</ul>
+<blockquote>
+<p>
+This allows you to discover, for example, that by the end of military rule in Nigeria in 1998 Nigerians were holding around $100 billion of capital outside the country.
+</p>
+</blockquote>
+
+<blockquote>
+<p>
+By 1990, 38 percent of its private wealth was held abroad. (Africa)
+</p>
+</blockquote>
+
+<ul class="org-ul">
+<li>Credibility problem is not only scaring off foreigners, but also local investors</li>
+<li>The money is also lost from the inside</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgcf9566c" class="outline-3">
+<h3 id="orgcf9566c"><span class="section-number-3">2.3</span> Migration and the Bottom Billion</h3>
+<div class="outline-text-3" id="text-2-3">
+<ul class="org-ul">
+<li>Brain drain: many educated people leaving
+<ul class="org-ul">
+<li>Short of qualified people, and its getting worse</li>
+</ul></li>
+</ul>
+
+<blockquote>
+<p>
+Meanwhile, back in the countries of the bottom billion, the ﬁnancial sectors are run by people whose understanding of ﬁnancial economics does not equip them to manage much more
+than a piggy bank.
+</p>
+</blockquote>
+</div>
+</div>
+
+<div id="outline-container-orgf5d26d8" class="outline-3">
+<h3 id="orgf5d26d8"><span class="section-number-3">2.4</span> Life in Limbo: Out of the Frying Pan . . .</h3>
+<div class="outline-text-3" id="text-2-4">
+<ul class="org-ul">
+<li>To play in the global economy, you need to get rid of traps</li>
+<li>They don't get capital in, and all of their capital goes out
+<ul class="org-ul">
+<li>Because of risk</li>
+</ul></li>
+<li>Can't converge: even if their growth rate was a sign, it would be <i>way</i> too slow</li>
+<li>And they can still fall in the traps
+<ul class="org-ul">
+<li>As long as they are weak</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2018-11-12 Mon 22:55</p>
+<p class="validation"></p>
+</div>
+</body>
+</html>
