@@ -803,15 +803,15 @@ kbd{
 }
 
 #table-of-contents {
-    float: left;
-    position: fixed;
-    width: 400px;
-    left: 0px;
-    top: 0px;
-    height: 100%;
-    background: rgba(229, 232, 232, 0.5);
-    border: 1px solid #0096d6;
-    padding-left: 10px;
+    /* float: left; */
+    /* position: fixed; */
+    /* width: 400px; */
+    /* left: 0px; */
+    /* top: 0px; */
+    /* height: 100%; */
+    /* background: rgba(229, 232, 232, 0.5); */
+    /* border: 1px solid #0096d6; */
+    /* padding-left: 10px; */
 }
 
 .tag {
