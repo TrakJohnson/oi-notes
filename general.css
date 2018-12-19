@@ -2,9 +2,53 @@
 @import url('https://fonts.googleapis.com/css?family=Iosevka');
 @import url('https://fonts.googleapis.com/css?family=Martel:300');
 
+
+/* Fonts */
+/* martel-regular - latin */
+@font-face {
+  font-family: 'Martel';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Martel'), local('Martel-Regular'),
+       url('fonts/martel-v2-latin-regular.woff2') format('woff2'),
+       url('fonts/martel-v2-latin-regular.woff') format('woff');
+}
+
+/* libre-baskerville-regular - latin */
+@font-face {
+  font-family: 'Libre Baskerville';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Libre Baskerville'), local('LibreBaskerville-Regular'),
+       url('fonts/libre-baskerville-v5-latin-regular.woff2') format('woff2'),
+       url('fonts/libre-baskerville-v5-latin-regular.woff') format('woff');
+}
+/* libre-baskerville-italic - latin */
+@font-face {
+  font-family: 'Libre Baskerville';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Libre Baskerville Italic'), local('LibreBaskerville-Italic'),
+       url('fonts/libre-baskerville-v5-latin-italic.woff2') format('woff2'),
+       url('fonts/libre-baskerville-v5-latin-italic.woff') format('woff');
+}
+/* libre-baskerville-700 - latin */
+@font-face {
+  font-family: 'Libre Baskerville';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Libre Baskerville Bold'), local('LibreBaskerville-Bold'),
+       url('./fonts/libre-baskerville-v5-latin-700.woff2') format('woff2'),
+       url('./fonts/libre-baskerville-v5-latin-700.woff') format('woff');
+}
+
+
+/* main theme */
+
 body {
   margin: 2% auto;
   font-family: 'Libre Baskerville', serif;
+  font-size: 16px;
   background: whitesmoke;
 }
 
@@ -15,6 +59,14 @@ body {
 #content {
   margin: 20px auto;
   max-width: 65%;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  #content {
+    max-width: 100%;
+    margin: 2px auto;
+  }
 }
 
 /* Links & TOC */
@@ -39,33 +91,19 @@ h1, h2, h3, h4 {
   font-family: 'Martel', serif;
 }
 
-h1 {
-  font-size: 2.5em;
-}
-
-h2 {
-  font-size: 1.8em;
-  /* color: green; */
-}
-
-h3 {
-  font-size: 1.6em;
-}
-
-h4 {
-  font-size: 1.4em;
-}
-
-h5 {
-  font-size: 1.2em;
-}
+h1 { font-size: 2.5em; }
+h2 { font-size: 1.8em; }
+h3 { font-size: 1.6em; }
+h4 { font-size: 1.4em; }
+h5 { font-size: 1.2em; }
 
 /* Heading number */
 
 [class^='section-number'] {
   /* border: 3px solid grey; */
   padding: 1px 4px;
-  text-decoration: underline;
+  font-weight: bold;
+  /* text-decoration: underline; */
 }
 
 /* Quotes */
@@ -76,6 +114,7 @@ blockquote {
   border: 1px solid grey;
   padding: 15px;
   text-align: justify;
+  color: dimgrey;
 }
 
 blockquote > p {
