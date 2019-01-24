@@ -1,0 +1,773 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2019-01-24 Thu 20:06 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Middle East</title>
+<meta name="generator" content="Org mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="/home/theo/oi-notes-website/general.css" type="text/css"/><link rel="stylesheet" href="/oi-notes/general.css" type="text/css"/>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Middle East</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgdef5fef">1. Religious Divisions</a></li>
+<li><a href="#org34d807c">2. A Region of Conflict: the NEAR and MIDDLE East since the end of WW1</a>
+<ul>
+<li><a href="#org2fbe277">2.1. Key Questions</a></li>
+<li><a href="#org9750298">2.2. Key Words</a></li>
+<li><a href="#orga5455c9">2.3. Main Periods of time</a></li>
+<li><a href="#org44a23d9">2.4. Middle East from 1914 to 1948</a>
+<ul>
+<li><a href="#orgfaa10d1">2.4.1. The Impact of WW1</a></li>
+<li><a href="#org6a5acf7">2.4.2. Middle East WW2</a></li>
+<li><a href="#orgf17f057">2.4.3. After WW2</a></li>
+<li><a href="#org059cb89">2.4.4. 1st crisis: 1948 Wars</a></li>
+</ul>
+</li>
+<li><a href="#org96dcd8f">2.5. Midle East after 1948</a>
+<ul>
+<li><a href="#org7ec1843">2.5.1. Alliances</a></li>
+<li><a href="#org1548f19">2.5.2. 2nd crisis: Suez Canal Crisis</a></li>
+<li><a href="#orgcbccb78">2.5.3. 3rd crisis: 1967 War (6 day war)</a></li>
+<li><a href="#org17c8739">2.5.4. PLO</a></li>
+<li><a href="#org5e66f91">2.5.5. 4th crisis: Yom Kippur War</a></li>
+</ul>
+</li>
+<li><a href="#orgbecc713">2.6. Pan-stuff</a>
+<ul>
+<li><a href="#orgb21e1d9">2.6.1. Pan-Arabism</a></li>
+<li><a href="#org92b4831">2.6.2. Pan-Islamism</a></li>
+</ul>
+</li>
+<li><a href="#orgfa118c1">2.7. Middle East since 1979</a>
+<ul>
+<li><a href="#org418e42a">2.7.1. War against terrorism</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org55a64ca">3. Reading</a>
+<ul>
+<li><a href="#org69b49da">3.1. <span class="todo TODO">TODO</span> Put somewhere else</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgdef5fef" class="outline-2">
+<h2 id="orgdef5fef"><span class="section-number-2">1</span> Religious Divisions</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+<b>Shiia:</b> (~10%, ex: Iran)
+</p>
+<ul class="org-ul">
+<li>Traditional</li>
+<li>Islamist</li>
+</ul>
+
+<p>
+<b>Sunni:</b> (~90%, ex: Saudi Arabia)
+</p>
+<ul class="org-ul">
+<li>Traditional</li>
+<li>Islam Fundamentalists
+<ul class="org-ul">
+<li>Muslim Brotherhood</li>
+<li>Salafi (Salaf: old, traditional, root) (~12,000 in France)
+<ul class="org-ul">
+<li>Very religious but not politically active</li>
+<li>ISIS</li>
+<li>Jihadist minorities</li>
+<li>Washabism (Ben Laden was Wahabist + Jihadist)</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p>
+Always some more radical / involved in politics, 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org34d807c" class="outline-2">
+<h2 id="org34d807c"><span class="section-number-2">2</span> A Region of Conflict: the NEAR and MIDDLE East since the end of WW1</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org2fbe277" class="outline-3">
+<h3 id="org2fbe277"><span class="section-number-3">2.1</span> Key Questions</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>What are the different sources of conflict in the Middle East ?
+<ul class="org-ul">
+<li><i>Geographic, Religious, Political factors</i></li>
+</ul></li>
+<li>Why do these conflicts have such a resonance in the world ?
+<ul class="org-ul">
+<li><span class="underline">The Arab-Israeli conflicts</span>: causes, (what happened), consequences</li>
+</ul></li>
+</ul>
+
+<p>
+Example questions:
+</p>
+<ul class="org-ul">
+<li>How did the rise of Arab Nationalism contribute to the Arab conflicts</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org9750298" class="outline-3">
+<h3 id="org9750298"><span class="section-number-3">2.2</span> Key Words</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li><b>Zionism</b>: wh obelieves in the creation of a Jewish homeland (mount Zion)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orga5455c9" class="outline-3">
+<h3 id="orga5455c9"><span class="section-number-3">2.3</span> Main Periods of time</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+<b>1918 &rarr; 1923</b>: post WW1, breakup of the Ottoman Empire
+</p>
+
+<p>
+<b>1922 &rarr; 1948</b>: Role of nationalism, militarism &amp; socialism in regional conflicts
+</p>
+<ul class="org-ul">
+<li>Zionism, Pan-Arabism, Islamism</li>
+</ul>
+
+<p>
+<b>1956</b>:
+</p>
+<ul class="org-ul">
+<li>Arab-Israeli wars</li>
+<li>Peace accords, Camp David, Washington/Oslo accords</li>
+<li>Iranian Revolution &amp; US hostage crisis</li>
+<li>Iran-Iraq</li>
+<li>Lebanese Civil War</li>
+<li>Invasion of Kuwait</li>
+<li>Post 9/11</li>
+<li>Arab Spring</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org44a23d9" class="outline-3">
+<h3 id="org44a23d9"><span class="section-number-3">2.4</span> Middle East from 1914 to 1948</h3>
+<div class="outline-text-3" id="text-2-4">
+</div>
+<div id="outline-container-orgfaa10d1" class="outline-4">
+<h4 id="orgfaa10d1"><span class="section-number-4">2.4.1</span> The Impact of WW1</h4>
+<div class="outline-text-4" id="text-2-4-1">
+<ul class="org-ul">
+<li>Importance of <b>oil</b>, influence of Europe in the Middle East
+<ul class="org-ul">
+<li>Especially after WW1: strategic importance</li>
+</ul></li>
+<li>Sir Mark Sykes - François George Picot
+<ul class="org-ul">
+<li>Negotiations into the <b>Sykes Picot</b> agreement</li>
+<li>Before the end of the war (1916), split up the Middle East in case of Triple Entente win
+<ul class="org-ul">
+<li>France takes Syria and Lebanon</li>
+<li>The Ottoman Empire becomes Turkey</li>
+<li>UK gets Iraq, Jordan</li>
+</ul></li>
+</ul></li>
+<li><b>1932</b>: creation of Saudi Arabia (Ibn Saud)
+<ul class="org-ul">
+<li>Population that had felt <span class="underline">betrayed by the West</span> - didn't get their part of the Ottoman Empire &rArr; rise in nationalism</li>
+</ul></li>
+<li>British supported moderate Arabs, agreed to Iraq (1932) and Egypt's (1936) independence</li>
+<li>1944: <b>Aramco</b> (Arab American Company)
+<ul class="org-ul">
+<li>US agreed to give military assistance to Saudi Arabia in exchange for oil</li>
+</ul></li>
+<li>Everyone wants oil: 7 sisters cartel</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org6a5acf7" class="outline-4">
+<h4 id="org6a5acf7"><span class="section-number-4">2.4.2</span> Middle East WW2</h4>
+<div class="outline-text-4" id="text-2-4-2">
+<ul class="org-ul">
+<li><b>1939</b>: British White paper, no 2 states: all in one state</li>
+<li>Defense of Suez Canal done by the English
+<ul class="org-ul">
+<li>Important for oil</li>
+</ul></li>
+<li>Balfour decleration: creation of a "national home" (not a Jewish state !)
+<ul class="org-ul">
+<li>Churchill: says he can't do anything about it</li>
+</ul></li>
+<li>Very high Jewish immigration during WW2:
+<ul class="org-ul">
+<li>Jews: 83k (1922) &rarr; 528k (1944)</li>
+</ul></li>
+<li>Rebellions lead to the creation of the <b>Hagana</b> (Jewish Defense Force)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgf17f057" class="outline-4">
+<h4 id="orgf17f057"><span class="section-number-4">2.4.3</span> After WW2</h4>
+<div class="outline-text-4" id="text-2-4-3">
+<ul class="org-ul">
+<li>1947: A ship full of Jewish people was sent back to Germany
+<ul class="org-ul">
+<li>British govt gives responsibility to UN</li>
+<li>Resolution 181: divide Palestine into two sides</li>
+</ul></li>
+<li>May 14th, <b>1948</b>: British leave and Ben Gurion (leader of the Jews) proclaims the creation of Israel</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org059cb89" class="outline-4">
+<h4 id="org059cb89"><span class="section-number-4">2.4.4</span> 1st crisis: 1948 Wars</h4>
+<div class="outline-text-4" id="text-2-4-4">
+<ul class="org-ul">
+<li>Israels vs Egypt, Syria, Lebanon, Jordan (Arab Legion)</li>
+<li>First Palestinian refugees: the displaced Palestinians</li>
+<li>After the war, Israel: 55% of the British mandate to 79%</li>
+<li>Armistice but no peace treaty, no plan to handle refugees</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org96dcd8f" class="outline-3">
+<h3 id="org96dcd8f"><span class="section-number-3">2.5</span> Midle East after 1948</h3>
+<div class="outline-text-3" id="text-2-5">
+</div>
+<div id="outline-container-org7ec1843" class="outline-4">
+<h4 id="org7ec1843"><span class="section-number-4">2.5.1</span> Alliances</h4>
+<div class="outline-text-4" id="text-2-5-1">
+<ul class="org-ul">
+<li>US supports Israel, Saudi Arabia, Iran</li>
+<li>USSR supports Arab nationalism (to oppose itself to the US)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org1548f19" class="outline-4">
+<h4 id="org1548f19"><span class="section-number-4">2.5.2</span> 2nd crisis: Suez Canal Crisis</h4>
+<div class="outline-text-4" id="text-2-5-2">
+<ul class="org-ul">
+<li>Frustration growing in Egypt, with the British troops still present</li>
+<li><b>Nasser</b>: did a coup and overthrew the royal Egyptian
+<ul class="org-ul">
+<li>He wanted to be independent and neutral</li>
+</ul></li>
+</ul>
+
+<p>
+<b>1955</b>: Baghdad Pact, British ally with Turkey and Iran
+</p>
+<ul class="org-ul">
+<li>Nasser is unhappy ! Doesn't want any British rule in the region</li>
+<li>Doesn't want Western imperialism</li>
+</ul>
+
+<p>
+Nasser uses "Voices of the Arabs", radio, to prevent other Arab countries from joining the Pact
+</p>
+
+<p>
+February <b>1955</b>: Israel invades Gaza and heads to Egypt because they have been backing Palestinian attacks
+</p>
+
+<p>
+September <b>1955</b>: Arms deal with Czechoslovakia, he breaks his neutrality policy (and recognizes communist China later)
+</p>
+<ul class="org-ul">
+<li>Surprise, no one sees <i>that</i> coming</li>
+</ul>
+
+<p>
+July <b>1956</b>: Response from the British and US: cancel the loans they were giving to build the Aswan dam 
+</p>
+
+<p>
+Response: Nasser wants to nationalize the Suez canal
+</p>
+
+<p>
+Response:
+</p>
+<ul class="org-ul">
+<li>29th of October, Israel invades Egypt</li>
+<li>British and French bomb Egyptian airfields</li>
+<li>US backed UN peace treaty force them to get out of the zone
+<ul class="org-ul">
+<li>USSR supported this decision, wanted to avoid a global nuclear war</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgcbccb78" class="outline-4">
+<h4 id="orgcbccb78"><span class="section-number-4">2.5.3</span> 3rd crisis: 1967 War (6 day war)</h4>
+<div class="outline-text-4" id="text-2-5-3">
+<ul class="org-ul">
+<li>Israel is ally of US
+<ul class="org-ul">
+<li>Military aid</li>
+</ul></li>
+<li>June 5th, 1967: Israel declares war to everyone
+<ul class="org-ul">
+<li>6 days after, Jerusalem + West Bank (Water, Jordan river) + Golden Heights (Syrian artillery) + Gaza strips + Sinaï (buffer between them and Egypt) are in Israeli hand</li>
+<li>Death ratio: 15:1 death ratio</li>
+<li>Much better equipement and training for Israelis</li>
+</ul></li>
+<li>Jewish settlements are going to be built</li>
+<li>More refugees</li>
+</ul>
+
+<p>
+US sending $1B each year
+</p>
+</div>
+</div>
+
+<div id="outline-container-org17c8739" class="outline-4">
+<h4 id="org17c8739"><span class="section-number-4">2.5.4</span> PLO</h4>
+<div class="outline-text-4" id="text-2-5-4">
+<p>
+Palestinian Liberation Organization
+</p>
+<ul class="org-ul">
+<li>Launched attacks in Israel</li>
+<li>Not a govt controlled organization</li>
+<li>Lead by <b>Yasser Arafat</b></li>
+<li><span class="underline">Black September</span>: Jordan tried to get rid of it, they moved to Lebanon</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org5e66f91" class="outline-4">
+<h4 id="org5e66f91"><span class="section-number-4">2.5.5</span> 4th crisis: Yom Kippur War</h4>
+<div class="outline-text-4" id="text-2-5-5">
+<ul class="org-ul">
+<li>1970: Nasser dies, new president: Sadat
+<ul class="org-ul">
+<li>Wants peace, wants US to force Israel for peace</li>
+<li>Forces out USSR aid, to show US they aren't mean</li>
+<li>Doesn't work, as US is in Vietnam</li>
+</ul></li>
+<li>New Syrian leader: Assad
+<ul class="org-ul">
+<li>Wants to break the <span class="underline">no peace / no war</span> stalemate</li>
+</ul></li>
+</ul>
+
+<p>
+<b>October 6, 1973</b>: attack on the holy Israeli day Yom Kippur
+</p>
+<ul class="org-ul">
+<li>Attacked Sinaï + Golden heights</li>
+<li>In the end, Israel wins, however Sadat gets the US to be more friendly to Arab countries</li>
+</ul>
+
+<p>
+<b>1978</b>: <span class="underline">Land for Peace</span>:
+</p>
+<ul class="org-ul">
+<li><span class="underline">Sadat</span> &amp; Israeli prime minister <span class="underline">Begin</span></li>
+<li>Under the supervision of Carter, <b>Camp David Accords</b> / <b>Washington Agreements</b></li>
+<li>Egypt recognizes Israel as a state: first Arab state to do so</li>
+</ul>
+<p>
+Sadat gets assasinated in 1981
+</p>
+
+<p>
+<b>1982</b>: Israel attacks Lebanon, to kill PLO &amp; Palestinians
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgbecc713" class="outline-3">
+<h3 id="orgbecc713"><span class="section-number-3">2.6</span> Pan-stuff</h3>
+<div class="outline-text-3" id="text-2-6">
+</div>
+<div id="outline-container-orgb21e1d9" class="outline-4">
+<h4 id="orgb21e1d9"><span class="section-number-4">2.6.1</span> Pan-Arabism</h4>
+<div class="outline-text-4" id="text-2-6-1">
+<ul class="org-ul">
+<li>Unity is not on religion / unity around culture, ethnicity, language</li>
+<li>BA'ATH party: "unity, liberty, socialism"</li>
+<li>Israel is a threat to the Arab nation
+<ul class="org-ul">
+<li>All the Arab states are against, but they aren't organized</li>
+</ul></li>
+<li>Nasser was pro Pan-Arabic: points out disorganisation
+<ul class="org-ul">
+<li>Suez crisis: Arab victory</li>
+</ul></li>
+<li>Creation of the UAR: failed attempt to unite arabs</li>
+<li>Camp david accords weren't really arab accords</li>
+<li>Arab countries sided with Iran (while Iran isn't Arab: no unity)</li>
+<li><b>Arab League</b>: bring together as independant states
+<ul class="org-ul">
+<li>1949: Egypt, Saudi Arabia, Irak, Jordan, Lebanon</li>
+<li>Egypt is kicked out after Camp David accords</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org92b4831" class="outline-4">
+<h4 id="org92b4831"><span class="section-number-4">2.6.2</span> Pan-Islamism</h4>
+<div class="outline-text-4" id="text-2-6-2">
+<ul class="org-ul">
+<li>Political action linked to the Quran</li>
+<li>Provides identity and allegiance</li>
+<li>Wahhabism, Muslim Brotherhood, Hamas, Hezbollah</li>
+<li>1979: Islamic revolution, big turn of events, instability
+<ul class="org-ul">
+<li>Gives hope to extremist groups</li>
+</ul></li>
+<li>Afghanistan war: US supplied weapons to Afghan resistance, blah</li>
+<li>Iranian hostage crisis, etc</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgfa118c1" class="outline-3">
+<h3 id="orgfa118c1"><span class="section-number-3">2.7</span> Middle East since 1979</h3>
+<div class="outline-text-3" id="text-2-7">
+<p>
+After Cold War, US becomes the local "police"
+</p>
+<ul class="org-ul">
+<li>US presence in the region is heavily criticized by muslim / arab groups</li>
+</ul>
+
+<p>
+1987, Intifada: young rebels stoning Israeli soldiers
+</p>
+<ul class="org-ul">
+<li>Very mediatic</li>
+</ul>
+
+<p>
+<b>1993</b> Oslo accords: put an end to the antifada: create an official Palestinian authority
+</p>
+<ul class="org-ul">
+<li>Rabin + Arafat</li>
+<li>Govt is d'accord to leave some territory, however settlers that were implanted there for 30 years refused to leave
+<ul class="org-ul">
+<li>Jewish extremism rises, death of Benin</li>
+<li>Palestinian violence doesn't stop</li>
+</ul></li>
+</ul>
+
+<p>
+<b>1994</b>: Jordan recognizes Israel, in order to get peace
+</p>
+
+<p>
+<b>2000</b>: Sharon (Jewish Prime Minister) visits Temple Mount (sacred Muslim place)
+</p>
+<ul class="org-ul">
+<li>Seen very badly</li>
+</ul>
+</div>
+
+<div id="outline-container-org418e42a" class="outline-4">
+<h4 id="org418e42a"><span class="section-number-4">2.7.1</span> War against terrorism</h4>
+<div class="outline-text-4" id="text-2-7-1">
+<p>
+<b>Taliban</b>: student
+</p>
+<ul class="org-ul">
+<li>9/11 launches Afghanistan invasion and overthrowing of Taliban govt</li>
+<li>UN weapon inspectors</li>
+<li><b>2003</b> Second Gulf war, US invades Iraq (claims that they have evidence)</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org55a64ca" class="outline-2">
+<h2 id="org55a64ca"><span class="section-number-2">3</span> Reading</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org69b49da" class="outline-3">
+<h3 id="org69b49da"><span class="section-number-3">3.1</span> <span class="todo TODO">TODO</span> Put somewhere else</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+<b>1916</b>: Sikes Picot
+Arab Revolt:
+</p>
+<ul class="org-ul">
+<li><b>1936 - 1939</b>: Revolts, civil war for 3 years, British suppression</li>
+</ul>
+<p>
+<b>1917</b>: Balfour Declaration
+</p>
+<ul class="org-ul">
+<li>British promised the Jews a nation in Palestine, in an effort to get the US into the war (because US has an important Jewish population)</li>
+</ul>
+<p>
+Mandates:
+</p>
+<ul class="org-ul">
+<li>Treaty of Versailles didn't give anything to neither Arabs or Jews, all became mandates</li>
+</ul>
+<p>
+The Jews and Palestine
+The end of British Rule 
+The Birth of Israel
+Causes and effects of:
+</p>
+<ul class="org-ul">
+<li>1948 War</li>
+<li>1956 Suez Crises</li>
+</ul>
+<p>
+1978 Camp David accords
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2019-01-24 Thu 20:06</p>
+<p class="validation"></p>
+</div>
+</body>
+</html>

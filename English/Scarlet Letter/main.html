@@ -1,0 +1,707 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2019-01-18 Fri 10:40 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Scarlet Letter</title>
+<meta name="generator" content="Org mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="/home/theo/oi-notes-website/general.css" type="text/css"/><link rel="stylesheet" href="/oi-notes/general.css" type="text/css"/>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Scarlet Letter</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgc2dde3a">1. Setting</a>
+<ul>
+<li><a href="#org150ba0d">1.1. Chapter I</a></li>
+<li><a href="#orgcb6a963">1.2. Market place</a></li>
+<li><a href="#org8c80002">1.3. Town</a></li>
+<li><a href="#org5fb7160">1.4. Chapter VII - Governor's Hall</a></li>
+<li><a href="#orgb4d4909">1.5. Chapter XVI/XVII - Forest</a></li>
+<li><a href="#orgc3fd78b">1.6. Chapter XIV/XV - Sea</a></li>
+<li><a href="#org2fed185">1.7. Chapter V - Hester's House</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgc2dde3a" class="outline-2">
+<h2 id="orgc2dde3a"><span class="section-number-2">1</span> Setting</h2>
+<div class="outline-text-2" id="text-1">
+<blockquote>
+<p>
+How does setting reflect:
+</p>
+<ul class="org-ul">
+<li>Mood</li>
+<li>Role of characterss</li>
+<li>Themes</li>
+</ul>
+<p>
+How does this link to other works on the programme
+</p>
+</blockquote>
+</div>
+
+<div id="outline-container-org150ba0d" class="outline-3">
+<h3 id="org150ba0d"><span class="section-number-3">1.1</span> Chapter I</h3>
+<div class="outline-text-3" id="text-1-1">
+<blockquote>
+<p>
+A throng of bearded men, in sad-colored garments and gray, steeple-crowned hats, intermixed with women, some wearing hoods, and others bareheaded
+</p>
+</blockquote>
+<ul class="org-ul">
+<li>Groups, different stratus of society</li>
+<li>Individual identity vs group</li>
+</ul>
+
+<p>
+<b>Nature vs Society</b>
+</p>
+<ul class="org-ul">
+<li>Description of the Nature</li>
+<li>Nature has a <span class="underline">heart</span>, rose blossom, pity</li>
+</ul>
+
+<p>
+New World: Utopia
+</p>
+
+<p>
+Irony: Puritans have been persecuted &rarr; come to America, but focus on the impotrance of the <b>prison</b>
+</p>
+<ul class="org-ul">
+<li>They have come to reproduce what they were escaping</li>
+<li>Not learned from the past</li>
+</ul>
+
+<p>
+"oak" &rarr; symbol of England, irony in that it is what makes the prison
+</p>
+<ul class="org-ul">
+<li>Roses too, symbols of England everywhere</li>
+<li>Nothing has really changed: prison still overshadows</li>
+<li>"tall oaks" vs "rosebush" - Religious Authority vs Passion
+<ul class="org-ul">
+<li>oak breaks and rots at one point: you can't imprison forever</li>
+<li>The rosebush survives because you can try and oppress but <i>cannot</i> completely banish passion, desire, etc.
+<ul class="org-ul">
+<li>Nature will always be victorious</li>
+</ul></li>
+<li>Link with <b>Heany</b> poems</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgcb6a963" class="outline-3">
+<h3 id="orgcb6a963"><span class="section-number-3">1.2</span> Market place</h3>
+<div class="outline-text-3" id="text-1-2">
+<ul class="org-ul">
+<li>Idea of gossip, putting up to show, mocking
+<ul class="org-ul">
+<li>Individual vs society / <b>judgement</b></li>
+</ul></li>
+<li>Idea of the sin is <span class="underline">subjective</span>:
+<ul class="org-ul">
+<li>"Had there been a Papist among the crowd of Puritans, he might have seen in this beautiful woman, so picturesque in her attire and mien, and with the infant at her bosom, an object to remind him of the image of Divine Maternity" &rarr; irony over religion, etc</li>
+</ul></li>
+<li>Magistrates: law, restriction, etc</li>
+<li>Idea of a procession:
+<ul class="org-ul">
+<li>Most important people in town which come to see what happens to Hester</li>
+<li>Punishment is part of society - make people hate criminals to hold together
+<ul class="org-ul">
+<li>By puttin the blame on others, you ignore your sins &rarr; <b>scapegoating</b></li>
+</ul></li>
+</ul></li>
+<li><b>Dehumanisation of Hester</b> &rarr; she is "stripped" of her humanity</li>
+</ul>
+
+<p>
+<span class="underline">Text Analysis</span>: (But the point which drew all eyes &#x2026; letter in the market-place)
+</p>
+<ul class="org-ul">
+<li>References to magic, spells, mystery etc.
+<ul class="org-ul">
+<li>Theme of sin: magic is illegal</li>
+</ul></li>
+<li>Connection between magistrate and religion:
+<ul class="org-ul">
+<li><i>Religion is law</i></li>
+</ul></li>
+<li>Younger generation
+<ul class="org-ul">
+<li>Old woman (linked back to Elizabeth) vs young woman in the gossip</li>
+<li>References to age and tradition</li>
+</ul></li>
+<li>Her whole personal life is set out for the society to judge her
+<ul class="org-ul">
+<li>Private life can become public affairs</li>
+</ul></li>
+<li>Theme of beauty:
+<ul class="org-ul">
+<li>Makes a "halo", transformation of character</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org8c80002" class="outline-3">
+<h3 id="org8c80002"><span class="section-number-3">1.3</span> Town</h3>
+<div class="outline-text-3" id="text-1-3">
+<ul class="org-ul">
+<li>Hester's role vs society's rejection
+<ul class="org-ul">
+<li>all that she sows is present on people's clothes</li>
+<li>scarlet letter is the sin &rArr; everyone is a sinner</li>
+</ul></li>
+<li>Characterisation of the layers of society</li>
+<li>Looking at appearance in the high ranking class</li>
+<li>seemed so remote: dimmesdale is as if not more guilty than hester</li>
+<li>People see what they want to see / believe what they want to believe
+<ul class="org-ul">
+<li>Dimmesdale is characterized as a "saint on earth" to people</li>
+</ul></li>
+<li>Reference to indians shows the absurdity of judging on appearance
+<ul class="org-ul">
+<li>Indians thinking "A" means she is someone of high rank</li>
+<li><b>perception</b>, what you choose to see / believe</li>
+</ul></li>
+<li>link to gatsby: appearance</li>
+</ul>
+
+<p>
+p.141 ("sister of mercy"):
+</p>
+<ul class="org-ul">
+<li>not choosing vs sister of mercy (usually a choice)</li>
+<li>Society's heavy hand &rArr; determinism, fatality ?</li>
+<li>Society isa culprit as much as she is</li>
+<li>society has guilt over what is has done
+<ul class="org-ul">
+<li>Abel, hardworking but killed</li>
+</ul></li>
+<li>Refusal to accept</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5fb7160" class="outline-3">
+<h3 id="org5fb7160"><span class="section-number-3">1.4</span> Chapter VII - Governor's Hall</h3>
+<div class="outline-text-3" id="text-1-4">
+<ul class="org-ul">
+<li>Hester is trying to convince the Governor that she has the right to keep her child</li>
+</ul>
+
+<p>
+<b>Setting</b>:
+</p>
+<ul class="org-ul">
+<li>Lexical field of harsh materials: iron, wood, nothing very delicate</li>
+<li>"iron hammer": power, etc</li>
+<li>free-born, now a slave</li>
+<li>Past vs Present: role of England in American settlements</li>
+</ul>
+
+<blockquote>
+<p>
+The furniture of the hall consisted of some ponderous chairs, the
+backs of which were <b>elaborately carved</b> with wreaths of <b>oaken flowers</b>; and likewise a table in the
+same taste; the whole being of the <span class="underline">Elizabethan age</span>, or perhaps earlier, and heirlooms, transferred
+hither from the Governor’s <b>paternal</b> home.
+</p>
+</blockquote>
+<ul class="org-ul">
+<li>Setting reminds us of monarchy, luxuous castles</li>
+<li>Paternal home: still considers England to be his home</li>
+<li><b>oaken</b>: again, reference to England</li>
+<li>Overall atmosphere: sinister, rigid, old</li>
+</ul>
+
+<blockquote>
+<p>
+On the wall hung a <b>row</b> of portraits, representing the <b>forefathers</b> of the Bellingham lineage, some
+with <i>armour</i> on their breasts, and others with <i>stately ruffs</i> and <i>robes of peace</i>. All were characterized
+by the <span class="underline">sternness and severity</span> which old portraits so invariably put on; as if they were the ghosts,
+rather than the pictures, of departed worthies, and were gazing with harsh and intolerant criticism at
+the pursuits and enjoyments of living men.
+</p>
+</blockquote>
+<ul class="org-ul">
+<li>row: organization, rigidity</li>
+<li>forefathers: the ones that seeked Utopia</li>
+<li>opposition: armour / robes of peace</li>
+<li>eyes: idea of judgement (link to Gatsby)</li>
+<li><b>ghosts</b>: presence, opposition to a picture, they're <span class="underline">haunting</span>
+<ul class="org-ul">
+<li>the past is haunting the present, <span class="underline">New England is haunted by Old England</span></li>
+</ul></li>
+</ul>
+
+<blockquote>
+<p>
+a garden-walk, carpeted with closely shaven grass, and bordered with some rude and immature
+attempt at shrubbery. But the proprietor appeared already to have relinquished, as hopeless, the
+effort to perpetuate on this side of the Atlantic, in a hard soil and amid the close struggle for
+subsistence, the <b>native English taste for ornamental gardening</b>. Cabbages grew in plain sight; and a
+pumpkin vine, rooted at some distance, had run across the intervening space, and deposited one of
+its gigantic products directly beneath the hall-window; as if to warn the Governor that this great
+lump of vegetable gold was as rich an ornament as New England earth would offer him.
+</p>
+</blockquote>
+<ul class="org-ul">
+<li>opposition, the New world is incapable of evolution
+<ul class="org-ul">
+<li>needs England's ornemental gardens</li>
+</ul></li>
+<li>the Governor isn't cutting from his past, which he should according to Puritan simplicity
+<ul class="org-ul">
+<li>shown through the portaits and his desire to grow an ornamental garden</li>
+</ul></li>
+<li>however the New World refuses this &rarr; it is force to change
+<ul class="org-ul">
+<li>New England is still prosperous thanks to what it produces etc</li>
+<li><span class="underline">You cannot control nature</span>: you can't make something grow where its not meant to and vice-versa</li>
+<li>Extended metaphor to human nature, and Hester as Nature vs Society</li>
+</ul></li>
+<li>Only roses and apples can grow: you can't get rid of passion
+<ul class="org-ul">
+<li>You can't force values, <i>universality</i> of love/desire</li>
+<li>part of <b>human nature</b></li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgb4d4909" class="outline-3">
+<h3 id="orgb4d4909"><span class="section-number-3">1.5</span> Chapter XVI/XVII - Forest</h3>
+<div class="outline-text-3" id="text-1-5">
+<ul class="org-ul">
+<li>Wilderness, unpredictability, opposition to <b>society</b></li>
+<li>opposition to the town: no rules or persecution, opposed to Puritan law</li>
+<li>Secrecy &rArr; sin, confession and repentance
+<ul class="org-ul">
+<li>Dimmesdale and guilt</li>
+</ul></li>
+<li>Pearl is linked to the forest, opposed to society</li>
+</ul>
+
+<blockquote>
+<p>
+Hester Prynne remained constant in her resolve to make known to Mr. Dimmesdale, at whatever risk
+of present pain or ulterior consequences, the true character of the man who had crept into his
+intimacy. For several days, however, she vainly sought an opportunity of addressing him in some of
+the meditative walks which she knew him to be in the habit of taking, along the shores of the
+peninsula, or on the wooded hills of the neighboring country. There would have been no scandal,
+indeed, nor peril to the <b>holy whiteness</b> of the clergyman’s good fame, had she visited him in his own
+study; where many a penitent, ere now, had confessed sins of perhaps as deep a die as the one
+betokened by the scarlet letter. But, partly that she dreaded the secret or undisguised interference
+of old Roger Chillingworth, and partly that her conscious heart imputed suspicion where none could
+have been felt, and partly that both the minister and she would need the whole wide world to
+breathe in, while they talked together,—for all these reasons, Hester never thought of meeting him
+in any <b>narrower privacy than beneath the open sky</b>.
+</p>
+</blockquote>
+<ul class="org-ul">
+<li>Guilt is on both sides (society and individual)</li>
+<li>Irony in "holy whiteness"</li>
+<li>contrast between "narrower privacy" and "open sky"</li>
+<li>Dimmesdale is one confessing: the roles are reversed</li>
+</ul>
+
+<blockquote>
+<p>
+“More misery, Hester!—only the more misery!” answered the clergyman, with a bitter smile. “As
+concerns the good which I may appear to do, I have no faith in it. It must needs be a delusion. What
+can a ruined soul, like mine, effect towards the redemption of other souls?—or a polluted soul,
+towards their purification? And as for the people’s reverence, would that it were turned to scorn and
+hatred! Canst thou deem it, Hester, a consolation, that I must stand up in my pulpit, and meet so
+many eyes turned upward to my face, as if the light of heaven were beaming from it!—must see my
+flock hungry for the truth, and listening to my words as if a tongue of Pentecost were speaking!—and
+then look inward, and discern the black reality of what they idolize? I have laughed, in bitterness and
+agony of heart, at the contrast between what I seem and what I am! And Satan laughs at it!”
+</p>
+
+<p>
+[&#x2026;]
+</p>
+
+<p>
+“No, Hester, no!” replied the clergyman. “There is no substance in it! It is cold and dead, and can do
+nothing for me! <b>Of penance I have had enough! Of penitence there has been none!</b> Else, I should long
+ago have thrown off these garments of mock holiness, and have shown myself to mankind as they
+will see me at the judgment-seat. Happy are you, Hester, that wear the scarlet letter openly upon
+your bosom! Mine burns in secret! Thou little knowest what a relief it is, after the torment of a seven
+years’ cheat, to look into an eye that recognizes me for what I am! Had I one friend,—or were it my
+worst enemy!—to whom, when sickened with the praises of all other men, I could daily betake
+myself, and be known as the vilest of all sinners, methinks my soul might keep itself alive thereby.
+Even thus much of truth would save me! But, now, it is all falsehood!—all emptiness!—all death!”
+</p>
+</blockquote>
+<ul class="org-ul">
+<li>Dialogue</li>
+<li>Sin and religion, Dimmesdale is desperate</li>
+<li>Impact of the forest on the character: we see the real side of the story, not the godly dimmesdale but someone in sin</li>
+<li>Light / Dark (shadow of the woods): truth (forest) / lies (town), exposes his <b>guilt</b></li>
+<li>Confession</li>
+</ul>
+
+<p>
+<b>Isolation</b>: forest is cut from society, theme of nature, escape
+</p>
+
+<p>
+Psychological illness: link with Annie John, Dimmesdale is ill from his sin
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc3fd78b" class="outline-3">
+<h3 id="orgc3fd78b"><span class="section-number-3">1.6</span> Chapter XIV/XV - Sea</h3>
+<div class="outline-text-3" id="text-1-6">
+<ul class="org-ul">
+<li>Going away from Chillingworth</li>
+<li>Setting of reconciliation (?)</li>
+<li>Hope - to escape, as she tried to go with Dimmesdale to Europe
+<ul class="org-ul">
+<li>Move on, new beginnning: link to Annie John trying to escape
+<ul class="org-ul">
+<li>Things are repeating</li>
+</ul></li>
+</ul></li>
+<li>Relaxing: supernatural, fantasy, dream
+<ul class="org-ul">
+<li>Pearl and her innocence</li>
+</ul></li>
+</ul>
+
+<blockquote>
+<p>
+Pearl, whose activity of spirit never flagged, had been at no loss for amusement while her mother
+talked with the old gatherer of herbs. At first, as already told, she had flirted fancifully with her own
+image in a pool of water, beckoning the phantom forth, and—as it declined to venture—seeking a
+passage for herself into its sphere of impalpable earth and unattainable sky. Soon finding, however,
+that either she or the image was unreal, she turned elsewhere for better pastime. She made little
+boats out of <b>birch-bark</b>, and freighted them with <b>snail-shells</b>, and sent out more ventures on the
+mighty deep than any merchant in New England; but the larger part of them foundered near the
+shore. She seized a live <b>horseshoe</b> by the tail, and made prize of several five-fingers, and laid out a jelly-fish to melt in the warm sun. Then she took up the white foam, that streaked the line of the
+advancing tide, and threw it upon the breeze, scampering after it with winged footsteps, to catch the
+great snow-flakes ere they fell. Perceiving a flock of beach-birds, that fed and fluttered along the
+shore, the naughty child picked up her apron full of pebbles, and, creeping from rock to rock after
+these small sea-fowl, displayed remarkable dexterity in pelting them. One little gray bird, with a
+white breast, Pearl was almost sure, had been hit by a pebble and fluttered away with a broken
+wing. <b>But then the elf-child sighed, and gave up her sport; because it grieved her to have done harm
+to a little being that was as wild as the sea-breeze</b>, or as wild as Pearl herself.
+</p>
+</blockquote>
+<ul class="org-ul">
+<li>Pearl's link to nature
+<ul class="org-ul">
+<li>Lexical field of natural elements: bark, snail-shells, horsehoe, jellyfish</li>
+</ul></li>
+<li>Innocence</li>
+<li>Childish innonce yet she knows better than society
+<ul class="org-ul">
+<li>She stops hurting the bird on her own, while <b>society never stops</b> hurting others and making scapegoats</li>
+<li>She is the "devil" child yet she is less devilish than society, she has empathy and society doesn't</li>
+<li>Stones of silence and punishment &rarr; Biblical reference</li>
+</ul></li>
+</ul>
+
+<blockquote>
+<p>
+imitated, as best she could, on her own bosom, the decoration with which she
+was so familiar on her mother’s. A letter, —the letter A,—but freshly green, instead of scarlet! The
+child bent her chin upon her breast, and contemplated this device with strange interest; even as if
+the one only thing for which she had been sent into the world was to make out its hidden import.
+</p>
+
+<p>
+“I wonder if mother will ask me what it means!” thought Pearl.
+</p>
+</blockquote>
+<ul class="org-ul">
+<li>Pearl trying to imitate Hester and her A</li>
+<li>Not only Hester has been punished for her crime, Pearl seems to have integrated the punishment unconsciously</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2fed185" class="outline-3">
+<h3 id="org2fed185"><span class="section-number-3">1.7</span> Chapter V - Hester's House</h3>
+<div class="outline-text-3" id="text-1-7">
+<blockquote>
+<p>
+Hester Prynne, therefore, did not flee. On the outskirts of the town, <span class="underline">within the verge of the
+peninsula</span>, but not in close vicinity to any other habitation, there was a <b>small thatched cottage</b>. It
+had been built by an earlier settler, and abandoned, because the soil about it was too sterile for
+cultivation, while its comparative remoteness put it out of the sphere of that social activity which
+already marked the habits of the emigrants. It stood on the shore, <b>looking across a basin of the sea</b>
+at the forest-covered hills, towards the west. A <span class="underline">clump of scrubby trees</span>, such as alone grew on the
+peninsula, did not so much conceal the cottage from view, as seem to denote that here was some
+object which would fain have been, or at least ought to be, <b>concealed</b>. In this <span class="underline">little, lonesome
+dwelling</span>, with some slender means that she possessed, and by the license of the magistrates, who
+still kept an inquisitorial watch over her, Hester established herself, with her infant child. 
+</p>
+
+<p>
+A mystic shadow of suspicion immediately attached itself to the spot. Children, <span class="underline">too young to comprehend wherefore this woman should be shut out from the sphere of human charities</span>, would creep nigh enough to behold her plying her needle at the cottage-window, or standing in the door-way, or
+laboring in her little garden, or coming forth along the pathway that led townward; and, discerning
+the scarlet letter on her breast, would scamper off, with a <b>strange, contagious fear</b>.
+</p>
+</blockquote>
+
+<ul class="org-ul">
+<li>Isolation and marginality</li>
+<li>Next to a basin that isolates her from the town: link to Annie John, isolation by water
+<ul class="org-ul">
+<li>Next to the sea: an option available, that tempts her but she chooses not to escape</li>
+</ul></li>
+<li>Location of the house is not precise
+<ul class="org-ul">
+<li>References to darkness: people don't understand</li>
+<li>Children's view: people don't <b>understand</b> her, only see her as a sinner
+<ul class="org-ul">
+<li>Childrens are criticized for ignorance, but <i>do people know more ?</i></li>
+</ul></li>
+</ul></li>
+<li>Far away from civilisation: Wuthering Heights</li>
+</ul>
+
+<p>
+Metaphor of the sin as <b>roots</b> into the soil
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2019-01-18 Fri 10:40</p>
+<p class="validation"></p>
+</div>
+</body>
+</html>
