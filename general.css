@@ -121,6 +121,11 @@ blockquote > p {
   margin: 0;
 }
 
+/* source blocks */
+.SOURCE {
+  font-family: monospace;
+}
+
 /* footer */
 #postamble {
   text-align: center;
