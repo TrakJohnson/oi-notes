@@ -1,0 +1,780 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2019-04-27 Sat 20:59 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>US: Pathway to Power</title>
+<meta name="generator" content="Org mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="/home/theo/oi-notes-website/general.css" type="text/css"/><link rel="stylesheet" href="/oi-notes/general.css" type="text/css"/>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2019 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">US: Pathway to Power</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org82c817e">1. Key questions:</a></li>
+<li><a href="#org953e67e">2. Background</a></li>
+<li><a href="#org81eab45">3. 1918 &rarr; 1945 - From isolationism to interventionism</a>
+<ul>
+<li><a href="#org300e22a">3.1. WW1, the attempt to impose a peace settlement</a></li>
+<li><a href="#org51218b3">3.2. 1920-1941: Power without obligation / The US preserves its interest</a>
+<ul>
+<li><a href="#org8bee475">3.2.1. Return to isolationism: Never Again !</a></li>
+<li><a href="#orgff44e2b">3.2.2. Power without obligation</a></li>
+<li><a href="#org9ad40b0">3.2.3. The end of isolationism &amp; intervention / from biased neutrality to war</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org22b0804">4. The USA during the Cold War</a>
+<ul>
+<li><a href="#org449bf9a">4.1. The USA disseminates its power in a bi-polar world</a></li>
+<li><a href="#org209bc87">4.2. The start of the Cold War - US Unilateral Intervention</a>
+<ul>
+<li><a href="#org2d3a773">4.2.1. Unilateral intervention in the 50s</a></li>
+<li><a href="#org650b729">4.2.2. Difficulties in the 60s and 70s</a></li>
+<li><a href="#org400269a">4.2.3. 70s Nixon</a></li>
+<li><a href="#orgd31c8e1">4.2.4. Reagan</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgb50d86b">5. The USA in the World since the end of the Cold War</a>
+<ul>
+<li><a href="#org79cc811">5.1. Gulf War 1991</a></li>
+<li><a href="#orgfbe465d">5.2. 9/11</a></li>
+<li><a href="#org59f670e">5.3. Obama, multilateralism</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-org82c817e" class="outline-2">
+<h2 id="org82c817e"><span class="section-number-2">1</span> Key questions:</h2>
+<div class="outline-text-2" id="text-1">
+<blockquote>
+<ul class="org-ul">
+<li>How was the notion of power been shaped and transformed by the USA in the 20sh century ?</li>
+<li>What <b>military</b>, <b>political</b>, <b>ideological</b>, <b>economic</b> and <b>cultural</b> factors have contributed to making the USA a world power ?</li>
+<li>To what degree can the pathway to power for the USA and China be compared ?</li>
+</ul>
+</blockquote>
+</div>
+</div>
+
+<div id="outline-container-org953e67e" class="outline-2">
+<h2 id="org953e67e"><span class="section-number-2">2</span> Background</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+In 1890, the US's navy was smaller than Sweden or Turkey
+</p>
+<ul class="org-ul">
+<li>Foreign policy shaped the US's power</li>
+</ul>
+
+<p>
+<b>Monroe Doctrine</b> (1823):
+</p>
+<ul class="org-ul">
+<li>Separate the US and European spheres of influence (non-colonization)
+<ul class="org-ul">
+<li>New World vs Old World</li>
+</ul></li>
+<li>They didn't want to interfere anywhere &rarr; <span class="underline">isolationism</span></li>
+</ul>
+
+<blockquote>
+<p>
+Our business with them (Europe), and theirs with them is commerce, not politics and much less war
+</p>
+</blockquote>
+</div>
+</div>
+
+<div id="outline-container-org81eab45" class="outline-2">
+<h2 id="org81eab45"><span class="section-number-2">3</span> 1918 &rarr; 1945 - From isolationism to interventionism</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org300e22a" class="outline-3">
+<h3 id="org300e22a"><span class="section-number-3">3.1</span> WW1, the attempt to impose a peace settlement</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+Tried to stay neutral
+</p>
+<ul class="org-ul">
+<li>Made bank loans to both sides ($2.3B allies, $23M axis)</li>
+<li>Traded with both sides</li>
+<li>At the end, a lot of debt from other countries come in</li>
+</ul>
+
+<p>
+However&#x2026; 2 reasons:
+</p>
+<ul class="org-ul">
+<li>Germany's submarine warfare was threatening US ships</li>
+<li>Zimmerman (Germany's foreign secretary) telegram sent to Mexico to help</li>
+</ul>
+
+<p>
+<span class="underline">1917</span>: Declared war on Germany
+</p>
+
+<p>
+Sent 2M men, lost 50k (few compared to for ex British lose 20k first day of Somme)
+</p>
+
+<p>
+<span class="underline">Wilson's 14 points</span>:
+</p>
+<ul class="org-ul">
+<li>Tried to setup a peace treaty, <b>self-determination</b></li>
+<li>Setup the League of Nations
+<ul class="org-ul">
+<li>But Republicans are very unhappy and win majority in Congress &rarr; no one wants to go in League of Nations</li>
+</ul></li>
+</ul>
+
+<p>
+Four big:
+</p>
+<ul class="org-ul">
+<li>Wilson, Clemenceau, Orlando, Lloyd George</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org51218b3" class="outline-3">
+<h3 id="org51218b3"><span class="section-number-3">3.2</span> 1920-1941: Power without obligation / The US preserves its interest</h3>
+<div class="outline-text-3" id="text-3-2">
+</div>
+<div id="outline-container-org8bee475" class="outline-4">
+<h4 id="org8bee475"><span class="section-number-4">3.2.1</span> Return to isolationism: Never Again !</h4>
+<div class="outline-text-4" id="text-3-2-1">
+<ul class="org-ul">
+<li>Has become interventionist, but American people want to go back to isolationism</li>
+<li>Wanted to be internationally uninvolved, but trade forced them into political matters
+<ul class="org-ul">
+<li>Politics and money couldn't be separated</li>
+</ul></li>
+<li>Consumerism, Fordism, development &rarr; US is doing fine</li>
+<li>Majority of WASP
+<ul class="org-ul">
+<li>Hostile to Catholics, restrict immigration, turn to themselves</li>
+</ul></li>
+<li>Only <span class="underline">economic intervention</span> in Europe</li>
+</ul>
+
+
+<p>
+                              <b>United States</b>
+                  &#x2026;
+                ..   .
+(France &rarr; US, pay back loans)  ..     ..    (Germany &rarr; US, pay back loans)
+                  ..	.
+                ..		 .
+               ..		  ..
+         <b>France</b> &#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;.  <b>Germany</b>
+</p>
+
+<p>
+(Germany &rarr; France, pay back reparations)
+</p>
+
+
+<ul class="org-ul">
+<li><b>Kellogg-Brian Pact</b>: War was declared illegal (???)</li>
+<li><b>Simson Doctrine</b>: Doesn't recognize Japan's invasion of Manchuria</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgff44e2b" class="outline-4">
+<h4 id="orgff44e2b"><span class="section-number-4">3.2.2</span> Power without obligation</h4>
+<div class="outline-text-4" id="text-3-2-2">
+<p>
+Washington Armament Conference: reduce military strength, so reduce the risk of going to war
+</p>
+<ul class="org-ul">
+<li><b>1921-1922</b>: building diplomatic power in Europe</li>
+<li>Wanted to prevent Japanese invasion in China</li>
+</ul>
+
+<p>
+<span class="underline">1933</span>: Good neighbor policy, promises <b>no military intervention</b>
+</p>
+<ul class="org-ul">
+<li>Recognition of the USSR</li>
+</ul>
+
+<p>
+Rise of fascism in Europe:
+</p>
+<ul class="org-ul">
+<li>Congress tries to pass laws to avoid getting involved in any potential conflict that would happen</li>
+</ul>
+
+<p>
+Neutrality acts:
+</p>
+<ul class="org-ul">
+<li><b>1935</b>: prohibit the sales of arms and munitions to countries</li>
+<li><b>1936</b>: prohibit loans to countries at war</li>
+<li><b>1937</b>: extends to civil war (Spanish Civil war)</li>
+</ul>
+
+<p>
+However, in FDR's annual speech in January 1941:
+</p>
+<ul class="org-ul">
+<li>Promises freedom from fear, to free speech, from necessity, <b>everywhere</b> in the world</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org9ad40b0" class="outline-4">
+<h4 id="org9ad40b0"><span class="section-number-4">3.2.3</span> The end of isolationism &amp; intervention / from biased neutrality to war</h4>
+<div class="outline-text-4" id="text-3-2-3">
+<p>
+<b>November 1939</b>, weapons can be sold again to UK &amp; France in order to ensuire their safety
+<b>1940</b>: France's defeat leads to restoring conscription
+<b>March 1941</b>: <span class="underline">Lend-Lease</span>, weapons can be lent to US's allies
+<b>Aug 1941</b>: Atlantic charter, set the bases for the UN &rarr; FDR + Churchill
+</p>
+
+<p>
+<span class="underline">December 1941</span>: USA at war on 2 fronts
+</p>
+
+<p>
+<span class="underline">Victory Program-me</span>: mobilize US economy and industry fully
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org22b0804" class="outline-2">
+<h2 id="org22b0804"><span class="section-number-2">4</span> The USA during the Cold War</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org449bf9a" class="outline-3">
+<h3 id="org449bf9a"><span class="section-number-3">4.1</span> The USA disseminates its power in a bi-polar world</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+Plan for International Cooperation War Time Conferences (Diplomatic / Economic Power)
+</p>
+<ul class="org-ul">
+<li>Bretton woods, cf. International Governance</li>
+<li>US leads the way (vs Keynes)</li>
+</ul>
+
+<p>
+Terrain Conference:
+</p>
+<ul class="org-ul">
+<li>Agreed on the UN and weak post-war Germany (what the USSR wanted)</li>
+</ul>
+
+<p>
+Yalta:
+</p>
+<ul class="org-ul">
+<li>Agreements made, USSR goes to war against Japan, etc</li>
+</ul>
+
+<p>
+Potsdam:
+</p>
+<ul class="org-ul">
+<li>Allied control of defeated Germany and reparations</li>
+<li>Reparations issue</li>
+<li>Agreed on Poland's borders</li>
+<li>Russia joined war on far East</li>
+</ul>
+
+<p>
+US is always in the middle in the pictures
+</p>
+</div>
+</div>
+
+<div id="outline-container-org209bc87" class="outline-3">
+<h3 id="org209bc87"><span class="section-number-3">4.2</span> The start of the Cold War - US Unilateral Intervention</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+<span class="underline">Marshall Plan:</span> economic power
+<span class="underline">Berlin Blockade:</span> hard, military power
+<span class="underline">National Security Act:</span>: Establishes NSC, Department of Defense, CIA
+<span class="underline">NSC-68</span>: Allowed expansion of military spending ($13B &rarr; $45B)
+</p>
+<ul class="org-ul">
+<li>US is fully involved in Cold War</li>
+</ul>
+
+<p>
+<span class="underline">1947</span>: Rio Pact
+<span class="underline">1949</span>: NATO
+<span class="underline">1954</span>: SEATO, Southeast Asia Treaty Organization
+<span class="underline">1955</span>: CENTO, (Baghdad Pact)
+</p>
+
+<p>
+<span class="underline">1952</span>: US has H-Bombs, USSR does too
+</p>
+
+<p>
+<span class="underline">1957</span> Sputnik launched
+</p>
+<ul class="org-ul">
+<li>Creation of NASA</li>
+</ul>
+
+<p>
+<span class="underline">1960</span>: France tests A-Bomb
+</p>
+</div>
+
+<div id="outline-container-org2d3a773" class="outline-4">
+<h4 id="org2d3a773"><span class="section-number-4">4.2.1</span> Unilateral intervention in the 50s</h4>
+<div class="outline-text-4" id="text-4-2-1">
+<p>
+Asia: Korean war (1950-1953) (UN forces but mostly US)
+Middle-East: Suez
+</p>
+
+<p>
+<span class="underline">1957</span>: Eisenhower doctrine, US will defend the Middle East against Soviet attack
+</p>
+<ul class="org-ul">
+<li>Lebanon, US sent 14k troops in Lebanon</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org650b729" class="outline-4">
+<h4 id="org650b729"><span class="section-number-4">4.2.2</span> Difficulties in the 60s and 70s</h4>
+<div class="outline-text-4" id="text-4-2-2">
+<p>
+Asia: Vietnam War
+Latin America: Cuba
+Middle East: Yom Kippur (Oil ?)
+</p>
+
+<p>
+<span class="underline">Massive Retaliation</span>, Eisenhower ("more bang for the buck", hit hard with the money)
+</p>
+<ul class="org-ul">
+<li>Brinkmanship</li>
+<li>Domino theory</li>
+</ul>
+
+<p>
+Kennedy: "flexible response", wants to prevent war
+</p>
+<ul class="org-ul">
+<li>Diplomatic solution to Cuban missile crisis</li>
+</ul>
+
+<p>
+Vietnam:
+</p>
+<ul class="org-ul">
+<li>Failure of the military</li>
+<li>Govt hid what was going on in the beginning</li>
+<li>Deception in government</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org400269a" class="outline-4">
+<h4 id="org400269a"><span class="section-number-4">4.2.3</span> 70s Nixon</h4>
+<div class="outline-text-4" id="text-4-2-3">
+<ul class="org-ul">
+<li>End of Vietnam War (Catastrophic Failure)</li>
+<li>Opens doors with China (ping-pong diplomacy, communication, trades)</li>
+</ul>
+<p>
+é    - Kissinger: "political realism", foreign policy should be based only on power, not ideals or moral principles
+</p>
+<ul class="org-ul">
+<li>Visits China in 1972</li>
+<li>Carter recognizes China in 1979</li>
+<li>New balance of power: "vietnamization"
+<ul class="org-ul">
+<li>However continued confrontation with communist states</li>
+</ul></li>
+</ul>
+
+<p>
+Decline in power in the 70s
+</p>
+
+<p>
+Periods of detente
+</p>
+
+<p>
+<b>SALT</b>: Strategic Arms Limitation Talks
+</p>
+<ul class="org-ul">
+<li>USA and USSR agreed to not make new ABM (anti-ballistic) missiles</li>
+</ul>
+
+<p>
+<b>SALT II</b> not ratified because of invasion of Afghanistan
+</p>
+
+<p>
+Middle East: Shuttle Diplomacy
+</p>
+<ul class="org-ul">
+<li>Kissinger travelling back and forth between Israel and Egypt</li>
+</ul>
+
+<p>
+<b>1975</b>: Final Vietnam act signed
+</p>
+
+<p>
+<span class="underline">Carter Presidency</span>:
+</p>
+<ul class="org-ul">
+<li>Detente + Human rights</li>
+<li>Concerned with USSR's aid to Third World Communists</li>
+<li>However Carter's foreign policy was a mess:
+<ul class="org-ul">
+<li>Iranian revolution, Soviet invasion of Afghanistan, conservative revolution
+<ul class="org-ul">
+<li>&rarr; not really much detente left</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgd31c8e1" class="outline-4">
+<h4 id="orgd31c8e1"><span class="section-number-4">4.2.4</span> Reagan</h4>
+<div class="outline-text-4" id="text-4-2-4">
+<p>
+USSR is the "Evil Empire"
+</p>
+
+<p>
+<b>SDI</b>: Strategic Defense Initiative, Star Wars
+</p>
+<ul class="org-ul">
+<li>Military spending goes up by $100B during Reagan's First Term</li>
+<li>Reaffirm the US power &rarr; end of detente</li>
+<li>Against SALT and very expensive and not feasible</li>
+</ul>
+
+<p>
+<b>1986</b>: <span class="underline">Iran-Contra Scandal</span> US had sold arms to Shah in Iran
+</p>
+<ul class="org-ul">
+<li>To win the realease of US citizens held in Lebanon by pro-Iranian groups (even if they said)</li>
+<li>Money won from these sales went to the contra in Nicaragua (funding anti communist guerrillas)</li>
+</ul>
+
+<p>
+<b>Gorbachev</b> came to power (1985)
+</p>
+<ul class="org-ul">
+<li>Soviet Union couldn't keep up with the weapons</li>
+<li>Introduced Glasnost and Perestroika</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb50d86b" class="outline-2">
+<h2 id="orgb50d86b"><span class="section-number-2">5</span> The USA in the World since the end of the Cold War</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+<b>Hyper Power and World's Police</b>
+</p>
+</div>
+
+<div id="outline-container-org79cc811" class="outline-3">
+<h3 id="org79cc811"><span class="section-number-3">5.1</span> Gulf War 1991</h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li>US convinced the UNSC to fight in the Gulf War</li>
+<li>Success in there</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgfbe465d" class="outline-3">
+<h3 id="orgfbe465d"><span class="section-number-3">5.2</span> 9/11</h3>
+<div class="outline-text-3" id="text-5-2">
+<p>
+War on terror: American interests above all (allies, international law)
+</p>
+<ul class="org-ul">
+<li>Declares the right to punish "rogue states"</li>
+<li>Axis of evil: Iran, Iraq, &#x2026;, North Korea</li>
+<li>Invasion of Afghanistan in 2001 and Iraq 2003</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org59f670e" class="outline-3">
+<h3 id="org59f670e"><span class="section-number-3">5.3</span> Obama, multilateralism</h3>
+<div class="outline-text-3" id="text-5-3">
+<p>
+Shared burden of defending peace with USA Allies
+</p>
+
+<p>
+<b>2011</b>: France + UK intervene in Libya
+<b>2012</b>: France sent troops to Mali (US provides logistical support)
+</p>
+
+<p>
+From 2008: crisis consequences, reducing military
+</p>
+<ul class="org-ul">
+<li>Redefining priorities</li>
+</ul>
+
+<p>
+Trump: US is closing itself in again, back to unilateral policies
+</p>
+<ul class="org-ul">
+<li>Doesn't want to</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2019-04-27 Sat 20:59</p>
+<p class="validation"></p>
+</div>
+</body>
+</html>

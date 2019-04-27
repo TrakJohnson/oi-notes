@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville');
 @import url('https://fonts.googleapis.com/css?family=Iosevka');
 @import url('https://fonts.googleapis.com/css?family=Martel:300');
+@import url('https://fonts.googleapis.com/css?family=Arimo');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 
 /* Fonts */
@@ -47,13 +49,45 @@
 
 body {
   margin: 2% auto;
-  font-family: 'Libre Baskerville', serif;
-  font-size: 16px;
+  font-family: "Open Sans";
+  font-size: 17px;
   background: whitesmoke;
 }
 
 .title {
-  text-decoration: underline;
+  /* text-decoration: underline; */
+  font-family: "Libre Baskerville", serif;
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+  font-weight: normal;
+  font-family: 'Martel', serif;
+  color: #222;
+}
+
+h1:after {
+  display: block;
+  margin-bottom: 5px;
+}
+
+h2:after {  /* line below title */
+  content: ' ';
+  display: block;
+  border-bottom: 1px solid #777;
+  margin-top: 5px;
+}
+
+h1 { font-size: 2.5em; }
+h2 { font-size: 1.8em; }
+h3 { font-size: 1.6em; }
+h4 { font-size: 1.4em; }
+h5 { font-size: 1.2em; }
+
+/* Heading number */
+[class^='section-number'] {
+  padding: 1px 4px;
+  font-weight: bold;
 }
 
 #content {
@@ -61,13 +95,31 @@ body {
   max-width: 65%;
 }
 
+p, li {
+  color: #444;
+}
+
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   #content {
-    max-width: 100%;
+    max-width: 90%;
     margin: 2px auto;
   }
 }
+
+/* bullet points */
+/* ul { */
+/*   list-style-type: none; */
+/*   padding-left: 1em; */
+/* } */
+
+/* ul li:before { */
+/*   content: "–"; */
+/*   position: absolute; */
+/*   margin-left: -1em; */
+/*   font-weight: bold; */
+/*   color: #888; */
+/* } */
 
 /* Links & TOC */
 a {
@@ -79,31 +131,9 @@ a:hover {
   border-bottom: 1px dotted;
 }
 
-#table-of-contents {
-  line-height: 25px;
+#table-of-contents {rrrrrr
+  line-height: 23px;
   font-family: "Iosevka", monospace;
-}
-
-/* Headings */
-
-h1, h2, h3, h4 {
-  font-weight: lighter;
-  font-family: 'Martel', serif;
-}
-
-h1 { font-size: 2.5em; }
-h2 { font-size: 1.8em; }
-h3 { font-size: 1.6em; }
-h4 { font-size: 1.4em; }
-h5 { font-size: 1.2em; }
-
-/* Heading number */
-
-[class^='section-number'] {
-  /* border: 3px solid grey; */
-  padding: 1px 4px;
-  font-weight: bold;
-  /* text-decoration: underline; */
 }
 
 /* Quotes */
@@ -111,10 +141,11 @@ h5 { font-size: 1.2em; }
 blockquote {
   font-style: italic;
   line-height: 23px;
-  border: 1px solid grey;
+  border-left: 8px solid #BBB;
   padding: 15px;
   text-align: justify;
   color: dimgrey;
+  background-color: #EEE;
 }
 
 blockquote > p {
@@ -123,12 +154,18 @@ blockquote > p {
 
 /* source blocks */
 .SOURCE {
-  font-family: monospace;
+  font-family: "Iosevka", monospace;
 }
 
 /* footer */
 #postamble {
+  color: #FFF;
+  margin-top: 30px;
   text-align: center;
   font-style: italic;
+  font-size: 0.8em;
 }
 
+#postamble > * {
+  display: inline;
+}

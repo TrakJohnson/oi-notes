@@ -1,0 +1,700 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2019-04-27 Sat 20:59 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Globalization</title>
+<meta name="generator" content="Org mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="/home/theo/oi-notes-website/general.css" type="text/css"/><link rel="stylesheet" href="/oi-notes/general.css" type="text/css"/>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2019 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Globalization</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org9d760d3">1. Keywords</a></li>
+<li><a href="#orga690532">2. Introduction</a>
+<ul>
+<li><a href="#orga12190a">2.1. Definition</a></li>
+</ul>
+</li>
+<li><a href="#orga8d877d">3. History</a></li>
+<li><a href="#org624f8d0">4. Causes</a>
+<ul>
+<li><a href="#org928c229">4.1. Technology</a></li>
+<li><a href="#org526b50e">4.2. Economic doctrine</a></li>
+<li><a href="#orgad0c10b">4.3. Need for cooperation</a></li>
+</ul>
+</li>
+<li><a href="#org56ea4d4">5. Effects</a>
+<ul>
+<li><a href="#orgcac6e8b">5.1. Contagion</a></li>
+<li><a href="#orgcc9a4da">5.2. Constraint</a></li>
+<li><a href="#orgd3357aa">5.3. Impact on democracy</a></li>
+</ul>
+</li>
+<li><a href="#org99d8f84">6. Dimensions of Globalization</a>
+<ul>
+<li><a href="#orgdcd8989">6.1. Political</a></li>
+<li><a href="#orgc1fa490">6.2. Economic</a>
+<ul>
+<li><a href="#org2e3dbbd">6.2.1. Why has trade accelerated ?</a></li>
+<li><a href="#org1b9e2fb">6.2.2. Consequences</a></li>
+</ul>
+</li>
+<li><a href="#org5ab733d">6.3. Social / cultural</a></li>
+<li><a href="#orga81adbc">6.4. Linguistic</a></li>
+<li><a href="#org286f917">6.5. Demographics</a></li>
+<li><a href="#org50a8b08">6.6. Environmental</a></li>
+</ul>
+</li>
+<li><a href="#org6bafc17">7. Key Drivers/Actors</a>
+<ul>
+<li><a href="#orga079acd">7.1. The Contributors</a></li>
+<li><a href="#org4c5fa1d">7.2. More Developed Countries</a></li>
+<li><a href="#org6bd65d1">7.3. Developpping countries</a></li>
+<li><a href="#org9a85999">7.4. Obama speech</a></li>
+</ul>
+</li>
+<li><a href="#orgaeb2eb1">8. Case Studies</a>
+<ul>
+<li><a href="#org1ece14d">8.1. Nike</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org9d760d3" class="outline-2">
+<h2 id="org9d760d3"><span class="section-number-2">1</span> Keywords</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>Link/Connection/Inter-connection</li>
+<li>Compression of space</li>
+<li>Integration</li>
+</ul>
+
+<p>
+<b>Key Questions</b>:
+</p>
+<ul class="org-ul">
+<li>What is globalization ? (being able to reflect through a product/city)</li>
+<li>How does it help or hinder development ?</li>
+<li>Product and how it reflects globalization</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orga690532" class="outline-2">
+<h2 id="orga690532"><span class="section-number-2">2</span> Introduction</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Links between flows:
+</p>
+<ul class="org-ul">
+<li>People</li>
+<li>Goods (physical &amp; capital)</li>
+<li>Information</li>
+</ul>
+
+<p>
+Looking at globalisation through a <span class="underline">product</span> or <span class="underline">cities</span>
+</p>
+<ul class="org-ul">
+<li>Highlighting <b>actors</b> and <b>flows</b></li>
+</ul>
+
+<blockquote>
+<p>
+How does a product/city show the process of globalization ?
+</p>
+</blockquote>
+</div>
+
+<div id="outline-container-orga12190a" class="outline-3">
+<h3 id="orga12190a"><span class="section-number-3">2.1</span> Definition</h3>
+<div class="outline-text-3" id="text-2-1">
+<blockquote>
+<p>
+Globalizatoin as a concept refers both to the <b>compression</b> of the world and the intensification of oconsciousness of the world as a whole.
+</p>
+</blockquote>
+
+<p>
+<span class="underline">Integration</span> of Trade, Finance, People: connect freely, one global marketplace
+</p>
+<ul class="org-ul">
+<li>Changing technology, international trade increases</li>
+<li>Marketing: producing more, clothing changing every 6 weeks
+<ul class="org-ul">
+<li>Producing at cheap wages, consumption en masse</li>
+<li>Disposable products, no more repairing</li>
+</ul></li>
+</ul>
+
+<p>
+<span class="underline">Compression</span> of space: further, faster, cheaper
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orga8d877d" class="outline-2">
+<h2 id="orga8d877d"><span class="section-number-2">3</span> History</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Starts with the growth of sea trade, then industrial revolution accelerates
+</p>
+<ul class="org-ul">
+<li>After WW2 picks up very fast (affluent society)</li>
+</ul>
+
+<p>
+<b>NIDL</b>: New International Division of Labor
+</p>
+<ul class="org-ul">
+<li>Division of labor: specialization in the production, specific steps done by specific countries / companies / people</li>
+<li>Spreads the production process</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org624f8d0" class="outline-2">
+<h2 id="org624f8d0"><span class="section-number-2">4</span> Causes</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org928c229" class="outline-3">
+<h3 id="org928c229"><span class="section-number-3">4.1</span> Technology</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li>Reduces distances:
+<ul class="org-ul">
+<li>Physical distances, people can move much faster and further</li>
+<li>Internet:</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org526b50e" class="outline-3">
+<h3 id="org526b50e"><span class="section-number-3">4.2</span> Economic doctrine</h3>
+<div class="outline-text-3" id="text-4-2">
+<ul class="org-ul">
+<li>Open, Liberal economies and low trade barriers seen as the virtuous route to all good things
+<ul class="org-ul">
+<li>winner against communism</li>
+<li>US hegemony during and after Cold War</li>
+<li>backed by IMF &amp; WTO</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgad0c10b" class="outline-3">
+<h3 id="orgad0c10b"><span class="section-number-3">4.3</span> Need for cooperation</h3>
+<div class="outline-text-3" id="text-4-3">
+<ul class="org-ul">
+<li>EU to solve war problems</li>
+<li>Deal with common, worldwide problems: climate change for ex.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org56ea4d4" class="outline-2">
+<h2 id="org56ea4d4"><span class="section-number-2">5</span> Effects</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-orgcac6e8b" class="outline-3">
+<h3 id="orgcac6e8b"><span class="section-number-3">5.1</span> Contagion</h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li>Political, Econmic and Social events spread <b>rapidly</b>
+<ul class="org-ul">
+<li>Financial crises in late 1990s + 2008</li>
+<li>Arab revolts</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgcc9a4da" class="outline-3">
+<h3 id="orgcc9a4da"><span class="section-number-3">5.2</span> Constraint</h3>
+<div class="outline-text-3" id="text-5-2">
+<ul class="org-ul">
+<li>Put limits on what <b>states</b> can do - decrease sovereignty ?</li>
+<li>Capital mobility increase: can move from state to state
+<ul class="org-ul">
+<li>States want to prevent <span class="underline">capital flight</span> - people and money</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgd3357aa" class="outline-3">
+<h3 id="orgd3357aa"><span class="section-number-3">5.3</span> Impact on democracy</h3>
+<div class="outline-text-3" id="text-5-3">
+<ul class="org-ul">
+<li>Democratically elected leaders are constrained by organization organizations and important world powers
+<ul class="org-ul">
+<li>Voters can't control what their state does</li>
+</ul></li>
+<li>Democracy spreads faster - international standard of political legitimacy</li>
+<li></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org99d8f84" class="outline-2">
+<h2 id="org99d8f84"><span class="section-number-2">6</span> Dimensions of Globalization</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-orgdcd8989" class="outline-3">
+<h3 id="orgdcd8989"><span class="section-number-3">6.1</span> Political</h3>
+<div class="outline-text-3" id="text-6-1">
+<ul class="org-ul">
+<li>UN to develop cooperation, local: EU</li>
+<li>Key meetings: G8 (8 largest economies), G20, etc. &rarr; political organization, dealing with economic issues</li>
+<li>International relations and comparative politics - everything is intertwined</li>
+<li>Transnational issues: require state cooperation</li>
+<li>Increase in political cooperation, increase of the influence of global politics on local politics</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgc1fa490" class="outline-3">
+<h3 id="orgc1fa490"><span class="section-number-3">6.2</span> Economic</h3>
+<div class="outline-text-3" id="text-6-2">
+<ul class="org-ul">
+<li>Trade, investment, migration, capital flows increase</li>
+<li>Movements of goods, money and people</li>
+<li><b>WTO</b> (inherited from GATT), most important</li>
+<li>Regional trading blocks: NAFTA, MERCOSUR, ASEAN</li>
+<li>neo-liberal  conomics: eradicating barriers to trade</li>
+<li>Increased interdependence: 2008 crisis for example affects everyone</li>
+</ul>
+</div>
+
+<div id="outline-container-org2e3dbbd" class="outline-4">
+<h4 id="org2e3dbbd"><span class="section-number-4">6.2.1</span> Why has trade accelerated ?</h4>
+<div class="outline-text-4" id="text-6-2-1">
+<ul class="org-ul">
+<li>Peace</li>
+<li>GATT / WTO: tariffs are 1/10th of those in 1947</li>
+<li>Technical, technological and structural changes ("transport &amp; communication revolution")</li>
+<li>80s: liberalization of the economy, Reagan/Thatcher</li>
+<li>1990s: integration of the USSR</li>
+<li>Opening up of China &amp; India</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org1b9e2fb" class="outline-4">
+<h4 id="org1b9e2fb"><span class="section-number-4">6.2.2</span> Consequences</h4>
+<div class="outline-text-4" id="text-6-2-2">
+<ul class="org-ul">
+<li>Increased high competition, leads to very low prices &rArr; disadvantageous for less developed countries</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5ab733d" class="outline-3">
+<h3 id="org5ab733d"><span class="section-number-3">6.3</span> Social / cultural</h3>
+<div class="outline-text-3" id="text-6-3">
+<ul class="org-ul">
+<li>Western influence: Westernization or Americanizatoin</li>
+<li>Islam influence</li>
+<li>Asiatic influence</li>
+<li>Eroding local traditions and languages ? but also creates <span class="underline">diversity</span> by exposing people to ideas from around the world</li>
+<li>Promoting progress ?</li>
+</ul>
+
+<p>
+<span class="underline">Media</span> &amp; <span class="underline">advertising</span> &rarr; spreading culture, lifestyle
+</p>
+<ul class="org-ul">
+<li>Globalization is mainly spread through consumer culture</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-orga81adbc" class="outline-3">
+<h3 id="orga81adbc"><span class="section-number-3">6.4</span> Linguistic</h3>
+<div class="outline-text-3" id="text-6-4">
+<ul class="org-ul">
+<li>English has become the main language</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org286f917" class="outline-3">
+<h3 id="org286f917"><span class="section-number-3">6.5</span> Demographics</h3>
+<div class="outline-text-3" id="text-6-5">
+<ul class="org-ul">
+<li>Movement of people across borders</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org50a8b08" class="outline-3">
+<h3 id="org50a8b08"><span class="section-number-3">6.6</span> Environmental</h3>
+</div>
+</div>
+<div id="outline-container-org6bafc17" class="outline-2">
+<h2 id="org6bafc17"><span class="section-number-2">7</span> Key Drivers/Actors</h2>
+<div class="outline-text-2" id="text-7">
+</div>
+<div id="outline-container-orga079acd" class="outline-3">
+<h3 id="orga079acd"><span class="section-number-3">7.1</span> The Contributors</h3>
+<div class="outline-text-3" id="text-7-1">
+<ul class="org-ul">
+<li><b>Technology</b> - cost of communication has fallen considerably</li>
+<li><b>Liberalization of international trade</b> - less protectionist methods (less tariffs, quotas, duties)</li>
+<li><b>Deregulation</b> especially with foreign firms</li>
+<li><b>Language</b> - English is considered the official language of many companies</li>
+</ul>
+
+<p>
+<b>TNC</b> (TransNationalCompanies): key actor
+<span class="underline">Positive impacts:</span>
+</p>
+<ul class="org-ul">
+<li>Investment and employment are increased</li>
+<li>Tax revenues &rarr; goes to government</li>
+<li>Importing tech, techniques and skills</li>
+<li>Brings competition &rarr; better prices and choices</li>
+<li>Increases balance of payment &rarr; reduce imports, increase exports</li>
+</ul>
+
+<p>
+<span class="underline">Negative impacts</span>:
+</p>
+<ul class="org-ul">
+<li>Increased competition: domestic firms aren't ready</li>
+<li>Jobs created are low skilled</li>
+<li>Env. impact: detrimental to local environment</li>
+<li>Depletion of natural resources</li>
+<li>Cultural and social impact &rarr; local cultures can be lost</li>
+</ul>
+
+
+<p>
+<b>FDI</b> (Foreign Direct Investment): key to becoming a globalized country (from countries and TNCs)
+</p>
+<ul class="org-ul">
+<li>Increasing integration of the world</li>
+<li>Who really benefits ?</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org4c5fa1d" class="outline-3">
+<h3 id="org4c5fa1d"><span class="section-number-3">7.2</span> More Developed Countries</h3>
+<div class="outline-text-3" id="text-7-2">
+<ul class="org-ul">
+<li>Get a better impact &rarr; more developped products</li>
+<li>Products made in different countries</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org6bd65d1" class="outline-3">
+<h3 id="org6bd65d1"><span class="section-number-3">7.3</span> Developpping countries</h3>
+<div class="outline-text-3" id="text-7-3">
+<ul class="org-ul">
+<li>Job creation in the industry</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org9a85999" class="outline-3">
+<h3 id="org9a85999"><span class="section-number-3">7.4</span> Obama speech</h3>
+<div class="outline-text-3" id="text-7-4">
+<p>
+2008 speech in Flint
+</p>
+<ul class="org-ul">
+<li>Jobs and industries can be anywhere</li>
+<li>Competition is not local anymore</li>
+<li>We can't turn back the clock</li>
+<li>Instead of closing in, we must embrace the future and compete</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgaeb2eb1" class="outline-2">
+<h2 id="orgaeb2eb1"><span class="section-number-2">8</span> Case Studies</h2>
+<div class="outline-text-2" id="text-8">
+</div>
+<div id="outline-container-org1ece14d" class="outline-3">
+<h3 id="org1ece14d"><span class="section-number-3">8.1</span> Nike</h3>
+<div class="outline-text-3" id="text-8-1">
+<ul class="org-ul">
+<li>Selling products throughout the world to increase their client base</li>
+<li>Producing products all around the world
+<ul class="org-ul">
+<li>Better access to resources such as rubber</li>
+<li>500+ factories allow for better availability &rarr; reduce transport prices</li>
+<li>Manufacturing in the right countries that have low wages and less worker protection</li>
+<li>Highest revenue is in the US, yet there are no factories there: client countries vs producing countries</li>
+</ul></li>
+<li>World influence &rarr; most recognized logo for ex., advertisement with well known athletes
+<ul class="org-ul">
+<li>Marketing based</li>
+</ul></li>
+<li>Disadvantages:
+<ul class="org-ul">
+<li>For workers: the sheer size of the company means it delegates its work to small contractors, so it doesn't control locally/directly the working conditions - although if it did, would they improve ?</li>
+</ul></li>
+<li>Nike invests locally instead of being mobile and leaving countries for cheaper labour
+<ul class="org-ul">
+<li>Training locally, etc.</li>
+</ul></li>
+</ul>
+
+<p>
+Controversies:
+</p>
+<ul class="org-ul">
+<li>Accused of paying lower than Vietnam's minimal wage (that's really hard to do)
+<ul class="org-ul">
+<li>$0.20/h, $37 vs minimum $45 per month</li>
+</ul></li>
+<li>Doesn't improve worker's conditions</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Date: 2019-03-29 Fri 00:00</p>
+<p class="date">Created: 2019-04-27 Sat 20:59</p>
+<p class="validation"></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,817 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2019-04-27 Sat 20:59 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The Media and Public Opinion</title>
+<meta name="generator" content="Org mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="/home/theo/oi-notes-website/general.css" type="text/css"/><link rel="stylesheet" href="/oi-notes/general.css" type="text/css"/>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2019 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">The Media and Public Opinion</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org72a67b1">1. Key Questions</a></li>
+<li><a href="#org22000c1">2. Keywords</a></li>
+<li><a href="#org4f11164">3. Introduction</a></li>
+<li><a href="#org313deab">4. Part 1 (TODO note title)</a>
+<ul>
+<li><a href="#orga181426">4.1. The development of the press</a></li>
+<li><a href="#orgcd30366">4.2. Popular press vs Quality Press</a></li>
+<li><a href="#org34f312e">4.3. Dreyfus Affair</a>
+<ul>
+<li><a href="#orgc82ab40">4.3.1. Video</a></li>
+</ul>
+</li>
+<li><a href="#org8e74d55">4.4. Newspapers during WW1</a>
+<ul>
+<li><a href="#org8879dee">4.4.1. Anastasia or the Press at War</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgabdd367">5. Media Post WW1</a>
+<ul>
+<li><a href="#org05955f5">5.1. The Rise of Radio and Film</a></li>
+<li><a href="#org69d76a5">5.2. 1934 Crisis</a>
+<ul>
+<li><a href="#orgb37e4ab">5.2.1. Background instability</a></li>
+<li><a href="#orgf592faf">5.2.2. Role of the press</a></li>
+</ul>
+</li>
+<li><a href="#orge9e9e18">5.3. WW2</a></li>
+</ul>
+</li>
+<li><a href="#org1d31e03">6. Media 1944-1974</a>
+<ul>
+<li><a href="#org2afea13">6.1. The Press at the Liberation</a></li>
+<li><a href="#orgd643e3c">6.2. Audiovisual under State Controlled</a></li>
+</ul>
+</li>
+<li><a href="#orge04a48e">7. Communication Company</a>
+<ul>
+<li><a href="#org1ef21b8">7.1. Audiovisual Liberationx</a></li>
+<li><a href="#org459ea40">7.2. Internet</a></li>
+<li><a href="#orgc15388e">7.3. Other examples</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org72a67b1" class="outline-2">
+<h2 id="org72a67b1"><span class="section-number-2">1</span> Key Questions</h2>
+<div class="outline-text-2" id="text-1">
+<blockquote>
+<ul class="org-ul">
+<li>Analyze the role of the media in the formation and expression of public opinion in political crises in France since the end of the 19th century.</li>
+<li>How do politics shape the relation between the media and public opinion?</li>
+</ul>
+</blockquote>
+</div>
+</div>
+
+<div id="outline-container-org22000c1" class="outline-2">
+<h2 id="org22000c1"><span class="section-number-2">2</span> Keywords</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>Public opinion</li>
+<li>Censuring, government</li>
+<li>Neutrality</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org4f11164" class="outline-2">
+<h2 id="org4f11164"><span class="section-number-2">3</span> Introduction</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li>Public opinion became a key player in politics since right to vote</li>
+<li>Government had no choice but to pay serious attention to public opinion</li>
+<li><b>1881</b>: Freedom of press is a reality</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org313deab" class="outline-2">
+<h2 id="org313deab"><span class="section-number-2">4</span> Part 1 (TODO note title)</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-orga181426" class="outline-3">
+<h3 id="orga181426"><span class="section-number-3">4.1</span> The development of the press</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+<span class="underline">The Golden Age (1880 - 1914)</span>
+</p>
+
+<p>
+Press became the 1st mass media
+</p>
+<ul class="org-ul">
+<li>Republican success</li>
+<li>New liberal regime led to proliferating of newspapers (79 in Paris and 257 in rest of France)</li>
+<li>Progress in printing techniques + distribution
+<ul class="org-ul">
+<li>Prices go down &rarr; copies go up</li>
+</ul></li>
+<li>Development of education and literacy &rarr; more people reading</li>
+</ul>
+
+<p>
+Massive explosion of <span class="underline">numbers of titles</span> (over 300 in 1914) and <span class="underline">size of readership</span> (9 million copies printed in 1914)
+</p>
+
+<p>
+Different kinds of press:
+</p>
+<ul class="org-ul">
+<li>Neutral information: Le Petit Journal, le Petit Parisien</li>
+<li>Opinionated press:
+<ul class="org-ul">
+<li><span class="underline">Far left</span>: Humanité</li>
+<li><span class="underline">Left</span>: L'Aurore</li>
+<li><span class="underline">Right</span>: Le Figaro</li>
+<li><span class="underline">Far right</span>: Action Française, La Libre Parole</li>
+</ul></li>
+</ul>
+
+<p>
+Freedom of opinion remains fragile (!= freedom of press)
+</p>
+<ul class="org-ul">
+<li>Press was influenced</li>
+<li>Financed by businesses, reflected manager's opinions</li>
+<li>Frequent corruption</li>
+<li><b>1892</b>: Panama Scandal
+<ul class="org-ul">
+<li>Investors that bought shares in the panama canal company lost it, because they were influenced by the media which had been bribed by the company</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgcd30366" class="outline-3">
+<h3 id="orgcd30366"><span class="section-number-3">4.2</span> Popular press vs Quality Press</h3>
+<div class="outline-text-3" id="text-4-2">
+<ul class="org-ul">
+<li>Lucrative business: meet the public demand rather than influence the political opinion</li>
+<li>Main: Petit Parisien, Petit Journal &rarr; contain more random, misc stuff than actual important content</li>
+</ul>
+
+<p>
+The political journals have far less:
+</p>
+<ul class="org-ul">
+<li>Action française 300k</li>
+<li>Aurore (Zola, J'Accuse)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org34f312e" class="outline-3">
+<h3 id="org34f312e"><span class="section-number-3">4.3</span> Dreyfus Affair</h3>
+<div class="outline-text-3" id="text-4-3">
+<p>
+Press revealed the affair in <b>1894</b>: at the time the press was very popular
+</p>
+<ul class="org-ul">
+<li>Claims of espionnage dealt with in the military court, in secret</li>
+<li>Affair broke out when the real culprit, Esterhazy, was discovered: but he wasn't condemned</li>
+<li>Zola writes "J'accuse" to lead to a <span class="underline">real</span> trial</li>
+<li>Media and population divided &rarr; press led th investigations</li>
+<li>Lead press was Libre Parole, Action Française &rarr; went against Jews, anti-semitic</li>
+<li>Dreyfusard were the intellectuals, defend human rights &amp; fix an injustice</li>
+</ul>
+
+<p>
+La libre parole talked about it in 1894, yet it was supposed to be secret:
+</p>
+<ul class="org-ul">
+<li>The press is active and gets involved</li>
+</ul>
+
+<p>
+1898: Anti Dreyfussard  still dominant and remained, and public opinion mostly against dreyfus
+</p>
+<ul class="org-ul">
+<li>only 32% of newspapers in favor of a revision of the trial (boosted by J'Accuse)</li>
+<li>Petit Journal is supposed to be neutral, but presents very anti-dreyfusard views ("Vive l'armée")</li>
+</ul>
+
+<p>
+Newspapers created:
+</p>
+<ul class="org-ul">
+<li>le Sifflet (satirical) (1898), Dreyfussard, in response to "Psst&#x2026;!" which was anti-dreyfussard</li>
+<li>Many newspapers created just during the affairs</li>
+</ul>
+
+
+<p>
+<b>1906</b>: Dreyfus found innocent
+</p>
+</div>
+<div id="outline-container-orgc82ab40" class="outline-4">
+<h4 id="orgc82ab40"><span class="section-number-4">4.3.1</span> Video</h4>
+<div class="outline-text-4" id="text-4-3-1">
+<p>
+"In search of History - The Infamous of Dreyfus Affair"
+</p>
+
+<p>
+Consequence of 1870 defeat
+Spy found within the ranks &rarr; Dreyfus denounced because a Jew
+</p>
+
+<p>
+Anti-Semite press reveals and forces Army to have a court
+</p>
+
+<p>
+Dreyfus' brother &rarr; tries to prove his brother's innocence
+Picard: new head of counter-intelligence
+</p>
+<ul class="org-ul">
+<li>Finds unsent telegram to Esterhazy</li>
+<li>Picard says he found the real traitor, but army doesn't want to reveal it was wrong</li>
+</ul>
+
+<p>
+Dreyfus' brother tries to keep his name in the press, by inventing fake stories
+</p>
+<ul class="org-ul">
+<li>This worked as the press got more interested in the affair and separated two groups</li>
+</ul>
+
+<p>
+Esterhazy goes to trial and acquitted in a week
+</p>
+
+<p>
+Zola &rarr; J'Accuse
+</p>
+<ul class="org-ul">
+<li>Convicted of diffamation, sparked riots</li>
+<li>Forced to give more proofs &rarr; fake letter</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org8e74d55" class="outline-3">
+<h3 id="org8e74d55"><span class="section-number-3">4.4</span> Newspapers during WW1</h3>
+<div class="outline-text-3" id="text-4-4">
+<p>
+Press at War: Back to Censorship
+</p>
+
+<p>
+State controlled newspapers:
+</p>
+<ul class="org-ul">
+<li>To avoid hurting troop morale</li>
+<li>To avoid publishing military secrets</li>
+<li>Vector of propaganda</li>
+<li>Show patriotism
+<ul class="org-ul">
+<li>Brainwashing</li>
+</ul></li>
+</ul>
+</div>
+
+<div id="outline-container-org8879dee" class="outline-4">
+<h4 id="org8879dee"><span class="section-number-4">4.4.1</span> Anastasia or the Press at War</h4>
+<div class="outline-text-4" id="text-4-4-1">
+<ul class="org-ul">
+<li>Uion Sacrée &amp; Anastasie: government censorship introduced to keep popular morale high</li>
+<li>Press presents highly misleading &amp; optimistic view of the front leading to alienation</li>
+<li>Reaction: Creation of <i>Canard Enchaîné</i> to point out satirically political scandals and censorship c</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgabdd367" class="outline-2">
+<h2 id="orgabdd367"><span class="section-number-2">5</span> Media Post WW1</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org05955f5" class="outline-3">
+<h3 id="org05955f5"><span class="section-number-3">5.1</span> The Rise of Radio and Film</h3>
+<div class="outline-text-3" id="text-5-1">
+<p>
+Competition: <span class="underline">Radio and Cinema</span>
+</p>
+<ul class="org-ul">
+<li><b>1912</b>: Radio developped</li>
+<li><b>1932</b>: 10% of the French have access to a radio</li>
+<li><b>1939</b>: 56% of the French have access to a radio</li>
+<li>Very much controlled by the government</li>
+</ul>
+
+<p>
+<span class="underline">Modernization of the Press</span>:
+</p>
+<ul class="org-ul">
+<li>Despite decline in numbers of daily titles, over 11m prints in 1939</li>
+<li>Press changes nature: magazines appear, weekly etc
+<ul class="org-ul">
+<li>Provincial press gains importance</li>
+</ul></li>
+</ul>
+
+<p>
+<span class="underline">Advent of the radio</span>
+</p>
+<ul class="org-ul">
+<li>First regular broadcast: radio "Tour Eiffel"</li>
+<li>First private radio: Radio Paris (1922)</li>
+<li>Used by politics for campaigns in 1936</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org69d76a5" class="outline-3">
+<h3 id="org69d76a5"><span class="section-number-3">5.2</span> 1934 Crisis</h3>
+<div class="outline-text-3" id="text-5-2">
+</div>
+<div id="outline-container-orgb37e4ab" class="outline-4">
+<h4 id="orgb37e4ab"><span class="section-number-4">5.2.1</span> Background instability</h4>
+<div class="outline-text-4" id="text-5-2-1">
+<ul class="org-ul">
+<li>Instability since WW1, inflation &amp; high taxation</li>
+<li>Impact of Great Depression + Rise of Fascist States
+<ul class="org-ul">
+<li>Unemployment soared</li>
+</ul></li>
+</ul>
+
+<p>
+Political instability:
+</p>
+<ul class="org-ul">
+<li>Rise of the extreme right (Action Française, Faisceau)</li>
+<li>Afraid of Bolshevism</li>
+<li>Growth of xenophobia</li>
+</ul>
+
+<p>
+Political affairs which discredit the Republic
+</p>
+<ul class="org-ul">
+<li>Panama Affair</li>
+<li>Boulanger Crisis</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgf592faf" class="outline-4">
+<h4 id="orgf592faf"><span class="section-number-4">5.2.2</span> Role of the press</h4>
+<div class="outline-text-4" id="text-5-2-2">
+<p>
+Press was <b>violent</b>
+</p>
+
+<p>
+Example: <span class="underline">Stavisky affair</span>
+</p>
+<ul class="org-ul">
+<li>Business man that stole money with deputy and newspaper directors</li>
+<li>Bribed his way out of arrestations</li>
+<li>1934: found dead - but he knew many things that would've been helpful
+<ul class="org-ul">
+<li>Claims suicide, press divided</li>
+</ul></li>
+<li>Effect: Chaumtemps, prime minister quits - Daladier replaces him and fires préfet de police</li>
+<li>&rArr; political instability</li>
+</ul>
+
+<p>
+&rarr; Leads to parliamentary crisis, "ras-le-bol"
+<b>6th of February 1934</b>: Right-wing demonstrations
+</p>
+<ul class="org-ul">
+<li>"A bas les ministres et les députés vendus !" - Action Française</li>
+<li>It is the press who <b>calls people to protest</b> on the front page
+<ul class="org-ul">
+<li>The day when Daladier is inaugurated</li>
+<li>Newspaper's director is Maurras, royalist</li>
+<li>Insulting, strong vocabulary: violent press movement</li>
+<li>Action Française prints triple/quadruples</li>
+</ul></li>
+</ul>
+
+<p>
+<b>Left vs Right</b>
+</p>
+<ul class="org-ul">
+<li>The Left pointed out the link between Stavisky and Chiappe (Salengro Affair)</li>
+<li>Right turned Stavisky in a symbol of corruption</li>
+</ul>
+
+<p>
+Gathering at place de la Concorde in front of Assemblée Nationale
+</p>
+<ul class="org-ul">
+<li>Degenerated: protesters tried to storm into the Palais Bourbon and clash with police</li>
+<li>14 dead, hundreds of casualties</li>
+<li>Le Populaire: "Le coup de force fasciste a échoué"</li>
+<li>Consequence: government shook, creation of the "Front Populaire"</li>
+</ul>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Le Populaire</th>
+<th scope="col" class="org-left">Action Française</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Attempt at a coup</td>
+<td class="org-left">Honest men's protest</td>
+</tr>
+
+<tr>
+<td class="org-left">Self-defense against violent protestors</td>
+<td class="org-left">Police is a murderer</td>
+</tr>
+
+<tr>
+<td class="org-left">39 deaths including policemen</td>
+<td class="org-left">50 deaths and thousands of casualties</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<span class="underline">Salengro Affair</span>
+</p>
+<ul class="org-ul">
+<li><b>Gringoire</b>, far right paper that attacked politicians on personal levels</li>
+<li><b>1936</b>, started a defamation campaign against minister Roger Salengro who committed suicide as a consequence of this harassment</li>
+<li>Le Populaire: "Ils l'ont tué ! [&#x2026;] Le Fascisme assassin"</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge9e9e18" class="outline-3">
+<h3 id="orge9e9e18"><span class="section-number-3">5.3</span> WW2</h3>
+<div class="outline-text-3" id="text-5-3">
+<p>
+Radio was the #1 form of media:
+</p>
+<ul class="org-ul">
+<li>in 1940 60% of French homes had a radio</li>
+<li>Back to censorship</li>
+<li>Pétain speaks through radios, and also De Gaulle</li>
+<li>Radio because a political tool:
+<ul class="org-ul">
+<li>Radio Paris / Radio Londres, les français parlent aux français</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1d31e03" class="outline-2">
+<h2 id="org1d31e03"><span class="section-number-2">6</span> Media 1944-1974</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-org2afea13" class="outline-3">
+<h3 id="org2afea13"><span class="section-number-3">6.1</span> The Press at the Liberation</h3>
+<div class="outline-text-3" id="text-6-1">
+<ul class="org-ul">
+<li>Freedom restored after WW2</li>
+<li>New Golden Age: creation of FranceSoir, Le Monde, AFP (Agence France Presse - give all media equal and impartial information)
+<ul class="org-ul">
+<li>Paper that supported Vichy were banned</li>
+<li>Papers were subsidised - so that there's no lobbying</li>
+<li>Later l'Express (1953) on the model of weekly US magazines</li>
+<li>Press starts to decline (daily papers) &rarr; in favor of radio</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgd643e3c" class="outline-3">
+<h3 id="orgd643e3c"><span class="section-number-3">6.2</span> Audiovisual under State Controlled</h3>
+<div class="outline-text-3" id="text-6-2">
+<ul class="org-ul">
+<li>Press was free</li>
+<li>However the State imposed tight control over Radio &amp; TV
+<ul class="org-ul">
+<li>RTF (Radiodiffusion télévision française) / ORTF</li>
+<li>Public media didn't broadcast advertising, however in exchange was under control</li>
+</ul></li>
+<li>Development of peripheral stations (especially after 68)
+<ul class="org-ul">
+<li>Europe 1, RTL</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orge04a48e" class="outline-2">
+<h2 id="orge04a48e"><span class="section-number-2">7</span> Communication Company</h2>
+<div class="outline-text-2" id="text-7">
+</div>
+<div id="outline-container-org1ef21b8" class="outline-3">
+<h3 id="org1ef21b8"><span class="section-number-3">7.1</span> Audiovisual Liberationx</h3>
+<div class="outline-text-3" id="text-7-1">
+<p>
+Changes:
+</p>
+<ul class="org-ul">
+<li>Giscard: ORTF breaks up into TF1, Antenne 2, etc</li>
+<li>End of 1970s: illegal radios surfaced</li>
+</ul>
+
+<p>
+<b>1981</b> Changes under Mitterand
+</p>
+<ul class="org-ul">
+<li>Private radios allowed</li>
+<li><b>1982</b>: State monopoly/control ends on radio</li>
+<li><b>1984</b>: Canal Plus first private TV network &rarr; have to pay a subscription</li>
+<li><b>1987</b> TF1 privatized</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org459ea40" class="outline-3">
+<h3 id="org459ea40"><span class="section-number-3">7.2</span> Internet</h3>
+<div class="outline-text-3" id="text-7-2">
+<p>
+Even more decrease in printings &rarr; people read newspapers on their devices
+</p>
+<ul class="org-ul">
+<li>Professional != amateur, internet allows more</li>
+<li>Information modified, deformed</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgc15388e" class="outline-3">
+<h3 id="orgc15388e"><span class="section-number-3">7.3</span> Other examples</h3>
+<div class="outline-text-3" id="text-7-3">
+<p>
+JFK Assasination - Oswald assasination
+</p>
+
+<p>
+Gulf War &rarr; broadcasted 24/7
+</p>
+<ul class="org-ul">
+<li>Live, video game style</li>
+</ul>
+
+<p>
+<b>Watergate</b>: important of journalists
+<b>Vietnam</b>: first time that war happens on TV, broadcast at home
+</p>
+<ul class="org-ul">
+<li>Living room war</li>
+<li>Têt offensive, journalists were in the towns and saw the battle directly</li>
+<li>Anti-war riots</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2019-04-27 Sat 20:59</p>
+<p class="validation"></p>
+</div>
+</body>
+</html>
