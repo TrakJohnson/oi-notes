@@ -1,0 +1,751 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2019-05-06 Mon 19:57 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Globalization - notes</title>
+<meta name="generator" content="Org mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="/home/theo/oi-notes-website/general.css" type="text/css"/><link rel="stylesheet" href="/oi-notes/general.css" type="text/css"/>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2019 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Globalization - notes</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org61d1283">1. Production &amp; Global products</a>
+<ul>
+<li><a href="#orga7d446e">1.1. Outsourcing as a key component of globalization</a></li>
+<li><a href="#orgaadc27f">1.2. Global production networks</a>
+<ul>
+<li><a href="#org34b79b4">1.2.1. Example: Mini</a></li>
+<li><a href="#org8a768dc">1.2.2. Example: iPhone</a></li>
+<li><a href="#orgf24a3c2">1.2.3. Example: Fender musical instruments</a></li>
+<li><a href="#orge4d0fb0">1.2.4. Example: Facebook</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orge38fd65">2. Trade Blocks &amp; Free Trade zones</a>
+<ul>
+<li><a href="#org174a72d">2.1. Trade blocks</a></li>
+<li><a href="#org184a44e">2.2. Free Trade Zones (Zones Economiques Spéciales)</a></li>
+</ul>
+</li>
+<li><a href="#orgc7d68b6">3. Shrinking World</a>
+<ul>
+<li><a href="#org7090acd">3.1. Technologies</a></li>
+</ul>
+</li>
+<li><a href="#orgd33038e">4. IB Essay example</a>
+<ul>
+<li><a href="#orgb4d6ef8">4.1. Plan</a></li>
+</ul>
+</li>
+<li><a href="#orgfa8d075">5. Cultural Change</a>
+<ul>
+<li><a href="#orgfac4b8c">5.1. Cultural traits</a></li>
+<li><a href="#org7dab0fa">5.2. Global scale</a></li>
+</ul>
+</li>
+<li><a href="#org8826ad4">6. Resistance to globalization</a>
+<ul>
+<li><a href="#orga324964">6.1. Sustainability and Justice</a></li>
+<li><a href="#org4bc941d">6.2. Nationalism and sovereignty</a></li>
+<li><a href="#org488ff8a">6.3. Problems with TNCs</a>
+<ul>
+<li><a href="#orgc3f3096">6.3.1. Examples</a></li>
+</ul>
+</li>
+<li><a href="#org42d936b">6.4. Local sourcing</a></li>
+<li><a href="#orgcb209fe">6.5. Anti-immigration</a></li>
+<li><a href="#orgb128319">6.6. Protectionism</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<blockquote>
+<ul class="org-ul">
+<li>Pages 22-25
+<ul class="org-ul">
+<li>How does a product reflect the process of globalization?</li>
+<li>Global production network: take notes on the case studies (Mini, Musical Instruments, Facebook) in order to understand how a product reflects the process of globalization.</li>
+</ul></li>
+<li>Pages 28 &amp; 29
+<ul class="org-ul">
+<li>What are trade blocs and what are Free Trade zones? How do these contribute to globalization?</li>
+</ul></li>
+<li>Pages 31-33
+<ul class="org-ul">
+<li>What contributes to “shrinking” the world?</li>
+<li>Over time, how has transport contributed to globalization?</li>
+<li>Over time, how the flow of data contributed to globalization?</li>
+</ul></li>
+<li>Pages 39-41
+<ul class="org-ul">
+<li>Read the essay and take notes : examine the interactions between technology, TNCs and the growth of globalization.</li>
+</ul></li>
+<li>Pages 54-55
+<ul class="org-ul">
+<li>Diversity / Changing identities and cultures</li>
+<li>How have certain cultures gained influence?</li>
+</ul></li>
+<li>Page 59
+<ul class="org-ul">
+<li>What are the cultural effects of globalization?</li>
+</ul></li>
+<li>Pages 70-76, 78-81, 92&#x2013;99
+<ul class="org-ul">
+<li>Understanding the movement against globalization</li>
+<li>Analyze resistance to globalization (civil society, protests, rejection of globalized production, rise of anti-immigration movement, trade restrictions, environmental risks&#x2026;)</li>
+</ul></li>
+</ul>
+</blockquote>
+
+<div id="outline-container-org61d1283" class="outline-2">
+<h2 id="org61d1283"><span class="section-number-2">1</span> Production &amp; Global products</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orga7d446e" class="outline-3">
+<h3 id="orga7d446e"><span class="section-number-3">1.1</span> Outsourcing as a key component of globalization</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li>China, workshop of the world since 1990s</li>
+<li>Low cost labour</li>
+<li>Results in <span class="underline">technology transfers</span> from western countries to China</li>
+<li>Makes TNCs more competitive while enabling the development of the workshop countries</li>
+<li>Product is globalized when its components are produced around the world, and by different firms
+<ul class="org-ul">
+<li>Modular system</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgaadc27f" class="outline-3">
+<h3 id="orgaadc27f"><span class="section-number-3">1.2</span> Global production networks</h3>
+<div class="outline-text-3" id="text-1-2">
+<ul class="org-ul">
+<li><b>GPN</b>, chain of connected suppliers where parts move around
+<ul class="org-ul">
+<li>Contains the actors of globalization</li>
+<li>Big TNCs have giant GPNs, tens of thousands of suppliers</li>
+<li>Different from the division of labour within the</li>
+</ul></li>
+</ul>
+</div>
+
+<div id="outline-container-org34b79b4" class="outline-4">
+<h4 id="org34b79b4"><span class="section-number-4">1.2.1</span> Example: Mini</h4>
+<div class="outline-text-4" id="text-1-2-1">
+<p>
+BMW: 2500 different suppliers
+</p>
+<ul class="org-ul">
+<li>Some parts are from the EU, less tariffs</li>
+<li>Engine is from Brazil, costs less to produce</li>
+<li>Parts made by contractors who themselves have a global network</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org8a768dc" class="outline-4">
+<h4 id="org8a768dc"><span class="section-number-4">1.2.2</span> Example: iPhone</h4>
+<div class="outline-text-4" id="text-1-2-2">
+<p>
+Outsourcing creates a long chain, example with Apple's screen:
+</p>
+<ol class="org-ol">
+<li>Apple, USA</li>
+<li>Foxconn, Taiwan &rarr; factory in China</li>
+<li>Wintek, Taiwan &rarr; outsources to China's Lianjian</li>
+<li>Raw materials come from around the globe</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgf24a3c2" class="outline-4">
+<h4 id="orgf24a3c2"><span class="section-number-4">1.2.3</span> Example: Fender musical instruments</h4>
+<div class="outline-text-4" id="text-1-2-3">
+<ul class="org-ul">
+<li>Two types of products:
+<ul class="org-ul">
+<li>Low-cost outsourced production in Mexico: helped by <b>NAFTA</b></li>
+<li>High-cost, better quality, local production by skilled workers in the US
+<ul class="org-ul">
+<li><b>"post-fordism"</b>, "Made in USA"</li>
+</ul></li>
+</ul></li>
+<li>Outsourcing countries have become a market in themselves, thanks to cultural globalization and the country's economic development</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orge4d0fb0" class="outline-4">
+<h4 id="orge4d0fb0"><span class="section-number-4">1.2.4</span> Example: Facebook</h4>
+<div class="outline-text-4" id="text-1-2-4">
+<ul class="org-ul">
+<li>1.6B users throughout the globe, userbase growth thanks to developing countries</li>
+<li>Mega-corporation, many acquisitions: owns a significant part of the communication &amp; media (Facebook, Whatsapp, Instagram, etc.)</li>
+<li>Aided by growth in technology, reduction in smartphone prices, etc.</li>
+<li>Established a big physical network
+<ul class="org-ul">
+<li>70 regional offices, present on every continent</li>
+<li>Invests by creation of:
+<ul class="org-ul">
+<li>Regional offices for sales and advertising</li>
+<li>Regional data storage facilities (Sweden has the biggest server), ex. of influence of physical geography</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orge38fd65" class="outline-2">
+<h2 id="orge38fd65"><span class="section-number-2">2</span> Trade Blocks &amp; Free Trade zones</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org174a72d" class="outline-3">
+<h3 id="org174a72d"><span class="section-number-3">2.1</span> Trade blocks</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>MGO, multi-governmental organizations</li>
+<li>removal or decrease of internal <b>tarrifs</b></li>
+<li>Benefits:
+<ul class="org-ul">
+<li>Markets grow and firms get new customers</li>
+<li>Specific firms that are geographically locked (like wine-makers) are not hampered by that anymore within the block</li>
+<li>More demand &rarr; more production &rarr; lower prices</li>
+<li>TNCs within the bloc can merge for better effectiveness (Airbus, Airtel Africa)</li>
+<li>Trade barriers are stronger, making the EU more powerful in blocking selected imports (compared to its individual members)</li>
+<li>Blocks can be formed of states at different development stages, which benefits TNCs as they can do everything (except for sales) within the block (USA + Mexico for ex.)</li>
+</ul></li>
+</ul>
+
+<p>
+<span class="underline">Major trade blocks:</span>
+</p>
+<ul class="org-ul">
+<li>America
+<ul class="org-ul">
+<li>NAFTA</li>
+<li>Pacific Alliance</li>
+<li>Mercosur</li>
+<li>Caricom</li>
+</ul></li>
+<li>Europe
+<ul class="org-ul">
+<li>EU</li>
+</ul></li>
+<li>Africa
+<ul class="org-ul">
+<li>COMESA, SADC, UEMOA</li>
+</ul></li>
+<li>Asia
+<ul class="org-ul">
+<li>ASEAN</li>
+</ul></li>
+</ul>
+
+<p>
+Companies like Unilever, Ikea have expanded significantly thanks to the EU trade block
+</p>
+<ul class="org-ul">
+<li>Both in terms of production and sales within the block</li>
+</ul>
+
+<p>
+However, member countries still hold restrictions on some sectors
+</p>
+</div>
+</div>
+
+<div id="outline-container-org184a44e" class="outline-3">
+<h3 id="org184a44e"><span class="section-number-3">2.2</span> Free Trade Zones (Zones Economiques Spéciales)</h3>
+<div class="outline-text-3" id="text-2-2">
+<blockquote>
+<p>
+Special Economic Zones (SEZ)_: Industrial area, usually coastal, with low tax and no tariffs, created to incite TNCs to come and invest
+</p>
+</blockquote>
+
+<ul class="org-ul">
+<li>India, started in 1965, now &gt;200</li>
+<li>China: crucial to its growth in the Deng Xiaoping era, they enabled the country to progress economically but also technologically through the "join ventures"
+<ul class="org-ul">
+<li>50% of GDP from these places in the 1990s</li>
+</ul></li>
+<li>Indonesia creates a zone for raw materials
+<ul class="org-ul">
+<li>Attracts many clothing TNCs</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc7d68b6" class="outline-2">
+<h2 id="orgc7d68b6"><span class="section-number-2">3</span> Shrinking World</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org7090acd" class="outline-3">
+<h3 id="org7090acd"><span class="section-number-3">3.1</span> Technologies</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>Exponential growth of ICT (Information + Communication tech) is an <b>outcome</b> and a <b>driver</b> of globalization
+<ul class="org-ul">
+<li>But there is also war and security: WW1+2 led the extremely rapid development of the aeronautic and space industry, but also computers, radar, nuclear, etc.</li>
+<li><b>Social need</b> can drive technology, but more importantly it is <b>technological progress</b> that shapes our societies</li>
+</ul></li>
+<li>Leads to <b>time-space compression</b>
+<ul class="org-ul">
+<li>Physically, through plane travel &amp; low cost airlines that make travelling much more accessible
+<ul class="org-ul">
+<li>Economic shrinking, money can be invested easily, containers <b>standardization</b> enables mass shipping, etc.</li>
+</ul></li>
+<li>Abstractly, through the speed at which data travels - almost instant
+<ul class="org-ul">
+<li>Internet, etc.</li>
+</ul></li>
+<li>Innovation is driven by governments (ARPANET), hobbyists (modem), TNCs and their constant need to improve</li>
+<li></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd33038e" class="outline-2">
+<h2 id="orgd33038e"><span class="section-number-2">4</span> IB Essay example</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+pff c'est IB
+</p>
+<blockquote>
+<p>
+Examine the interactions between technology, transnational corporations, and the growth of globalization.
+</p>
+</blockquote>
+</div>
+
+<div id="outline-container-orgb4d6ef8" class="outline-3">
+<h3 id="orgb4d6ef8"><span class="section-number-3">4.1</span> Plan</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li>Description of the shrinking distance phenomena
+<ul class="org-ul">
+<li>How faster transport brings people together (tourism, migration) and enables goods to move faster and further</li>
+</ul></li>
+<li>Role of governments in the development of technology</li>
+<li>TNC's power in globalization
+<ul class="org-ul">
+<li>Big production networks</li>
+<li>FDI, major role in economic growth</li>
+<li>Outsourcing, mergers, acquisitions, glocalization
+<ul class="org-ul">
+<li>They sometimes adapt to the country, or the country adapts to the firm
+<ul class="org-ul">
+<li>Ex: spread of the English language, of western cultural traditions</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>TNCs aren't limited to manufacturing or tech:
+<ul class="org-ul">
+<li>agriculture, food, mining, energy, etc.</li>
+<li>Important in the spread of lifestyles: link to cultural globalization</li>
+</ul></li>
+<li>Technology: enables economic migration, working at home or on the other side of the world
+<ul class="org-ul">
+<li>people are more involved in world events ? (examples used seem kindof far fetched)</li>
+</ul></li>
+<li>Competition pressure on TNCs: forced to constantly innovate, convince people to buy even if they don't need</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgfa8d075" class="outline-2">
+<h2 id="orgfa8d075"><span class="section-number-2">5</span> Cultural Change</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-orgfac4b8c" class="outline-3">
+<h3 id="orgfac4b8c"><span class="section-number-3">5.1</span> Cultural traits</h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li>Language, dialects</li>
+<li>Food, traditional dishes</li>
+<li>Clothing</li>
+<li>Religion</li>
+<li>Traditions</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org7dab0fa" class="outline-3">
+<h3 id="org7dab0fa"><span class="section-number-3">5.2</span> Global scale</h3>
+<div class="outline-text-3" id="text-5-2">
+<ul class="org-ul">
+<li>Globalization has a heavy influence on culture: Westernization, spread of the English language
+<ul class="org-ul">
+<li>Also more local influences: China &amp; Tibet, Uyghur, etc.</li>
+<li><b>soft power</b></li>
+<li>Language: 40% of the world's pop speaks one of these 8 major languages
+<ul class="org-ul">
+<li>Small languages are also rapidly declining, for ex. in Russia or in South America</li>
+</ul></li>
+</ul></li>
+<li>Factors:
+<ul class="org-ul">
+<li><b>TNCs</b> are the main vector through which culture spreads</li>
+<li>Global <b>media</b>: Disney films, Japanese Pokemon, etc.</li>
+<li><b>Migration</b> &amp; <b>Tourism</b>: diffusion of culture</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org8826ad4" class="outline-2">
+<h2 id="org8826ad4"><span class="section-number-2">6</span> Resistance to globalization</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-orga324964" class="outline-3">
+<h3 id="orga324964"><span class="section-number-3">6.1</span> Sustainability and Justice</h3>
+<div class="outline-text-3" id="text-6-1">
+<ul class="org-ul">
+<li>Impact that globalization has on the environment</li>
+<li>Social inequality that globalization emphasizes and doesn't solve</li>
+<li>TNCs are often targeted, as they are immensely rich and often avoid taxes (legally) through smart placement in key countries</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org4bc941d" class="outline-3">
+<h3 id="org4bc941d"><span class="section-number-3">6.2</span> Nationalism and sovereignty</h3>
+<div class="outline-text-3" id="text-6-2">
+<ul class="org-ul">
+<li>People feel like their jobs are being "stolen", that they are the losers of globalization</li>
+<li>Nationalism is on the rise, in the EU for example
+<ul class="org-ul">
+<li>Sovereignty but also identity and financial concerns</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org488ff8a" class="outline-3">
+<h3 id="org488ff8a"><span class="section-number-3">6.3</span> Problems with TNCs</h3>
+<div class="outline-text-3" id="text-6-3">
+<ul class="org-ul">
+<li>Immense wealth, increase of the wealth gap, gives them a lot of power, especially of development</li>
+<li>Social harm: people working for very low wages, etc.</li>
+<li>Environmental degredation</li>
+<li>Tax avoidance</li>
+<li>Cultural imperialism</li>
+</ul>
+</div>
+
+<div id="outline-container-orgc3f3096" class="outline-4">
+<h4 id="orgc3f3096"><span class="section-number-4">6.3.1</span> Examples</h4>
+<div class="outline-text-4" id="text-6-3-1">
+<ul class="org-ul">
+<li><b>1999</b>, WTO conferences, 40k people protest against how developed countries are controlling globalization</li>
+<li><b>2003</b>: Farmer suicides to denounce trade laws</li>
+<li>Canadian oil exploitation led to death of trouts due to pollution, and spread alcohol and drugs to local populations
+<ul class="org-ul">
+<li>Fracking practices too</li>
+</ul></li>
+<li>Protests against McDonald in India
+<ul class="org-ul">
+<li>Local cultures are extinguished by the uniformity of McDonald's restaurants</li>
+<li>Local cooking traditions are lost, languages too</li>
+<li>Despite opposition, such as the creation of some restaurants in sacred places, it has had a lot of success (&gt;300 million customers in 2015)</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org42d936b" class="outline-3">
+<h3 id="org42d936b"><span class="section-number-3">6.4</span> Local sourcing</h3>
+<div class="outline-text-3" id="text-6-4">
+<ul class="org-ul">
+<li>Attempt to boycott imports by buying from local suppliers
+<ul class="org-ul">
+<li>Reduced the <b>food miles</b>, give a more secure source of food, less polution (especially through the removal of air travel)</li>
+</ul></li>
+<li><b>Problems</b>:
+<ul class="org-ul">
+<li>They might still travel a lot, through distribution centers etc.</li>
+<li>Local transport is less efficient than large ships or trucks</li>
+<li>Local food production systems can be more energy intensive</li>
+<li>Buying global food helps other countries develop, in Africa for ex.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgcb209fe" class="outline-3">
+<h3 id="orgcb209fe"><span class="section-number-3">6.5</span> Anti-immigration</h3>
+<div class="outline-text-3" id="text-6-5">
+<ul class="org-ul">
+<li>Goes with nationalism, rise in EU countries</li>
+<li>Impacts:
+<ul class="org-ul">
+<li><b>Economic impacts</b>, migrants are key to the US's economy yet unemployment makes people angry</li>
+<li><b>National security</b>, banning every Muslim will solve terrorism !</li>
+<li><b>Demographic impact</b>, help counter the aging population</li>
+<li><b>Cultural change</b>: considerable influence on local customs</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgb128319" class="outline-3">
+<h3 id="orgb128319"><span class="section-number-3">6.6</span> Protectionism</h3>
+<div class="outline-text-3" id="text-6-6">
+<ul class="org-ul">
+<li>Slowdown of globalization, 2008 crisis &rarr; doesn't rise again like expected</li>
+<li>Protectionism goes against the free flow of people and goods, adds higher tariffs</li>
+<li>Governments intervene in trade deals:
+<ul class="org-ul">
+<li>Trans-Pacific Partnership is not ratified yet, and might never be as political support fades</li>
+<li>Western countries are calling for limits on Chinese investment &rarr; raising tariffs on imports</li>
+<li>Countries are blocking acquisitions of national companies or places (hotels, etc.) to limit "infiltration"</li>
+</ul></li>
+<li>Also a result of concerns about ecology (fear of importing diseases) and politics (Cuba &amp; US)</li>
+</ul>
+
+<p>
+(Interesting, great firewall can be seen as a trade barrier for e-shopping and therefore can be denounced as unfair competition &rarr; which would break the WTO's rules)
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2019-05-06 Mon 19:57</p>
+<p class="validation"></p>
+</div>
+</body>
+</html>
